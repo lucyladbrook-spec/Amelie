@@ -1,0 +1,4865 @@
+{
+ "sessions": {
+  "6": {
+   "objective": "Use ΔE = m c Δθ to find energy, mass, specific heat capacity or temperature change, and describe the required practical.",
+   "objectives": [
+    "Say what specific heat capacity means",
+    "Calculate with ΔE = m c Δθ",
+    "Describe the specific heat capacity practical"
+   ],
+   "essentials": [
+    "Specific heat capacity is the energy needed to raise the temperature of 1 kg of a substance by 1 °C.",
+    "ΔE = m c Δθ, where Δθ is the temperature CHANGE.",
+    "Water has a high specific heat capacity: about 4200 J/kg °C.",
+    "In the practical, energy lost to the surroundings makes your value of c too high."
+   ],
+   "diagram": "shc-practical",
+   "example": [
+    {
+     "label": "Identify the equation",
+     "text": "ΔE = m c Δθ"
+    },
+    {
+     "label": "Convert units",
+     "text": "m = 2 kg is already in kg. Find the temperature change: Δθ = 70 − 20 = 50 °C"
+    },
+    {
+     "label": "Substitute",
+     "text": "ΔE = 2 × 4200 × 50"
+    },
+    {
+     "label": "Rearrange",
+     "text": "Not needed: ΔE is already the subject."
+    },
+    {
+     "label": "Calculate",
+     "text": "2 × 4200 × 50 = 420 000"
+    },
+    {
+     "label": "Unit",
+     "text": "420 000 J"
+    }
+   ],
+   "questions": [
+    {
+     "hint": "All three values are given. Put them straight into ΔE = m c Δθ.",
+     "numeric": {
+      "value": 9000,
+      "unit": "J"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "ΔE = m c Δθ"
+      },
+      {
+       "label": "Convert units",
+       "text": "m = 0.5 kg, c = 900 J/kg °C, Δθ = 20 °C. All already in the right units."
+      },
+      {
+       "label": "Substitute",
+       "text": "ΔE = 0.5 × 900 × 20"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "0.5 × 900 × 20 = 9000"
+      },
+      {
+       "label": "Unit",
+       "text": "9000 J"
+      }
+     ]
+    },
+    {
+     "hint": "Substitute first, then rearrange for Δθ: Δθ = ΔE ÷ (m × c).",
+     "numeric": {
+      "value": 10,
+      "unit": "°C"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "ΔE = m c Δθ"
+      },
+      {
+       "label": "Convert units",
+       "text": "ΔE = 12 600 J, m = 0.3 kg, c = 4200 J/kg °C. All already in the right units."
+      },
+      {
+       "label": "Substitute",
+       "text": "12 600 = 0.3 × 4200 × Δθ"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Δθ = 12 600 ÷ (0.3 × 4200)"
+      },
+      {
+       "label": "Calculate",
+       "text": "12 600 ÷ 1260 = 10"
+      },
+      {
+       "label": "Unit",
+       "text": "10 °C"
+      }
+     ]
+    },
+    {
+     "hint": "Substitute first, then rearrange for c: c = ΔE ÷ (m × Δθ).",
+     "numeric": {
+      "value": 450,
+      "unit": "J/kg °C"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "ΔE = m c Δθ"
+      },
+      {
+       "label": "Convert units",
+       "text": "ΔE = 9000 J, m = 1 kg, Δθ = 20 °C. All already in the right units."
+      },
+      {
+       "label": "Substitute",
+       "text": "9000 = 1 × c × 20"
+      },
+      {
+       "label": "Rearrange",
+       "text": "c = 9000 ÷ (1 × 20)"
+      },
+      {
+       "label": "Calculate",
+       "text": "9000 ÷ 20 = 450"
+      },
+      {
+       "label": "Unit",
+       "text": "450 J/kg °C"
+      }
+     ]
+    },
+    {
+     "hint": "The heater's energy doesn't all go into the block. Where else could it go?"
+    },
+    {
+     "hint": "List what you measure: mass, temperature and energy. What measures each one?"
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Using the final temperature in ΔE = m c Δθ.",
+     "avoid": "Work out the change first: Δθ = final temperature − starting temperature."
+    },
+    {
+     "mistake": "In the 6-mark method, leaving out how a quantity is measured, especially the mass.",
+     "avoid": "Name every measurement and its instrument: mass (balance), temperature (thermometer), energy (joulemeter, or ammeter, voltmeter and stopwatch)."
+    }
+   ]
+  },
+  "1": {
+   "objective": "Get every calculation off to the right start: the right units, the right prefixes and standard form.",
+   "objectives": [
+    "Name the SI units used in physics",
+    "Convert with prefixes such as k, m and µ",
+    "Write very big and very small numbers in standard form"
+   ],
+   "questions": [
+    {
+     "hint": "There are 100 cm in 1 m, so divide by 100.",
+     "numeric": {
+      "value": 0.35,
+      "unit": "m"
+     },
+     "solution": [
+      {
+       "label": "What to do",
+       "text": "cm → m: divide by 100"
+      },
+      {
+       "label": "Calculate",
+       "text": "35 ÷ 100 = 0.35"
+      },
+      {
+       "label": "Unit",
+       "text": "0.35 m"
+      }
+     ]
+    },
+    {
+     "hint": "kilo means × 1000.",
+     "numeric": {
+      "value": 2400,
+      "unit": "W"
+     },
+     "solution": [
+      {
+       "label": "What to do",
+       "text": "kW → W: multiply by 1000"
+      },
+      {
+       "label": "Calculate",
+       "text": "2.4 × 1000 = 2400"
+      },
+      {
+       "label": "Unit",
+       "text": "2400 W"
+      }
+     ]
+    },
+    {
+     "hint": "There are 60 seconds in a minute.",
+     "numeric": {
+      "value": 180,
+      "unit": "s"
+     },
+     "solution": [
+      {
+       "label": "What to do",
+       "text": "minutes → s: multiply by 60"
+      },
+      {
+       "label": "Calculate",
+       "text": "3 × 60 = 180"
+      },
+      {
+       "label": "Unit",
+       "text": "180 s"
+      }
+     ]
+    },
+    {
+     "hint": "There are 1000 g in 1 kg.",
+     "numeric": {
+      "value": 0.75,
+      "unit": "kg"
+     },
+     "solution": [
+      {
+       "label": "What to do",
+       "text": "g → kg: divide by 1000"
+      },
+      {
+       "label": "Calculate",
+       "text": "750 ÷ 1000 = 0.75"
+      },
+      {
+       "label": "Unit",
+       "text": "0.75 kg"
+      }
+     ]
+    },
+    {
+     "hint": "milli means ÷ 1000. Then write the answer as a number between 1 and 10 × 10 to a power.",
+     "numeric": {
+      "value": 0.005,
+      "unit": "A"
+     },
+     "solution": [
+      {
+       "label": "What to do",
+       "text": "mA → A: divide by 1000"
+      },
+      {
+       "label": "Calculate",
+       "text": "5 ÷ 1000 = 0.005"
+      },
+      {
+       "label": "Standard form",
+       "text": "0.005 = 5 × 10⁻³"
+      },
+      {
+       "label": "Unit",
+       "text": "5 × 10⁻³ A"
+      }
+     ]
+    },
+    {
+     "hint": "mega means × 1 000 000.",
+     "numeric": {
+      "value": 4200000,
+      "unit": "J"
+     },
+     "solution": [
+      {
+       "label": "What to do",
+       "text": "MJ → J: multiply by 1 000 000"
+      },
+      {
+       "label": "Calculate",
+       "text": "4.2 × 1 000 000 = 4 200 000"
+      },
+      {
+       "label": "Standard form",
+       "text": "4.2 × 10⁶"
+      },
+      {
+       "label": "Unit",
+       "text": "4.2 × 10⁶ J"
+      }
+     ]
+    },
+    {
+     "hint": "nano means × 10⁻⁹. Type standard form as 6e-7.",
+     "numeric": {
+      "value": 6e-07,
+      "unit": "m"
+     },
+     "solution": [
+      {
+       "label": "What to do",
+       "text": "nm → m: multiply by 10⁻⁹"
+      },
+      {
+       "label": "Calculate",
+       "text": "600 × 10⁻⁹ = 0.0000006"
+      },
+      {
+       "label": "Standard form",
+       "text": "6.0 × 10⁻⁷"
+      },
+      {
+       "label": "Unit",
+       "text": "6.0 × 10⁻⁷ m"
+      }
+     ]
+    },
+    {
+     "hint": "There are 3600 seconds in an hour.",
+     "numeric": {
+      "value": 7200,
+      "unit": "s"
+     },
+     "solution": [
+      {
+       "label": "What to do",
+       "text": "hours → s: multiply by 3600"
+      },
+      {
+       "label": "Calculate",
+       "text": "2 × 3600 = 7200"
+      },
+      {
+       "label": "Unit",
+       "text": "7200 s"
+      }
+     ]
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Multiplying when you should divide, e.g. turning 35 cm into 3500 m.",
+     "avoid": "Sense-check: the same length in metres is a SMALLER number than in centimetres."
+    },
+    {
+     "mistake": "Converting values that are already in SI units, such as kg or m/s.",
+     "avoid": "Check the unit first. Only convert if it isn't already a standard unit."
+    }
+   ]
+  },
+  "2": {
+   "objective": "Use the equations sheet with the same six steps every time, so calculations feel routine.",
+   "objectives": [
+    "Find the right equation on the sheet",
+    "Substitute before you rearrange",
+    "Rearrange to find any quantity"
+   ],
+   "example": [
+    {
+     "label": "Identify the equation",
+     "text": "P = E ÷ t"
+    },
+    {
+     "label": "Convert units",
+     "text": "P = 2000 W and E = 600 000 J are already in SI units."
+    },
+    {
+     "label": "Substitute",
+     "text": "2000 = 600 000 ÷ t"
+    },
+    {
+     "label": "Rearrange",
+     "text": "t = 600 000 ÷ 2000"
+    },
+    {
+     "label": "Calculate",
+     "text": "600 000 ÷ 2000 = 300"
+    },
+    {
+     "label": "Unit",
+     "text": "300 s"
+    }
+   ],
+   "questions": [
+    {
+     "hint": "V = IR: multiply the current by the resistance.",
+     "numeric": {
+      "value": 6,
+      "unit": "V"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "V = IR"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in A and Ω."
+      },
+      {
+       "label": "Substitute",
+       "text": "V = 0.5 × 12"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "0.5 × 12 = 6"
+      },
+      {
+       "label": "Unit",
+       "text": "6 V"
+      }
+     ]
+    },
+    {
+     "hint": "Substitute: 12 = I × 4. Then divide both sides by 4.",
+     "numeric": {
+      "value": 3,
+      "unit": "A"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "V = IR"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in V and Ω."
+      },
+      {
+       "label": "Substitute",
+       "text": "12 = I × 4"
+      },
+      {
+       "label": "Rearrange",
+       "text": "I = 12 ÷ 4"
+      },
+      {
+       "label": "Calculate",
+       "text": "12 ÷ 4 = 3"
+      },
+      {
+       "label": "Unit",
+       "text": "3 A"
+      }
+     ]
+    },
+    {
+     "hint": "Multiply all three numbers together.",
+     "numeric": {
+      "value": 98,
+      "unit": "J"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "Ep = mgh"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in kg, N/kg and m."
+      },
+      {
+       "label": "Substitute",
+       "text": "Ep = 2 × 9.8 × 5"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "2 × 9.8 × 5 = 98"
+      },
+      {
+       "label": "Unit",
+       "text": "98 J"
+      }
+     ]
+    },
+    {
+     "hint": "Substitute: 490 = 10 × 9.8 × h. Then divide by 98.",
+     "numeric": {
+      "value": 5,
+      "unit": "m"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "Ep = mgh"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in J, kg and N/kg."
+      },
+      {
+       "label": "Substitute",
+       "text": "490 = 10 × 9.8 × h"
+      },
+      {
+       "label": "Rearrange",
+       "text": "h = 490 ÷ (10 × 9.8)"
+      },
+      {
+       "label": "Calculate",
+       "text": "490 ÷ 98 = 5"
+      },
+      {
+       "label": "Unit",
+       "text": "5 m"
+      }
+     ]
+    },
+    {
+     "hint": "Substitute, work out v², then take the square root.",
+     "numeric": {
+      "value": 10,
+      "unit": "m/s"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "Ek = ½mv²"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in J and kg."
+      },
+      {
+       "label": "Substitute",
+       "text": "400 = 0.5 × 8 × v²"
+      },
+      {
+       "label": "Rearrange",
+       "text": "v² = 400 ÷ (0.5 × 8) = 400 ÷ 4"
+      },
+      {
+       "label": "Calculate",
+       "text": "v² = 100, so v = √100 = 10"
+      },
+      {
+       "label": "Unit",
+       "text": "10 m/s"
+      }
+     ]
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Using an equation triangle and rearranging it the wrong way.",
+     "avoid": "Substitute into the equation exactly as it's written on the sheet, then rearrange."
+    },
+    {
+     "mistake": "Rounding part-way through a calculation.",
+     "avoid": "Keep the full number on your calculator and only round the final answer."
+    }
+   ]
+  },
+  "3": {
+   "objective": "Describe energy stores and transfers, and calculate kinetic energy, gravitational potential energy and work done.",
+   "objectives": [
+    "Name the energy stores and how energy moves between them",
+    "Calculate kinetic and gravitational potential energy",
+    "Calculate work done"
+   ],
+   "diagram": "falling-ball",
+   "example": [
+    {
+     "label": "Identify the equation",
+     "text": "Ep = mgh for the energy lost, then Ek = ½mv² for the speed."
+    },
+    {
+     "label": "Convert units",
+     "text": "m = 0.5 kg, h = 1.8 m, g = 9.8 N/kg. All already in SI units."
+    },
+    {
+     "label": "Substitute",
+     "text": "Ep = 0.5 × 9.8 × 1.8 = 8.82 J. All of it becomes kinetic energy: 8.82 = 0.5 × 0.5 × v²"
+    },
+    {
+     "label": "Rearrange",
+     "text": "v² = 8.82 ÷ (0.5 × 0.5) = 8.82 ÷ 0.25"
+    },
+    {
+     "label": "Calculate",
+     "text": "v² = 35.28, so v = √35.28 = 5.94"
+    },
+    {
+     "label": "Unit",
+     "text": "5.9 m/s"
+    }
+   ],
+   "questions": [
+    {
+     "hint": "Ek = ½mv². Square the speed first.",
+     "numeric": {
+      "value": 135000,
+      "unit": "J"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "Ek = ½mv²"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in kg and m/s."
+      },
+      {
+       "label": "Substitute",
+       "text": "Ek = 0.5 × 1200 × 15²"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "15² = 225; 0.5 × 1200 × 225 = 135 000"
+      },
+      {
+       "label": "Unit",
+       "text": "135 000 J"
+      }
+     ]
+    },
+    {
+     "hint": "Ep = mgh, with g = 9.8 N/kg.",
+     "numeric": {
+      "value": 14700,
+      "unit": "J"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "Ep = mgh"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in kg and m."
+      },
+      {
+       "label": "Substitute",
+       "text": "Ep = 60 × 9.8 × 25"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "60 × 9.8 × 25 = 14 700"
+      },
+      {
+       "label": "Unit",
+       "text": "14 700 J"
+      }
+     ]
+    },
+    {
+     "hint": "W = Fs: force × distance.",
+     "numeric": {
+      "value": 120,
+      "unit": "J"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "W = Fs"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in N and m."
+      },
+      {
+       "label": "Substitute",
+       "text": "W = 40 × 3"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "40 × 3 = 120"
+      },
+      {
+       "label": "Unit",
+       "text": "120 J"
+      }
+     ]
+    },
+    {
+     "hint": "Kinetic energy depends on v². What is 2²?"
+    },
+    {
+     "hint": "Start with the stretched bow. Where does the energy go when the arrow flies, and as it rises?"
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Writing kinetic energy as mass × speed, or forgetting the ½ or the square.",
+     "avoid": "Copy Ek = ½mv² from the sheet and square the speed before multiplying."
+    },
+    {
+     "mistake": "Only naming the energy stores.",
+     "avoid": "Say how the energy is transferred or changes from one store to another."
+    }
+   ]
+  },
+  "4": {
+   "objective": "Calculate the energy stored in a stretched spring and the power of a device.",
+   "objectives": [
+    "Find the extension of a spring",
+    "Calculate elastic potential energy",
+    "Calculate power from energy and time"
+   ],
+   "example": [
+    {
+     "label": "Identify the equation",
+     "text": "Ee = ½ke²"
+    },
+    {
+     "label": "Convert units",
+     "text": "e = 5 cm = 0.05 m"
+    },
+    {
+     "label": "Substitute",
+     "text": "Ee = 0.5 × 40 × 0.05²"
+    },
+    {
+     "label": "Rearrange",
+     "text": "Not needed."
+    },
+    {
+     "label": "Calculate",
+     "text": "0.05² = 0.0025; 0.5 × 40 × 0.0025 = 0.05"
+    },
+    {
+     "label": "Unit",
+     "text": "0.05 J"
+    }
+   ],
+   "questions": [
+    {
+     "hint": "Ee = ½ke². Square 0.1 first.",
+     "numeric": {
+      "value": 1,
+      "unit": "J"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "Ee = ½ke²"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in N/m and m."
+      },
+      {
+       "label": "Substitute",
+       "text": "Ee = 0.5 × 200 × 0.1²"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "0.1² = 0.01; 0.5 × 200 × 0.01 = 1"
+      },
+      {
+       "label": "Unit",
+       "text": "1 J"
+      }
+     ]
+    },
+    {
+     "hint": "Extension = 18 cm − 12 cm. Convert it to metres.",
+     "numeric": {
+      "value": 0.09,
+      "unit": "J"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "Ee = ½ke²"
+      },
+      {
+       "label": "Convert units",
+       "text": "e = 18 − 12 = 6 cm = 0.06 m"
+      },
+      {
+       "label": "Substitute",
+       "text": "Ee = 0.5 × 50 × 0.06²"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "0.06² = 0.0036; 0.5 × 50 × 0.0036 = 0.09"
+      },
+      {
+       "label": "Unit",
+       "text": "0.09 J"
+      }
+     ]
+    },
+    {
+     "hint": "Convert 2 minutes to seconds, then P = E ÷ t.",
+     "numeric": {
+      "value": 30,
+      "unit": "W"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "P = E/t"
+      },
+      {
+       "label": "Convert units",
+       "text": "t = 2 minutes = 120 s"
+      },
+      {
+       "label": "Substitute",
+       "text": "P = 3600 ÷ 120"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "3600 ÷ 120 = 30"
+      },
+      {
+       "label": "Unit",
+       "text": "30 W"
+      }
+     ]
+    },
+    {
+     "hint": "Convert kW → W and minutes → s. Then E = P × t.",
+     "numeric": {
+      "value": 900000,
+      "unit": "J"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "P = E/t"
+      },
+      {
+       "label": "Convert units",
+       "text": "P = 1.5 kW = 1500 W; t = 10 minutes = 600 s"
+      },
+      {
+       "label": "Substitute",
+       "text": "1500 = E ÷ 600"
+      },
+      {
+       "label": "Rearrange",
+       "text": "E = 1500 × 600"
+      },
+      {
+       "label": "Calculate",
+       "text": "1500 × 600 = 900 000"
+      },
+      {
+       "label": "Unit",
+       "text": "900 000 J"
+      }
+     ]
+    },
+    {
+     "hint": "Substitute, then e² = 2.5 ÷ 250. Square-root at the end.",
+     "numeric": {
+      "value": 0.1,
+      "unit": "m"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "Ee = ½ke²"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in J and N/m."
+      },
+      {
+       "label": "Substitute",
+       "text": "2.5 = 0.5 × 500 × e²"
+      },
+      {
+       "label": "Rearrange",
+       "text": "e² = 2.5 ÷ (0.5 × 500) = 2.5 ÷ 250"
+      },
+      {
+       "label": "Calculate",
+       "text": "e² = 0.01, so e = √0.01 = 0.1"
+      },
+      {
+       "label": "Unit",
+       "text": "0.1 m"
+      }
+     ]
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Using the spring's total length instead of its extension.",
+     "avoid": "Extension = new length − original length."
+    },
+    {
+     "mistake": "Forgetting to square the extension. This was the most common mistake in 2025.",
+     "avoid": "Work out e² first, then multiply."
+    },
+    {
+     "mistake": "Leaving minutes or kW unconverted.",
+     "avoid": "Convert to seconds and watts before you substitute."
+    }
+   ]
+  },
+  "5": {
+   "objective": "Calculate efficiency and explain how to reduce wasted energy.",
+   "objectives": [
+    "Calculate efficiency as a decimal or a percentage",
+    "Explain where wasted energy goes",
+    "Describe ways to reduce energy loss"
+   ],
+   "diagram": "sankey",
+   "example": [
+    {
+     "label": "Identify the equation",
+     "text": "efficiency = useful output ÷ total input"
+    },
+    {
+     "label": "Convert units",
+     "text": "Both in joules already."
+    },
+    {
+     "label": "Substitute",
+     "text": "efficiency = 350 ÷ 500"
+    },
+    {
+     "label": "Rearrange",
+     "text": "Not needed."
+    },
+    {
+     "label": "Calculate",
+     "text": "350 ÷ 500 = 0.7"
+    },
+    {
+     "label": "Unit",
+     "text": "No unit: 0.7, or 0.7 × 100 = 70%"
+    }
+   ],
+   "questions": [
+    {
+     "hint": "Useful ÷ total. Give it as a decimal.",
+     "numeric": {
+      "value": 0.2,
+      "alt": [
+       20
+      ],
+      "unit": "(decimal or %)"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "efficiency = useful output ÷ total input"
+      },
+      {
+       "label": "Convert units",
+       "text": "Both in joules."
+      },
+      {
+       "label": "Substitute",
+       "text": "efficiency = 12 ÷ 60"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "12 ÷ 60 = 0.2"
+      },
+      {
+       "label": "Unit",
+       "text": "0.2 (or 20%)"
+      }
+     ]
+    },
+    {
+     "hint": "Rearrange: useful = efficiency × total.",
+     "numeric": {
+      "value": 500,
+      "unit": "J"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "efficiency = useful output ÷ total input"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in joules."
+      },
+      {
+       "label": "Substitute",
+       "text": "0.25 = useful ÷ 2000"
+      },
+      {
+       "label": "Rearrange",
+       "text": "useful = 0.25 × 2000"
+      },
+      {
+       "label": "Calculate",
+       "text": "0.25 × 2000 = 500"
+      },
+      {
+       "label": "Unit",
+       "text": "500 J"
+      }
+     ]
+    },
+    {
+     "hint": "Use the same equation with power instead of energy.",
+     "numeric": {
+      "value": 0.9,
+      "alt": [
+       90
+      ],
+      "unit": "(decimal or %)"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "efficiency = useful power output ÷ total power input"
+      },
+      {
+       "label": "Convert units",
+       "text": "Both in watts."
+      },
+      {
+       "label": "Substitute",
+       "text": "efficiency = 1800 ÷ 2000"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "1800 ÷ 2000 = 0.9"
+      },
+      {
+       "label": "Unit",
+       "text": "0.9 (or 90%)"
+      }
+     ]
+    },
+    {
+     "hint": "What does lubrication reduce, and where would that wasted energy have gone?"
+    },
+    {
+     "hint": "Think about the roof, the walls and the windows."
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Putting the total input on top of the fraction.",
+     "avoid": "Useful goes on top. If your answer is bigger than 1, it's upside down."
+    },
+    {
+     "mistake": "Saying a device 'saves energy' or 'wastes no energy'.",
+     "avoid": "Say less energy is wasted (dissipated) to the surroundings."
+    }
+   ]
+  },
+  "7": {
+   "objective": "Use the words examiners expect for variables, errors and uncertainty in practical questions.",
+   "objectives": [
+    "Name independent, dependent and control variables",
+    "Tell random errors from systematic errors",
+    "Calculate a mean and an uncertainty"
+   ],
+   "questions": [
+    {
+     "hint": "Is the reading wrong by the same amount every time?"
+    },
+    {
+     "hint": "Dependent = what you measure. Controls = what you keep the same."
+    },
+    {
+     "hint": "Think about anomalies and random errors."
+    },
+    {
+     "hint": "Resolution is the smallest step on the scale.",
+     "numeric": {
+      "value": 1,
+      "unit": "°C"
+     },
+     "solution": [
+      {
+       "label": "What to do",
+       "text": "Find the smallest step on the scale: it is marked every 1 °C."
+      },
+      {
+       "label": "Answer",
+       "text": "1 °C"
+      }
+     ]
+    },
+    {
+     "hint": "Which reading doesn't fit? Leave it out, then find the mean of the rest.",
+     "numeric": {
+      "value": 4.37,
+      "unit": ""
+     },
+     "solution": [
+      {
+       "label": "Find the anomaly",
+       "text": "6.9 is much bigger than the others, so leave it out."
+      },
+      {
+       "label": "Add the rest",
+       "text": "4.2 + 4.5 + 4.4 = 13.1"
+      },
+      {
+       "label": "Divide",
+       "text": "13.1 ÷ 3 = 4.366…"
+      },
+      {
+       "label": "Answer",
+       "text": "4.37"
+      }
+     ]
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Writing 'human error' as a source of error.",
+     "avoid": "Name the actual error, such as reaction time or parallax."
+    },
+    {
+     "mistake": "Mixing up precision, accuracy and resolution.",
+     "avoid": "Accurate = close to the true value. Precise = repeat readings close together. Resolution = smallest change the instrument shows."
+    }
+   ]
+  },
+  "8": {
+   "objective": "Compare energy resources using reliability, environmental impact and whether they are renewable.",
+   "objectives": [
+    "Sort resources into renewable and non-renewable",
+    "Give an advantage and a disadvantage of each",
+    "Write a full 'compare' answer"
+   ],
+   "questions": [
+    {
+     "hint": "Which resources don't depend on the weather or daylight?"
+    },
+    {
+     "hint": "What does a wind turbine need to turn?"
+    },
+    {
+     "hint": "What gas does burning coal release?"
+    },
+    {
+     "hint": "What do plants take in while they grow?"
+    },
+    {
+     "hint": "Think about what happens to the valley behind the dam."
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Giving only differences in a 'compare' question.",
+     "avoid": "Give a similarity AND a difference, about both resources."
+    },
+    {
+     "mistake": "Writing just 'it will run out' for non-renewable.",
+     "avoid": "Say the resource is finite and can't be replaced as fast as it is used."
+    }
+   ]
+  },
+  "9": {
+   "objective": "Explain current, potential difference and resistance, and calculate with Q = It and V = IR.",
+   "objectives": [
+    "Draw and recognise circuit symbols",
+    "Calculate charge and current",
+    "Calculate potential difference and resistance"
+   ],
+   "diagram": "meters",
+   "example": [
+    {
+     "label": "Identify the equation",
+     "text": "V = IR"
+    },
+    {
+     "label": "Convert units",
+     "text": "I = 300 mA = 0.3 A"
+    },
+    {
+     "label": "Substitute",
+     "text": "12 = 0.3 × R"
+    },
+    {
+     "label": "Rearrange",
+     "text": "R = 12 ÷ 0.3"
+    },
+    {
+     "label": "Calculate",
+     "text": "12 ÷ 0.3 = 40"
+    },
+    {
+     "label": "Unit",
+     "text": "40 Ω"
+    }
+   ],
+   "questions": [
+    {
+     "hint": "Q = It: current × time.",
+     "numeric": {
+      "value": 60,
+      "unit": "C"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "Q = It"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in A and s."
+      },
+      {
+       "label": "Substitute",
+       "text": "Q = 2 × 30"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "2 × 30 = 60"
+      },
+      {
+       "label": "Unit",
+       "text": "60 C"
+      }
+     ]
+    },
+    {
+     "hint": "Convert 1 minute to seconds, then I = Q ÷ t.",
+     "numeric": {
+      "value": 2,
+      "unit": "A"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "Q = It"
+      },
+      {
+       "label": "Convert units",
+       "text": "t = 1 minute = 60 s"
+      },
+      {
+       "label": "Substitute",
+       "text": "120 = I × 60"
+      },
+      {
+       "label": "Rearrange",
+       "text": "I = 120 ÷ 60"
+      },
+      {
+       "label": "Calculate",
+       "text": "120 ÷ 60 = 2"
+      },
+      {
+       "label": "Unit",
+       "text": "2 A"
+      }
+     ]
+    },
+    {
+     "hint": "Substitute into V = IR, then divide by R.",
+     "numeric": {
+      "value": 0.5,
+      "unit": "A"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "V = IR"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in V and Ω."
+      },
+      {
+       "label": "Substitute",
+       "text": "9 = I × 18"
+      },
+      {
+       "label": "Rearrange",
+       "text": "I = 9 ÷ 18"
+      },
+      {
+       "label": "Calculate",
+       "text": "9 ÷ 18 = 0.5"
+      },
+      {
+       "label": "Unit",
+       "text": "0.5 A"
+      }
+     ]
+    },
+    {
+     "hint": "V = IR: multiply.",
+     "numeric": {
+      "value": 10,
+      "unit": "V"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "V = IR"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in A and Ω."
+      },
+      {
+       "label": "Substitute",
+       "text": "V = 0.2 × 50"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "0.2 × 50 = 10"
+      },
+      {
+       "label": "Unit",
+       "text": "10 V"
+      }
+     ]
+    },
+    {
+     "hint": "One meter goes in the loop with the component; the other goes across it."
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Leaving mA or minutes unconverted.",
+     "avoid": "Convert mA → A (÷ 1000) and minutes → seconds (× 60) before substituting."
+    },
+    {
+     "mistake": "Swapping the ammeter and voltmeter in a circuit diagram.",
+     "avoid": "Ammeter in series (in the loop). Voltmeter in parallel (across the component)."
+    }
+   ]
+  },
+  "10": {
+   "objective": "Use the rules for series and parallel circuits, and explain how adding resistors changes the total resistance.",
+   "objectives": [
+    "Apply the series rules for current, pd and resistance",
+    "Apply the parallel rules",
+    "Explain the resistance of a wire practical"
+   ],
+   "diagram": "series-parallel",
+   "example": [
+    {
+     "label": "Identify the equation",
+     "text": "R total = R1 + R2, then V = IR"
+    },
+    {
+     "label": "Convert units",
+     "text": "Already in Ω and V."
+    },
+    {
+     "label": "Substitute",
+     "text": "R total = 4 + 6 = 10 Ω, so 12 = I × 10"
+    },
+    {
+     "label": "Rearrange",
+     "text": "I = 12 ÷ 10"
+    },
+    {
+     "label": "Calculate",
+     "text": "12 ÷ 10 = 1.2"
+    },
+    {
+     "label": "Unit",
+     "text": "1.2 A"
+    }
+   ],
+   "questions": [
+    {
+     "hint": "In series, the supply pd is shared between components.",
+     "numeric": {
+      "value": 4,
+      "unit": "V"
+     },
+     "solution": [
+      {
+       "label": "Rule",
+       "text": "Series: the pds add up to the supply pd."
+      },
+      {
+       "label": "Calculate",
+       "text": "9 − 5 = 4"
+      },
+      {
+       "label": "Unit",
+       "text": "4 V"
+      }
+     ]
+    },
+    {
+     "hint": "In parallel, the branch currents add up to the total.",
+     "numeric": {
+      "value": 0.8,
+      "unit": "A"
+     },
+     "solution": [
+      {
+       "label": "Rule",
+       "text": "Parallel: total current = sum of the branch currents."
+      },
+      {
+       "label": "Calculate",
+       "text": "0.3 + 0.5 = 0.8"
+      },
+      {
+       "label": "Unit",
+       "text": "0.8 A"
+      }
+     ]
+    },
+    {
+     "hint": "In parallel, each branch gets the full supply pd.",
+     "numeric": {
+      "value": 6,
+      "unit": "V"
+     },
+     "solution": [
+      {
+       "label": "Rule",
+       "text": "Parallel: the pd across each branch equals the supply pd."
+      },
+      {
+       "label": "Answer",
+       "text": "6 V"
+      }
+     ]
+    },
+    {
+     "hint": "Think about how many paths the current has, and what happens to the total current."
+    },
+    {
+     "hint": "What happens to a wire's resistance when it gets hot?"
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Using the series rules in a parallel circuit, or the other way round. In 2025, over 80% scored zero on this.",
+     "avoid": "Check the circuit first: one loop = series; separate branches = parallel."
+    },
+    {
+     "mistake": "Writing just 'increase the resistance' when asked how to change the current.",
+     "avoid": "Say how: 'adjust the variable resistor'."
+    }
+   ]
+  },
+  "11": {
+   "objective": "Describe and explain the I–V graphs for a resistor, a filament lamp and a diode, and how LDRs and thermistors behave.",
+   "objectives": [
+    "Sketch the three I–V graphs",
+    "Explain why a filament lamp's resistance rises",
+    "Describe how LDRs and thermistors respond"
+   ],
+   "diagram": "iv-graphs",
+   "example": [
+    {
+     "label": "Identify the equation",
+     "text": "V = IR"
+    },
+    {
+     "label": "Convert units",
+     "text": "Already in V and A."
+    },
+    {
+     "label": "Substitute",
+     "text": "6 = 0.3 × R"
+    },
+    {
+     "label": "Rearrange",
+     "text": "R = 6 ÷ 0.3"
+    },
+    {
+     "label": "Calculate",
+     "text": "6 ÷ 0.3 = 20"
+    },
+    {
+     "label": "Unit",
+     "text": "20 Ω"
+    }
+   ],
+   "questions": [
+    {
+     "hint": "What happens to the filament as more current flows through it?"
+    },
+    {
+     "hint": "A diode only lets current flow one way."
+    },
+    {
+     "hint": "Thermistor: hotter means… lower or higher resistance?"
+    },
+    {
+     "hint": "What is the current when there is no pd?"
+    },
+    {
+     "hint": "LDR: less light means… lower or higher resistance?"
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Describing a diode vaguely.",
+     "avoid": "Use the key idea: current flows in one direction only."
+    },
+    {
+     "mistake": "Saying an LDR or thermistor 'gets more resistant' without the condition.",
+     "avoid": "Always link it: 'as light intensity increases…' or 'as temperature increases…'."
+    }
+   ]
+  },
+  "12": {
+   "objective": "Calculate electrical power and the energy transferred by appliances.",
+   "objectives": [
+    "Calculate power with P = VI and P = I²R",
+    "Calculate energy with E = Pt and E = QV",
+    "Combine two equations in a multi-step question"
+   ],
+   "example": [
+    {
+     "label": "Identify the equation",
+     "text": "P = VI, then E = Pt"
+    },
+    {
+     "label": "Convert units",
+     "text": "t = 2 minutes = 120 s"
+    },
+    {
+     "label": "Substitute",
+     "text": "P = 230 × 10 = 2300 W, then E = 2300 × 120"
+    },
+    {
+     "label": "Rearrange",
+     "text": "Not needed."
+    },
+    {
+     "label": "Calculate",
+     "text": "2300 × 120 = 276 000"
+    },
+    {
+     "label": "Unit",
+     "text": "276 000 J"
+    }
+   ],
+   "questions": [
+    {
+     "hint": "P = VI.",
+     "numeric": {
+      "value": 24,
+      "unit": "W"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "P = VI"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in V and A."
+      },
+      {
+       "label": "Substitute",
+       "text": "P = 12 × 2"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "12 × 2 = 24"
+      },
+      {
+       "label": "Unit",
+       "text": "24 W"
+      }
+     ]
+    },
+    {
+     "hint": "P = I²R. Square the current first.",
+     "numeric": {
+      "value": 36,
+      "unit": "W"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "P = I²R"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in A and Ω."
+      },
+      {
+       "label": "Substitute",
+       "text": "P = 3² × 4"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "9 × 4 = 36"
+      },
+      {
+       "label": "Unit",
+       "text": "36 W"
+      }
+     ]
+    },
+    {
+     "hint": "Convert kW → W and minutes → s, then E = Pt.",
+     "numeric": {
+      "value": 3600000,
+      "unit": "J"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "E = Pt"
+      },
+      {
+       "label": "Convert units",
+       "text": "P = 2 kW = 2000 W; t = 30 minutes = 1800 s"
+      },
+      {
+       "label": "Substitute",
+       "text": "E = 2000 × 1800"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "2000 × 1800 = 3 600 000"
+      },
+      {
+       "label": "Unit",
+       "text": "3 600 000 J"
+      }
+     ]
+    },
+    {
+     "hint": "E = QV.",
+     "numeric": {
+      "value": 300,
+      "unit": "J"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "E = QV"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in C and V."
+      },
+      {
+       "label": "Substitute",
+       "text": "E = 50 × 6"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "50 × 6 = 300"
+      },
+      {
+       "label": "Unit",
+       "text": "300 J"
+      }
+     ]
+    },
+    {
+     "hint": "Two steps: find E with E = Pt, then use E = QV to find Q.",
+     "numeric": {
+      "value": 1565,
+      "alt": [
+       1600,
+       1565.2
+      ],
+      "unit": "C"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "E = Pt, then E = QV"
+      },
+      {
+       "label": "Convert units",
+       "text": "P = 1.2 kW = 1200 W; t = 5 minutes = 300 s"
+      },
+      {
+       "label": "Substitute",
+       "text": "E = 1200 × 300 = 360 000 J, then 360 000 = Q × 230"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Q = 360 000 ÷ 230"
+      },
+      {
+       "label": "Calculate",
+       "text": "360 000 ÷ 230 = 1565.2…"
+      },
+      {
+       "label": "Unit",
+       "text": "1565 C (about 1600 C)"
+      }
+     ]
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Leaving kW or minutes unconverted.",
+     "avoid": "Convert kW → W (× 1000) and minutes → s (× 60) first."
+    },
+    {
+     "mistake": "Forgetting to square the current in P = I²R.",
+     "avoid": "Work out I² first, then multiply by R."
+    }
+   ]
+  },
+  "13": {
+   "objective": "Describe mains electricity, plug wiring and the National Grid, and explain why transmission uses a high pd.",
+   "objectives": [
+    "Describe ac and dc, and the UK mains supply",
+    "Explain the plug wires and how the earth wire and fuse keep you safe",
+    "Explain why the National Grid uses transformers"
+   ],
+   "example": [
+    {
+     "label": "Identify the equation",
+     "text": "Vp × Ip = Vs × Is"
+    },
+    {
+     "label": "Convert units",
+     "text": "Already in V and A."
+    },
+    {
+     "label": "Substitute",
+     "text": "25 000 × 800 = 400 000 × Is"
+    },
+    {
+     "label": "Rearrange",
+     "text": "Is = (25 000 × 800) ÷ 400 000"
+    },
+    {
+     "label": "Calculate",
+     "text": "20 000 000 ÷ 400 000 = 50"
+    },
+    {
+     "label": "Unit",
+     "text": "50 A"
+    }
+   ],
+   "questions": [
+    {
+     "hint": "Brown, blue or green-and-yellow? And what is UK mains pd?"
+    },
+    {
+     "hint": "How many times a second does UK mains change direction?",
+     "numeric": {
+      "value": 50,
+      "unit": "Hz"
+     },
+     "solution": [
+      {
+       "label": "Fact",
+       "text": "UK mains is ac at 230 V and 50 Hz."
+      },
+      {
+       "label": "Answer",
+       "text": "50 Hz"
+      }
+     ]
+    },
+    {
+     "hint": "What happens to the current when the pd goes up, and why does that matter for the cables?"
+    },
+    {
+     "hint": "Follow the current: live wire → metal case → earth wire → fuse."
+    },
+    {
+     "hint": "Think about the pd between the live wire and the ground you're standing on."
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Writing 'the case becomes live' as the danger.",
+     "avoid": "Finish the idea: touching it would give an electric shock."
+    },
+    {
+     "mistake": "Mixing up pd and current when explaining transformers.",
+     "avoid": "Step-up: pd goes UP, current goes DOWN, so less energy is lost heating the cables."
+    }
+   ]
+  },
+  "14": {
+   "objective": "Explain how objects become charged by friction, and describe electric fields and sparks.",
+   "objectives": [
+    "Explain charging by friction using electrons",
+    "Describe attraction and repulsion",
+    "Draw and describe electric field lines"
+   ],
+   "questions": [
+    {
+     "hint": "The rod gained electrons. What did the cloth lose?"
+    },
+    {
+     "hint": "Like charges… attract or repel?"
+    },
+    {
+     "hint": "Field lines point away from positive charges."
+    },
+    {
+     "hint": "Think about a large pd and the air gap."
+    },
+    {
+     "hint": "What could a spark do near fuel?"
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Saying protons or 'positive electrons' move.",
+     "avoid": "Only electrons move. Gaining electrons → negative; losing electrons → positive."
+    },
+    {
+     "mistake": "Drawing field lines like a bar magnet's, or too few lines.",
+     "avoid": "Draw at least three straight lines with arrows, pointing radially away from a positive charge."
+    }
+   ]
+  },
+  "15": {
+   "objective": "Calculate density, describe the three states of matter, and describe how to measure density.",
+   "objectives": [
+    "Calculate density with ρ = m/V",
+    "Describe particles in solids, liquids and gases",
+    "Describe the density practical, including irregular objects"
+   ],
+   "diagram": "particles",
+   "example": [
+    {
+     "label": "Identify the equation",
+     "text": "ρ = m/V"
+    },
+    {
+     "label": "Convert units",
+     "text": "Volume of stone = 72 − 50 = 22 cm³. Mass = 66 g. (Using g and cm³ together is fine.)"
+    },
+    {
+     "label": "Substitute",
+     "text": "ρ = 66 ÷ 22"
+    },
+    {
+     "label": "Rearrange",
+     "text": "Not needed."
+    },
+    {
+     "label": "Calculate",
+     "text": "66 ÷ 22 = 3"
+    },
+    {
+     "label": "Unit",
+     "text": "3 g/cm³, which is 3000 kg/m³"
+    }
+   ],
+   "questions": [
+    {
+     "hint": "ρ = m ÷ V.",
+     "numeric": {
+      "value": 800,
+      "unit": "kg/m³"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "ρ = m/V"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in kg and m³."
+      },
+      {
+       "label": "Substitute",
+       "text": "ρ = 2 ÷ 0.0025"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "2 ÷ 0.0025 = 800"
+      },
+      {
+       "label": "Unit",
+       "text": "800 kg/m³"
+      }
+     ]
+    },
+    {
+     "hint": "Volume = length × width × height. Then ρ = m ÷ V.",
+     "numeric": {
+      "value": 3,
+      "alt": [
+       3000
+      ],
+      "unit": "g/cm³ (or kg/m³)"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "ρ = m/V"
+      },
+      {
+       "label": "Convert units",
+       "text": "V = 5 × 4 × 2 = 40 cm³; m = 120 g"
+      },
+      {
+       "label": "Substitute",
+       "text": "ρ = 120 ÷ 40"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "120 ÷ 40 = 3"
+      },
+      {
+       "label": "Unit",
+       "text": "3 g/cm³ = 3000 kg/m³"
+      }
+     ]
+    },
+    {
+     "hint": "Rearrange: m = ρ × V.",
+     "numeric": {
+      "value": 460,
+      "unit": "kg"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "ρ = m/V"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in kg/m³ and m³."
+      },
+      {
+       "label": "Substitute",
+       "text": "920 = m ÷ 0.5"
+      },
+      {
+       "label": "Rearrange",
+       "text": "m = 920 × 0.5"
+      },
+      {
+       "label": "Calculate",
+       "text": "920 × 0.5 = 460"
+      },
+      {
+       "label": "Unit",
+       "text": "460 kg"
+      }
+     ]
+    },
+    {
+     "hint": "Think about the spacing of the particles."
+    },
+    {
+     "hint": "Could you measure the length, width and height of a lumpy stone?"
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Mixing g with m³, or kg with cm³.",
+     "avoid": "Use g with cm³ OR kg with m³. Multiply g/cm³ by 1000 to get kg/m³."
+    },
+    {
+     "mistake": "Writing the density equation the wrong way round. Some students did this in 2022.",
+     "avoid": "Copy it from the sheet: ρ = m/V (mass on top)."
+    }
+   ]
+  },
+  "16": {
+   "objective": "Explain internal energy and changes of state, and calculate with specific latent heat.",
+   "objectives": [
+    "Define internal energy",
+    "Calculate energy for a change of state with E = mL",
+    "Read and explain a heating curve"
+   ],
+   "diagram": "heating-curve",
+   "example": [
+    {
+     "label": "Identify the equation",
+     "text": "E = mL"
+    },
+    {
+     "label": "Convert units",
+     "text": "Already in kg and J/kg."
+    },
+    {
+     "label": "Substitute",
+     "text": "E = 0.5 × 334 000"
+    },
+    {
+     "label": "Rearrange",
+     "text": "Not needed."
+    },
+    {
+     "label": "Calculate",
+     "text": "0.5 × 334 000 = 167 000"
+    },
+    {
+     "label": "Unit",
+     "text": "167 000 J"
+    }
+   ],
+   "questions": [
+    {
+     "hint": "E = mL.",
+     "numeric": {
+      "value": 452000,
+      "unit": "J"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "E = mL"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in kg and J/kg."
+      },
+      {
+       "label": "Substitute",
+       "text": "E = 0.2 × 2 260 000"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "0.2 × 2 260 000 = 452 000"
+      },
+      {
+       "label": "Unit",
+       "text": "452 000 J"
+      }
+     ]
+    },
+    {
+     "hint": "Convert 3 kJ to J, then L = E ÷ m.",
+     "numeric": {
+      "value": 300000,
+      "unit": "J/kg"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "E = mL"
+      },
+      {
+       "label": "Convert units",
+       "text": "E = 3 kJ = 3000 J"
+      },
+      {
+       "label": "Substitute",
+       "text": "3000 = 0.01 × L"
+      },
+      {
+       "label": "Rearrange",
+       "text": "L = 3000 ÷ 0.01"
+      },
+      {
+       "label": "Calculate",
+       "text": "3000 ÷ 0.01 = 300 000"
+      },
+      {
+       "label": "Unit",
+       "text": "300 000 J/kg"
+      }
+     ]
+    },
+    {
+     "hint": "When ice melts, which store of the particles is changing: kinetic or potential?"
+    },
+    {
+     "hint": "One changes the temperature, the other changes the state."
+    },
+    {
+     "hint": "Is energy going into the water or out of it?"
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Saying the particles' kinetic energy changes while the substance melts or boils. In 2025, only 3% got full marks here.",
+     "avoid": "During a change of state, kinetic energy stays the same and POTENTIAL energy changes."
+    },
+    {
+     "mistake": "Mixing up specific heat capacity and specific latent heat.",
+     "avoid": "Temperature changing → E = mcΔθ. State changing (flat part of the graph) → E = mL."
+    }
+   ]
+  },
+  "17": {
+   "objective": "Explain gas pressure using particles, and use pV = constant at constant temperature.",
+   "objectives": [
+    "Explain pressure using collisions with the walls",
+    "Explain why heating a gas increases its pressure",
+    "Calculate with pV = constant"
+   ],
+   "example": [
+    {
+     "label": "Identify the equation",
+     "text": "p₁V₁ = p₂V₂ (pV = constant)"
+    },
+    {
+     "label": "Convert units",
+     "text": "Keep pressure in kPa on both sides; volumes in m³."
+    },
+    {
+     "label": "Substitute",
+     "text": "100 × 2 = p₂ × 0.5"
+    },
+    {
+     "label": "Rearrange",
+     "text": "p₂ = (100 × 2) ÷ 0.5"
+    },
+    {
+     "label": "Calculate",
+     "text": "200 ÷ 0.5 = 400"
+    },
+    {
+     "label": "Unit",
+     "text": "400 kPa"
+    }
+   ],
+   "questions": [
+    {
+     "hint": "Faster particles: how often do they hit the walls, and how hard?"
+    },
+    {
+     "hint": "p₁V₁ = p₂V₂. Substitute, then rearrange for V.",
+     "numeric": {
+      "value": 0.01,
+      "unit": "m³"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "p₁V₁ = p₂V₂"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in Pa and m³."
+      },
+      {
+       "label": "Substitute",
+       "text": "150 000 × 0.02 = 300 000 × V"
+      },
+      {
+       "label": "Rearrange",
+       "text": "V = (150 000 × 0.02) ÷ 300 000"
+      },
+      {
+       "label": "Calculate",
+       "text": "3000 ÷ 300 000 = 0.01"
+      },
+      {
+       "label": "Unit",
+       "text": "0.01 m³"
+      }
+     ]
+    },
+    {
+     "hint": "Pushing the pump handle does work on the gas."
+    },
+    {
+     "hint": "What do the particles keep hitting?"
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Writing 'more collisions between particles'.",
+     "avoid": "Say collisions with the container WALLS."
+    },
+    {
+     "mistake": "Giving only one reason for the pressure rise.",
+     "avoid": "Give both: collisions with the walls are more frequent AND each one has more force."
+    }
+   ]
+  },
+  "18": {
+   "objective": "Describe the structure of the atom and how the model developed, and write nuclear equations for alpha and beta decay.",
+   "objectives": [
+    "Describe protons, neutrons, electrons and isotopes",
+    "Explain what the alpha scattering experiment showed",
+    "Compare alpha, beta and gamma and write nuclear equations"
+   ],
+   "diagram": "penetration",
+   "example": [
+    {
+     "label": "What happens",
+     "text": "Alpha decay: the nucleus loses an alpha particle, ⁴₂He."
+    },
+    {
+     "label": "Mass number",
+     "text": "238 − 4 = 234"
+    },
+    {
+     "label": "Atomic number",
+     "text": "92 − 2 = 90, which is thorium (Th)"
+    },
+    {
+     "label": "Answer",
+     "text": "²³⁴₉₀Th"
+    }
+   ],
+   "questions": [
+    {
+     "hint": "Neutrons = mass number − number of protons.",
+     "numeric": {
+      "value": 8,
+      "unit": "neutrons"
+     },
+     "solution": [
+      {
+       "label": "Rule",
+       "text": "neutrons = mass number − protons"
+      },
+      {
+       "label": "Calculate",
+       "text": "14 − 6 = 8"
+      },
+      {
+       "label": "Answer",
+       "text": "8 neutrons"
+      }
+     ]
+    },
+    {
+     "hint": "What is most of the atom made of?"
+    },
+    {
+     "hint": "Alpha decay: mass number − 4, atomic number − 2."
+    },
+    {
+     "hint": "Beta decay: mass number stays the same, atomic number + 1."
+    },
+    {
+     "hint": "Which radiation is the biggest and most charged?"
+    },
+    {
+     "hint": "It's the same as a helium nucleus."
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Calling an alpha particle a helium atom.",
+     "avoid": "It's a helium NUCLEUS: 2 protons and 2 neutrons, with no electrons."
+    },
+    {
+     "mistake": "Getting beta decay backwards.",
+     "avoid": "In beta decay the atomic number goes UP by 1, and the mass number stays the same."
+    }
+   ]
+  },
+  "19": {
+   "objective": "Use half-life to work out activity and time, and explain contamination and irradiation.",
+   "objectives": [
+    "Define half-life and activity",
+    "Calculate using half-lives",
+    "Explain the difference between contamination and irradiation"
+   ],
+   "diagram": "half-life",
+   "example": [
+    {
+     "label": "Count the half-lives",
+     "text": "9 days ÷ 3 days = 3 half-lives"
+    },
+    {
+     "label": "Halve each time",
+     "text": "800 → 400 → 200 → 100"
+    },
+    {
+     "label": "Answer",
+     "text": "100 Bq"
+    }
+   ],
+   "questions": [
+    {
+     "hint": "Keep halving from 256 000 and count the steps.",
+     "numeric": {
+      "value": 4,
+      "unit": "half-lives"
+     },
+     "solution": [
+      {
+       "label": "Halve each time",
+       "text": "256 000 → 128 000 → 64 000 → 32 000 → 16 000"
+      },
+      {
+       "label": "Count",
+       "text": "That's 4 halvings."
+      },
+      {
+       "label": "Answer",
+       "text": "4 half-lives"
+      }
+     ]
+    },
+    {
+     "hint": "How many halvings from 1200 to 300? Then multiply by 5 years.",
+     "numeric": {
+      "value": 10,
+      "unit": "years"
+     },
+     "solution": [
+      {
+       "label": "Halve each time",
+       "text": "1200 → 600 → 300: 2 half-lives"
+      },
+      {
+       "label": "Calculate",
+       "text": "2 × 5 years = 10"
+      },
+      {
+       "label": "Answer",
+       "text": "10 years"
+      }
+     ]
+    },
+    {
+     "hint": "½ × ½ × ½ = ?"
+    },
+    {
+     "hint": "One is about radioactive atoms getting onto or into something; the other is about being exposed to radiation from outside."
+    },
+    {
+     "hint": "Which radiation is the most ionising, and how close is it to cells when inside the body?"
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Giving the number you divided by instead of what was asked, e.g. '16' instead of '4 half-lives'.",
+     "avoid": "Re-read the question and answer exactly what it asks."
+    },
+    {
+     "mistake": "Defining irradiation as just 'exposure'.",
+     "avoid": "Say: exposed to radiation from an outside source, and the object does NOT become radioactive."
+    }
+   ]
+  },
+  "20": {
+   "objective": "Describe background radiation, medical uses of radiation, and nuclear fission and fusion.",
+   "objectives": [
+    "Name sources of background radiation",
+    "Describe fission and a chain reaction",
+    "Define fusion and say where it happens"
+   ],
+   "diagram": "fission",
+   "questions": [
+    {
+     "hint": "Think about the ground, the air and space."
+    },
+    {
+     "hint": "What do the control rods soak up?"
+    },
+    {
+     "hint": "Two light nuclei…"
+    },
+    {
+     "hint": "Which radiation can get out of the body to a detector, and why would you want it to decay quickly?"
+    },
+    {
+     "hint": "What would happen if every fission caused more and more fissions?"
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Writing that two nuclei 'collide' as the definition of fusion.",
+     "avoid": "Say two LIGHT nuclei JOIN to form a heavier nucleus, releasing energy."
+    },
+    {
+     "mistake": "Mixing up fission and fusion.",
+     "avoid": "Fission = splitting a large nucleus. Fusion = joining light nuclei."
+    }
+   ]
+  },
+  "23": {
+   "objective": "Tell scalars from vectors, calculate weight, and find the resultant force on an object.",
+   "objectives": [
+    "Sort quantities into scalars and vectors",
+    "Calculate weight with W = mg",
+    "Find resultant forces and draw free-body diagrams"
+   ],
+   "diagram": "resultant",
+   "example": [
+    {
+     "label": "What to do",
+     "text": "The forces act in opposite directions, so subtract."
+    },
+    {
+     "label": "Calculate",
+     "text": "2000 − 1400 = 600"
+    },
+    {
+     "label": "Direction",
+     "text": "The bigger force is forwards."
+    },
+    {
+     "label": "Answer",
+     "text": "600 N forwards"
+    }
+   ],
+   "questions": [
+    {
+     "hint": "W = mg, with g = 9.8 N/kg.",
+     "numeric": {
+      "value": 637,
+      "unit": "N"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "W = mg"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in kg and N/kg."
+      },
+      {
+       "label": "Substitute",
+       "text": "W = 65 × 9.8"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "65 × 9.8 = 637"
+      },
+      {
+       "label": "Unit",
+       "text": "637 N"
+      }
+     ]
+    },
+    {
+     "hint": "Opposite directions: subtract, and give the direction.",
+     "numeric": {
+      "value": 18,
+      "unit": "N (to the right)"
+     },
+     "solution": [
+      {
+       "label": "What to do",
+       "text": "Opposite directions, so subtract."
+      },
+      {
+       "label": "Calculate",
+       "text": "30 − 12 = 18"
+      },
+      {
+       "label": "Answer",
+       "text": "18 N to the right"
+      }
+     ]
+    },
+    {
+     "hint": "Does it have a direction?"
+    },
+    {
+     "hint": "Which forces act without touching?"
+    },
+    {
+     "hint": "One force pulls down; one pushes up. What does a still book tell you about them?"
+    },
+    {
+     "hint": "Draw them tip to tail at right angles, or use Pythagoras.",
+     "numeric": {
+      "value": 5,
+      "unit": "N"
+     },
+     "solution": [
+      {
+       "label": "What to do",
+       "text": "The forces are at right angles: use Pythagoras (or a scale drawing)."
+      },
+      {
+       "label": "Substitute",
+       "text": "resultant = √(3² + 4²) = √(9 + 16)"
+      },
+      {
+       "label": "Calculate",
+       "text": "√25 = 5"
+      },
+      {
+       "label": "Unit",
+       "text": "5 N"
+      }
+     ]
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Untidy free-body diagrams: arrows not starting at the object, missing labels, or equal forces drawn different lengths.",
+     "avoid": "Draw each arrow from the object, label it, and make equal forces the same length."
+    },
+    {
+     "mistake": "Calling gravity a contact force, or labelling 'gravity' instead of 'weight'.",
+     "avoid": "Weight is the force due to gravity. It's a non-contact force."
+    }
+   ]
+  },
+  "24": {
+   "objective": "Calculate work done, use Hooke's law, and describe the spring practical.",
+   "objectives": [
+    "Tell elastic from inelastic deformation",
+    "Use F = ke and read a force–extension graph",
+    "Describe the force and extension practical"
+   ],
+   "diagram": "spring-graph",
+   "example": [
+    {
+     "label": "Identify the equation",
+     "text": "F = ke"
+    },
+    {
+     "label": "Convert units",
+     "text": "e = 4 cm = 0.04 m"
+    },
+    {
+     "label": "Substitute",
+     "text": "6 = k × 0.04"
+    },
+    {
+     "label": "Rearrange",
+     "text": "k = 6 ÷ 0.04"
+    },
+    {
+     "label": "Calculate",
+     "text": "6 ÷ 0.04 = 150"
+    },
+    {
+     "label": "Unit",
+     "text": "150 N/m"
+    }
+   ],
+   "questions": [
+    {
+     "hint": "Rearrange F = ke for e.",
+     "numeric": {
+      "value": 0.2,
+      "unit": "m"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "F = ke"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in N and N/m."
+      },
+      {
+       "label": "Substitute",
+       "text": "5 = 25 × e"
+      },
+      {
+       "label": "Rearrange",
+       "text": "e = 5 ÷ 25"
+      },
+      {
+       "label": "Calculate",
+       "text": "5 ÷ 25 = 0.2"
+      },
+      {
+       "label": "Unit",
+       "text": "0.2 m"
+      }
+     ]
+    },
+    {
+     "hint": "Does the object go back to its original shape?"
+    },
+    {
+     "hint": "What changes after the limit of proportionality?"
+    },
+    {
+     "hint": "W = Fs.",
+     "numeric": {
+      "value": 600,
+      "unit": "J"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "W = Fs"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in N and m."
+      },
+      {
+       "label": "Substitute",
+       "text": "W = 50 × 12"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "50 × 12 = 600"
+      },
+      {
+       "label": "Unit",
+       "text": "600 J"
+      }
+     ]
+    },
+    {
+     "hint": "Two things about the line: its shape, and where it starts."
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Writing 'as force increases, extension increases' for directly proportional.",
+     "avoid": "Say the graph is a straight line through the origin."
+    },
+    {
+     "mistake": "Using the length instead of the extension, or leaving it in cm.",
+     "avoid": "Extension = new length − original length, converted to metres."
+    }
+   ]
+  },
+  "25": {
+   "objective": "Calculate moments and pressure, and explain upthrust and floating.",
+   "objectives": [
+    "Calculate moments and use the principle of moments",
+    "Calculate pressure, including in liquids",
+    "Explain upthrust and why objects float"
+   ],
+   "diagram": "moments",
+   "example": [
+    {
+     "label": "Identify the equation",
+     "text": "M = Fd, and clockwise moment = anticlockwise moment"
+    },
+    {
+     "label": "Convert units",
+     "text": "Already in N and m."
+    },
+    {
+     "label": "Substitute",
+     "text": "300 × 2 = F × 1.5"
+    },
+    {
+     "label": "Rearrange",
+     "text": "F = (300 × 2) ÷ 1.5"
+    },
+    {
+     "label": "Calculate",
+     "text": "600 ÷ 1.5 = 400"
+    },
+    {
+     "label": "Unit",
+     "text": "400 N"
+    }
+   ],
+   "questions": [
+    {
+     "hint": "M = Fd.",
+     "numeric": {
+      "value": 6,
+      "unit": "N m"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "M = Fd"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in N and m."
+      },
+      {
+       "label": "Substitute",
+       "text": "M = 20 × 0.3"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "20 × 0.3 = 6"
+      },
+      {
+       "label": "Unit",
+       "text": "6 N m"
+      }
+     ]
+    },
+    {
+     "hint": "p = F ÷ A.",
+     "numeric": {
+      "value": 2000,
+      "unit": "Pa"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "p = F/A"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in N and m²."
+      },
+      {
+       "label": "Substitute",
+       "text": "p = 500 ÷ 0.25"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "500 ÷ 0.25 = 2000"
+      },
+      {
+       "label": "Unit",
+       "text": "2000 Pa"
+      }
+     ]
+    },
+    {
+     "hint": "p = hρg: multiply all three.",
+     "numeric": {
+      "value": 98000,
+      "unit": "Pa"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "p = hρg"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in m, kg/m³ and N/kg."
+      },
+      {
+       "label": "Substitute",
+       "text": "p = 10 × 1000 × 9.8"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "10 × 1000 × 9.8 = 98 000"
+      },
+      {
+       "label": "Unit",
+       "text": "98 000 Pa"
+      }
+     ]
+    },
+    {
+     "hint": "What changes when your hand is further from the nut?"
+    },
+    {
+     "hint": "Compare the upward and downward forces on the boat."
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Writing 'make the lever longer' as the way to increase a moment.",
+     "avoid": "Say: increase the force, OR apply it further from the pivot."
+    },
+    {
+     "mistake": "Leaving the area in cm².",
+     "avoid": "Convert cm² to m² (÷ 10 000) before calculating pressure."
+    }
+   ]
+  },
+  "26": {
+   "objective": "Use speed, velocity and acceleration, and read distance–time and velocity–time graphs.",
+   "objectives": [
+    "Tell distance from displacement and speed from velocity",
+    "Calculate speed and acceleration",
+    "Use gradients and areas on motion graphs"
+   ],
+   "diagram": "vt-graph",
+   "example": [
+    {
+     "label": "What to do",
+     "text": "Distance = area under the velocity–time graph. Here it's a triangle."
+    },
+    {
+     "label": "Substitute",
+     "text": "area = ½ × base × height = 0.5 × 6 × 12"
+    },
+    {
+     "label": "Calculate",
+     "text": "0.5 × 6 × 12 = 36"
+    },
+    {
+     "label": "Unit",
+     "text": "36 m"
+    }
+   ],
+   "questions": [
+    {
+     "hint": "Convert 4 minutes to seconds. Then speed = distance ÷ time.",
+     "numeric": {
+      "value": 5,
+      "unit": "m/s"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "s = vt"
+      },
+      {
+       "label": "Convert units",
+       "text": "t = 4 minutes = 240 s"
+      },
+      {
+       "label": "Substitute",
+       "text": "1200 = v × 240"
+      },
+      {
+       "label": "Rearrange",
+       "text": "v = 1200 ÷ 240"
+      },
+      {
+       "label": "Calculate",
+       "text": "1200 ÷ 240 = 5"
+      },
+      {
+       "label": "Unit",
+       "text": "5 m/s"
+      }
+     ]
+    },
+    {
+     "hint": "a = change in velocity ÷ time.",
+     "numeric": {
+      "value": 2.5,
+      "unit": "m/s²"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "a = Δv/t"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in m/s and s."
+      },
+      {
+       "label": "Substitute",
+       "text": "a = (20 − 0) ÷ 8"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "20 ÷ 8 = 2.5"
+      },
+      {
+       "label": "Unit",
+       "text": "2.5 m/s²"
+      }
+     ]
+    },
+    {
+     "hint": "The area under a flat line is a rectangle.",
+     "numeric": {
+      "value": 300,
+      "unit": "m"
+     },
+     "solution": [
+      {
+       "label": "What to do",
+       "text": "Distance = area under the graph: a rectangle."
+      },
+      {
+       "label": "Substitute",
+       "text": "area = 10 × 30"
+      },
+      {
+       "label": "Calculate",
+       "text": "10 × 30 = 300"
+      },
+      {
+       "label": "Unit",
+       "text": "300 m"
+      }
+     ]
+    },
+    {
+     "hint": "If the distance isn't changing, what is the object doing?"
+    },
+    {
+     "hint": "Displacement is the straight-line distance from start to finish."
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Using distance = speed × time when the speed is changing. In 2023, 34% scored zero this way.",
+     "avoid": "On a velocity–time graph, distance is the AREA under the line."
+    },
+    {
+     "mistake": "Misreading the scales on a graph.",
+     "avoid": "Check what one square is worth on each axis before reading a value."
+    }
+   ]
+  },
+  "27": {
+   "objective": "Use v² − u² = 2as, and explain how a falling object reaches terminal velocity.",
+   "objectives": [
+    "Calculate with v² − u² = 2as",
+    "Explain the forces on a falling object",
+    "Explain what a parachute does"
+   ],
+   "diagram": "skydiver",
+   "example": [
+    {
+     "label": "Identify the equation",
+     "text": "v² − u² = 2as"
+    },
+    {
+     "label": "Convert units",
+     "text": "u = 0 (starts from rest); a = 2 m/s²; s = 100 m"
+    },
+    {
+     "label": "Substitute",
+     "text": "v² − 0² = 2 × 2 × 100"
+    },
+    {
+     "label": "Rearrange",
+     "text": "v² = 400"
+    },
+    {
+     "label": "Calculate",
+     "text": "v = √400 = 20"
+    },
+    {
+     "label": "Unit",
+     "text": "20 m/s"
+    }
+   ],
+   "questions": [
+    {
+     "hint": "v = 0 at the end. Substitute, then solve for a. A deceleration comes out negative.",
+     "numeric": {
+      "value": -10,
+      "alt": [
+       10
+      ],
+      "unit": "m/s²"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "v² − u² = 2as"
+      },
+      {
+       "label": "Convert units",
+       "text": "u = 30 m/s, v = 0, s = 45 m"
+      },
+      {
+       "label": "Substitute",
+       "text": "0² − 30² = 2 × a × 45"
+      },
+      {
+       "label": "Rearrange",
+       "text": "a = −900 ÷ 90"
+      },
+      {
+       "label": "Calculate",
+       "text": "−900 ÷ 90 = −10"
+      },
+      {
+       "label": "Unit",
+       "text": "−10 m/s² (a deceleration of 10 m/s²)"
+      }
+     ]
+    },
+    {
+     "hint": "u = 0. v² = 2as, then square-root.",
+     "numeric": {
+      "value": 19.8,
+      "unit": "m/s"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "v² − u² = 2as"
+      },
+      {
+       "label": "Convert units",
+       "text": "u = 0, a = 9.8 m/s², s = 20 m"
+      },
+      {
+       "label": "Substitute",
+       "text": "v² − 0 = 2 × 9.8 × 20"
+      },
+      {
+       "label": "Rearrange",
+       "text": "v² = 392"
+      },
+      {
+       "label": "Calculate",
+       "text": "v = √392 = 19.8"
+      },
+      {
+       "label": "Unit",
+       "text": "19.8 m/s"
+      }
+     ]
+    },
+    {
+     "hint": "What happens to air resistance as speed increases? What happens to the resultant force?"
+    },
+    {
+     "hint": "A bigger area means… more or less air resistance?"
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Saying gravity increases as the object falls.",
+     "avoid": "Weight stays the same. It's the AIR RESISTANCE that increases with speed."
+    },
+    {
+     "mistake": "Forgetting the square root, or forgetting u² when the object didn't start from rest.",
+     "avoid": "Write v² = u² + 2as, then square-root at the end."
+    }
+   ]
+  },
+  "28": {
+   "objective": "Use Newton's three laws, including F = ma, and describe the acceleration practical.",
+   "objectives": [
+    "Explain Newton's first law and inertia",
+    "Calculate with F = ma",
+    "Apply Newton's third law to a situation"
+   ],
+   "example": [
+    {
+     "label": "Identify the equation",
+     "text": "F = ma"
+    },
+    {
+     "label": "Convert units",
+     "text": "Already in kg and m/s²."
+    },
+    {
+     "label": "Substitute",
+     "text": "F = 1500 × 2"
+    },
+    {
+     "label": "Rearrange",
+     "text": "Not needed."
+    },
+    {
+     "label": "Calculate",
+     "text": "1500 × 2 = 3000"
+    },
+    {
+     "label": "Unit",
+     "text": "3000 N"
+    }
+   ],
+   "questions": [
+    {
+     "hint": "Rearrange F = ma for a.",
+     "numeric": {
+      "value": 5,
+      "unit": "m/s²"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "F = ma"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in N and kg."
+      },
+      {
+       "label": "Substitute",
+       "text": "20 = 4 × a"
+      },
+      {
+       "label": "Rearrange",
+       "text": "a = 20 ÷ 4"
+      },
+      {
+       "label": "Calculate",
+       "text": "20 ÷ 4 = 5"
+      },
+      {
+       "label": "Unit",
+       "text": "5 m/s²"
+      }
+     ]
+    },
+    {
+     "hint": "Rearrange F = ma for m.",
+     "numeric": {
+      "value": 200,
+      "unit": "kg"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "F = ma"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in N and m/s²."
+      },
+      {
+       "label": "Substitute",
+       "text": "600 = m × 3"
+      },
+      {
+       "label": "Rearrange",
+       "text": "m = 600 ÷ 3"
+      },
+      {
+       "label": "Calculate",
+       "text": "600 ÷ 3 = 200"
+      },
+      {
+       "label": "Unit",
+       "text": "200 kg"
+      }
+     ]
+    },
+    {
+     "hint": "She pushes on the wall. What does the wall do back?"
+    },
+    {
+     "hint": "Steady speed means the resultant force is…?"
+    },
+    {
+     "hint": "What makes a test fair?"
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Stating Newton's law without applying it.",
+     "avoid": "Use the objects in the question: 'the wall pushes on the swimmer…'."
+    },
+    {
+     "mistake": "Thinking a third-law pair cancels out.",
+     "avoid": "The two forces act on DIFFERENT objects, so they don't cancel."
+    }
+   ]
+  },
+  "29": {
+   "objective": "Explain stopping distance, and use momentum to explain collisions and safety features.",
+   "objectives": [
+    "Explain the factors affecting thinking and braking distance",
+    "Calculate momentum and use conservation of momentum",
+    "Explain how airbags and crumple zones reduce force"
+   ],
+   "diagram": "stopping",
+   "example": [
+    {
+     "label": "Identify the equation",
+     "text": "p = mv; momentum before = momentum after"
+    },
+    {
+     "label": "Convert units",
+     "text": "Already in kg and m/s."
+    },
+    {
+     "label": "Substitute",
+     "text": "Before: 2 × 3 + 1 × 0 = 6 kg m/s. After: (2 + 1) × v = 3v"
+    },
+    {
+     "label": "Rearrange",
+     "text": "3v = 6, so v = 6 ÷ 3"
+    },
+    {
+     "label": "Calculate",
+     "text": "6 ÷ 3 = 2"
+    },
+    {
+     "label": "Unit",
+     "text": "2 m/s"
+    }
+   ],
+   "questions": [
+    {
+     "hint": "p = mv.",
+     "numeric": {
+      "value": 560,
+      "unit": "kg m/s"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "p = mv"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in kg and m/s."
+      },
+      {
+       "label": "Substitute",
+       "text": "p = 70 × 8"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "70 × 8 = 560"
+      },
+      {
+       "label": "Unit",
+       "text": "560 kg m/s"
+      }
+     ]
+    },
+    {
+     "hint": "F = mΔv ÷ Δt.",
+     "numeric": {
+      "value": 160,
+      "unit": "N"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "F = mΔv/Δt"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in kg, m/s and s."
+      },
+      {
+       "label": "Substitute",
+       "text": "F = 0.4 × 20 ÷ 0.05"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "8 ÷ 0.05 = 160"
+      },
+      {
+       "label": "Unit",
+       "text": "160 N"
+      }
+     ]
+    },
+    {
+     "hint": "Thinking distance = speed × reaction time.",
+     "numeric": {
+      "value": 12,
+      "unit": "m"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "s = vt"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in m/s and s."
+      },
+      {
+       "label": "Substitute",
+       "text": "s = 20 × 0.6"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "20 × 0.6 = 12"
+      },
+      {
+       "label": "Unit",
+       "text": "12 m"
+      }
+     ]
+    },
+    {
+     "hint": "Three links: time to stop → rate of change of momentum → force."
+    },
+    {
+     "hint": "Think about the car, the brakes and the road."
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Writing 'it cushions you' or just 'force is reduced'.",
+     "avoid": "Link all three: longer time to stop → smaller rate of change of momentum → smaller force."
+    },
+    {
+     "mistake": "Mixing up reaction time (a time) with thinking distance (a distance).",
+     "avoid": "Thinking distance = speed × reaction time."
+    }
+   ]
+  },
+  "30": {
+   "objective": "Describe transverse and longitudinal waves, and calculate with v = fλ and T = 1/f.",
+   "objectives": [
+    "Compare transverse and longitudinal waves",
+    "Label amplitude, wavelength, frequency and period",
+    "Calculate wave speed, wavelength and period"
+   ],
+   "diagram": "wave",
+   "example": [
+    {
+     "label": "Identify the equation",
+     "text": "v = fλ"
+    },
+    {
+     "label": "Convert units",
+     "text": "f = 100 MHz = 100 × 10⁶ Hz = 1 × 10⁸ Hz"
+    },
+    {
+     "label": "Substitute",
+     "text": "3 × 10⁸ = 1 × 10⁸ × λ"
+    },
+    {
+     "label": "Rearrange",
+     "text": "λ = 3 × 10⁸ ÷ 1 × 10⁸"
+    },
+    {
+     "label": "Calculate",
+     "text": "λ = 3"
+    },
+    {
+     "label": "Unit",
+     "text": "3 m"
+    }
+   ],
+   "questions": [
+    {
+     "hint": "v = fλ.",
+     "numeric": {
+      "value": 2,
+      "unit": "m/s"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "v = fλ"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in Hz and m."
+      },
+      {
+       "label": "Substitute",
+       "text": "v = 50 × 0.04"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "50 × 0.04 = 2"
+      },
+      {
+       "label": "Unit",
+       "text": "2 m/s"
+      }
+     ]
+    },
+    {
+     "hint": "Rearrange v = fλ for λ.",
+     "numeric": {
+      "value": 2,
+      "unit": "m"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "v = fλ"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in m/s and Hz."
+      },
+      {
+       "label": "Substitute",
+       "text": "340 = 170 × λ"
+      },
+      {
+       "label": "Rearrange",
+       "text": "λ = 340 ÷ 170"
+      },
+      {
+       "label": "Calculate",
+       "text": "340 ÷ 170 = 2"
+      },
+      {
+       "label": "Unit",
+       "text": "2 m"
+      }
+     ]
+    },
+    {
+     "hint": "T = 1 ÷ f.",
+     "numeric": {
+      "value": 0.25,
+      "unit": "s"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "T = 1/f"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in Hz."
+      },
+      {
+       "label": "Substitute",
+       "text": "T = 1 ÷ 4"
+      },
+      {
+       "label": "Rearrange",
+       "text": "Not needed."
+      },
+      {
+       "label": "Calculate",
+       "text": "1 ÷ 4 = 0.25"
+      },
+      {
+       "label": "Unit",
+       "text": "0.25 s"
+      }
+     ]
+    },
+    {
+     "hint": "What do both types do? How is the direction of oscillation different?"
+    },
+    {
+     "hint": "What do waves carry: water or energy?"
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Giving only differences in a 'compare' question. About half the students did this in 2025.",
+     "avoid": "Give a similarity (both transfer energy) AND a difference (direction of oscillation)."
+    },
+    {
+     "mistake": "Measuring half a wave as the wavelength.",
+     "avoid": "A wavelength is one FULL wave: peak to next peak, or trough to next trough."
+    }
+   ]
+  },
+  "31": {
+   "objective": "Describe reflection and refraction, use ultrasound echoes to find distances, and explain what seismic waves show about the Earth.",
+   "objectives": [
+    "Use the law of reflection and draw normals",
+    "Explain refraction using speed and wavefronts",
+    "Calculate distances from ultrasound echoes"
+   ],
+   "diagram": "refraction",
+   "example": [
+    {
+     "label": "Identify the equation",
+     "text": "s = vt, then halve it (the pulse goes there and back)"
+    },
+    {
+     "label": "Convert units",
+     "text": "Already in m/s and s."
+    },
+    {
+     "label": "Substitute",
+     "text": "s = 1500 × 0.0002 = 0.3 m there and back"
+    },
+    {
+     "label": "Rearrange",
+     "text": "Depth = 0.3 ÷ 2"
+    },
+    {
+     "label": "Calculate",
+     "text": "0.3 ÷ 2 = 0.15"
+    },
+    {
+     "label": "Unit",
+     "text": "0.15 m"
+    }
+   ],
+   "questions": [
+    {
+     "hint": "Angle of incidence = angle of reflection.",
+     "numeric": {
+      "value": 35,
+      "unit": "°"
+     },
+     "solution": [
+      {
+       "label": "Rule",
+       "text": "The angle of reflection equals the angle of incidence, both measured from the normal."
+      },
+      {
+       "label": "Answer",
+       "text": "35°"
+      }
+     ]
+    },
+    {
+     "hint": "Glass is denser than air. Does light speed up or slow down?"
+    },
+    {
+     "hint": "From the lowest to the highest frequency humans can hear."
+    },
+    {
+     "hint": "Which kind of wave can't travel through liquids?"
+    },
+    {
+     "hint": "Which end of the wavefront reaches the boundary first?"
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Measuring angles from the surface.",
+     "avoid": "Always measure angles from the NORMAL, the line at 90° to the surface."
+    },
+    {
+     "mistake": "Mixing up reflection and refraction. Many did in 2023.",
+     "avoid": "Reflection = bounces back. Refraction = changes direction as it enters a new material."
+    },
+    {
+     "mistake": "Writing 'human error' in practical questions.",
+     "avoid": "Name the problem, e.g. the ray was too wide to mark accurately."
+    }
+   ]
+  },
+  "32": {
+   "objective": "Put the electromagnetic spectrum in order, and describe the uses and dangers of each type of wave.",
+   "objectives": [
+    "List the EM spectrum in order",
+    "Match each type to a use",
+    "Explain the dangers of UV, X-rays and gamma"
+   ],
+   "diagram": "em-spectrum",
+   "questions": [
+    {
+     "hint": "They're at the left-hand end of the spectrum."
+    },
+    {
+     "hint": "The same waves your microwave oven uses."
+    },
+    {
+     "hint": "Think about skin and eyes."
+    },
+    {
+     "hint": "Dark and dull, or light and shiny?"
+    },
+    {
+     "hint": "What does bone do to X-rays that soft tissue doesn't?"
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Getting the order mixed up.",
+     "avoid": "Use a mnemonic: Raging Martians Invaded Venus Using X-ray Guns (radio → gamma)."
+    },
+    {
+     "mistake": "Confusing ultraviolet (UV) with ultrasound.",
+     "avoid": "UV is an electromagnetic wave. Ultrasound is a sound wave."
+    }
+   ]
+  },
+  "33": {
+   "objective": "Describe convex and concave lenses, real and virtual images, magnification and colour.",
+   "objectives": [
+    "Tell convex from concave lenses",
+    "Tell real from virtual images, and calculate magnification",
+    "Explain why objects look coloured"
+   ],
+   "diagram": "lens",
+   "example": [
+    {
+     "label": "Identify the equation",
+     "text": "magnification = image height ÷ object height"
+    },
+    {
+     "label": "Convert units",
+     "text": "Both in cm, so no conversion needed."
+    },
+    {
+     "label": "Substitute",
+     "text": "magnification = 6 ÷ 2"
+    },
+    {
+     "label": "Rearrange",
+     "text": "Not needed."
+    },
+    {
+     "label": "Calculate",
+     "text": "6 ÷ 2 = 3"
+    },
+    {
+     "label": "Unit",
+     "text": "3 (no unit)"
+    }
+   ],
+   "questions": [
+    {
+     "hint": "Can you put it on a screen?"
+    },
+    {
+     "hint": "Which lens makes things look bigger when you hold it close?"
+    },
+    {
+     "hint": "Which colour does it reflect, and what happens to the others?"
+    },
+    {
+     "hint": "Is there any red light for it to reflect?"
+    },
+    {
+     "hint": "Concave lenses spread light out."
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Writing 'not real' or 'fake'.",
+     "avoid": "Use the word 'virtual'."
+    },
+    {
+     "mistake": "Untidy ray diagrams.",
+     "avoid": "Use a ruler and put an arrow on every ray."
+    }
+   ]
+  },
+  "34": {
+   "objective": "Describe magnetic fields and electromagnets, and use the motor effect and F = BIl.",
+   "objectives": [
+    "Describe magnetic fields and induced magnets",
+    "Explain how an electromagnet works",
+    "Use Fleming's left-hand rule and F = BIl"
+   ],
+   "diagram": "magnet-field",
+   "example": [
+    {
+     "label": "Identify the equation",
+     "text": "F = BIl"
+    },
+    {
+     "label": "Convert units",
+     "text": "Already in T, A and m."
+    },
+    {
+     "label": "Substitute",
+     "text": "F = 0.2 × 3 × 0.5"
+    },
+    {
+     "label": "Rearrange",
+     "text": "Not needed."
+    },
+    {
+     "label": "Calculate",
+     "text": "0.2 × 3 × 0.5 = 0.3"
+    },
+    {
+     "label": "Unit",
+     "text": "0.3 N"
+    }
+   ],
+   "questions": [
+    {
+     "hint": "Rearrange F = BIl for B.",
+     "numeric": {
+      "value": 0.3,
+      "unit": "T"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "F = BIl"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in N, A and m."
+      },
+      {
+       "label": "Substitute",
+       "text": "0.06 = B × 2 × 0.1"
+      },
+      {
+       "label": "Rearrange",
+       "text": "B = 0.06 ÷ (2 × 0.1)"
+      },
+      {
+       "label": "Calculate",
+       "text": "0.06 ÷ 0.2 = 0.3"
+      },
+      {
+       "label": "Unit",
+       "text": "0.3 T"
+      }
+     ]
+    },
+    {
+     "hint": "Think about the current, the coil and what's inside it."
+    },
+    {
+     "hint": "It's only a magnet while it's in a magnetic field."
+    },
+    {
+     "hint": "What swaps the current every half turn?"
+    },
+    {
+     "hint": "The same things that make an electromagnet stronger."
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Mixing up motors and generators.",
+     "avoid": "Motor: current in → movement out. Generator: movement in → current out."
+    },
+    {
+     "mistake": "Writing 'bigger magnet'.",
+     "avoid": "Say 'stronger magnet'."
+    }
+   ]
+  },
+  "35": {
+   "objective": "Explain the generator effect, and how alternators, dynamos, microphones and transformers work.",
+   "objectives": [
+    "Explain how a pd is induced",
+    "Compare alternators and dynamos",
+    "Calculate with the transformer equations"
+   ],
+   "diagram": "transformer",
+   "example": [
+    {
+     "label": "Identify the equation",
+     "text": "Vp/Vs = np/ns"
+    },
+    {
+     "label": "Convert units",
+     "text": "Already in V and turns."
+    },
+    {
+     "label": "Substitute",
+     "text": "12 ÷ Vs = 200 ÷ 1000"
+    },
+    {
+     "label": "Rearrange",
+     "text": "Vs = 12 × 1000 ÷ 200"
+    },
+    {
+     "label": "Calculate",
+     "text": "12 000 ÷ 200 = 60"
+    },
+    {
+     "label": "Unit",
+     "text": "60 V"
+    }
+   ],
+   "questions": [
+    {
+     "hint": "Vp/Vs = np/ns. Rearrange for ns.",
+     "numeric": {
+      "value": 100,
+      "unit": "turns"
+     },
+     "solution": [
+      {
+       "label": "Identify the equation",
+       "text": "Vp/Vs = np/ns"
+      },
+      {
+       "label": "Convert units",
+       "text": "Already in V and turns."
+      },
+      {
+       "label": "Substitute",
+       "text": "230 ÷ 11.5 = 2000 ÷ ns"
+      },
+      {
+       "label": "Rearrange",
+       "text": "ns = 2000 × 11.5 ÷ 230"
+      },
+      {
+       "label": "Calculate",
+       "text": "23 000 ÷ 230 = 100"
+      },
+      {
+       "label": "Unit",
+       "text": "100 turns"
+      }
+     ]
+    },
+    {
+     "hint": "It's about how easily iron is magnetised, not conducting electricity."
+    },
+    {
+     "hint": "For a pd to be induced, the magnetic field has to be…?"
+    },
+    {
+     "hint": "Speed, magnet strength and number of turns."
+    },
+    {
+     "hint": "Slip rings or a split-ring commutator?"
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Trying to learn every detail of this topic. In 2023 only 2% got full marks explaining a dynamo.",
+     "avoid": "Learn the basics well and move on: changing field → induced pd; more speed, field or turns → bigger pd."
+    },
+    {
+     "mistake": "Saying a pd is 'created' or 'made'.",
+     "avoid": "Say a pd is INDUCED."
+    }
+   ]
+  },
+  "36": {
+   "objective": "Describe the solar system and the life cycle of stars, explain orbits, and use red-shift as evidence for the Big Bang.",
+   "objectives": [
+    "Describe the life cycle of a star",
+    "Explain why an orbiting object is accelerating",
+    "Explain red-shift and the Big Bang"
+   ],
+   "diagram": "star-life",
+   "example": [
+    {
+     "label": "Point 1",
+     "text": "The satellite's direction keeps changing."
+    },
+    {
+     "label": "Point 2",
+     "text": "Velocity is a vector, so a change of direction is a change of velocity."
+    },
+    {
+     "label": "Point 3",
+     "text": "A changing velocity means it is accelerating, towards the Earth, because of gravity."
+    }
+   ],
+   "questions": [
+    {
+     "hint": "Start with a nebula. A Sun-sized star doesn't become a supernova."
+    },
+    {
+     "hint": "Two forces: one pulling in, one pushing out."
+    },
+    {
+     "hint": "Fusion in stars only goes up to iron."
+    },
+    {
+     "hint": "Is the observed wavelength longer or shorter? What does that tell us about the galaxies?"
+    },
+    {
+     "hint": "If galaxies are moving apart now, what was the universe like long ago?"
+    }
+   ],
+   "watch": [
+    {
+     "mistake": "Saying galaxies give out longer wavelengths. Only 6% got full marks on red-shift in 2023.",
+     "avoid": "Say the OBSERVED wavelength is longer because the galaxy is moving away."
+    },
+    {
+     "mistake": "Listing the stages of a star's life without reasons.",
+     "avoid": "Say why it changes stage, e.g. it runs out of hydrogen, or forces become unbalanced."
+    }
+   ]
+  }
+ },
+ "vocab": {
+  "Specific heat capacity": {
+   "formal": "The amount of energy required to raise the temperature of one kilogram of a substance by one degree Celsius.",
+   "example": "Water: 4200 J/kg °C. So 1 kg of water needs 4200 J to warm up by 1 °C.",
+   "visual": "block"
+  },
+  "Δθ (delta theta)": {
+   "formal": "The change in temperature, in °C.",
+   "example": "Heated from 20 °C to 70 °C: Δθ = 70 − 20 = 50 °C.",
+   "visual": "thermo"
+  }
+ },
+ "equations": [
+  {
+   "eq": "Ek = ½mv²",
+   "name": "Kinetic energy",
+   "sym": [
+    [
+     "Ek",
+     "kinetic energy",
+     "J"
+    ],
+    [
+     "m",
+     "mass",
+     "kg"
+    ],
+    [
+     "v",
+     "speed",
+     "m/s"
+    ]
+   ],
+   "sessions": [
+    3
+   ]
+  },
+  {
+   "eq": "Ep = mgh",
+   "name": "Gravitational potential energy",
+   "sym": [
+    [
+     "Ep",
+     "gravitational potential energy",
+     "J"
+    ],
+    [
+     "m",
+     "mass",
+     "kg"
+    ],
+    [
+     "g",
+     "gravitational field strength",
+     "N/kg"
+    ],
+    [
+     "h",
+     "height",
+     "m"
+    ]
+   ],
+   "sessions": [
+    3
+   ]
+  },
+  {
+   "eq": "W = Fs",
+   "name": "Work done",
+   "sym": [
+    [
+     "W",
+     "work done",
+     "J"
+    ],
+    [
+     "F",
+     "force",
+     "N"
+    ],
+    [
+     "s",
+     "distance moved along the line of the force",
+     "m"
+    ]
+   ],
+   "sessions": [
+    3,
+    24
+   ]
+  },
+  {
+   "eq": "Ee = ½ke²",
+   "name": "Elastic potential energy",
+   "sym": [
+    [
+     "Ee",
+     "elastic potential energy",
+     "J"
+    ],
+    [
+     "k",
+     "spring constant",
+     "N/m"
+    ],
+    [
+     "e",
+     "extension",
+     "m"
+    ]
+   ],
+   "sessions": [
+    4
+   ]
+  },
+  {
+   "eq": "P = E/t",
+   "name": "Power (energy)",
+   "sym": [
+    [
+     "P",
+     "power",
+     "W"
+    ],
+    [
+     "E",
+     "energy transferred",
+     "J"
+    ],
+    [
+     "t",
+     "time",
+     "s"
+    ]
+   ],
+   "sessions": [
+    4
+   ]
+  },
+  {
+   "eq": "P = W/t",
+   "name": "Power (work)",
+   "sym": [
+    [
+     "P",
+     "power",
+     "W"
+    ],
+    [
+     "W",
+     "work done",
+     "J"
+    ],
+    [
+     "t",
+     "time",
+     "s"
+    ]
+   ],
+   "sessions": [
+    4
+   ]
+  },
+  {
+   "eq": "efficiency = useful output ÷ total input",
+   "name": "Efficiency",
+   "sym": [
+    [
+     "useful output",
+     "useful energy (or power) out",
+     "J (or W)"
+    ],
+    [
+     "total input",
+     "total energy (or power) in",
+     "J (or W)"
+    ]
+   ],
+   "note": "Efficiency has no unit. Multiply by 100 for a percentage.",
+   "sessions": [
+    5
+   ]
+  },
+  {
+   "eq": "E = mcΔθ",
+   "name": "Specific heat capacity",
+   "sym": [
+    [
+     "ΔE",
+     "change in thermal energy",
+     "J"
+    ],
+    [
+     "m",
+     "mass",
+     "kg"
+    ],
+    [
+     "c",
+     "specific heat capacity",
+     "J/kg °C"
+    ],
+    [
+     "Δθ",
+     "temperature change",
+     "°C"
+    ]
+   ],
+   "example": "2 kg of water heated from 20 °C to 70 °C: ΔE = 2 × 4200 × 50 = 420 000 J",
+   "mistake": "Using the final temperature instead of the temperature change.",
+   "sessions": [
+    6,
+    16
+   ]
+  },
+  {
+   "eq": "Q = It",
+   "name": "Charge",
+   "sym": [
+    [
+     "Q",
+     "charge",
+     "C"
+    ],
+    [
+     "I",
+     "current",
+     "A"
+    ],
+    [
+     "t",
+     "time",
+     "s"
+    ]
+   ],
+   "sessions": [
+    9
+   ]
+  },
+  {
+   "eq": "V = IR",
+   "name": "Potential difference",
+   "sym": [
+    [
+     "V",
+     "potential difference",
+     "V"
+    ],
+    [
+     "I",
+     "current",
+     "A"
+    ],
+    [
+     "R",
+     "resistance",
+     "Ω"
+    ]
+   ],
+   "sessions": [
+    9,
+    11
+   ]
+  },
+  {
+   "eq": "R total = R1 + R2 (series)",
+   "name": "Resistors in series",
+   "sym": [
+    [
+     "R total",
+     "total resistance",
+     "Ω"
+    ],
+    [
+     "R1, R2",
+     "each resistance",
+     "Ω"
+    ]
+   ],
+   "sessions": [
+    10
+   ]
+  },
+  {
+   "eq": "P = VI",
+   "name": "Electrical power",
+   "sym": [
+    [
+     "P",
+     "power",
+     "W"
+    ],
+    [
+     "V",
+     "potential difference",
+     "V"
+    ],
+    [
+     "I",
+     "current",
+     "A"
+    ]
+   ],
+   "sessions": [
+    12
+   ]
+  },
+  {
+   "eq": "P = I²R",
+   "name": "Electrical power (resistance)",
+   "sym": [
+    [
+     "P",
+     "power",
+     "W"
+    ],
+    [
+     "I",
+     "current",
+     "A"
+    ],
+    [
+     "R",
+     "resistance",
+     "Ω"
+    ]
+   ],
+   "sessions": [
+    12
+   ]
+  },
+  {
+   "eq": "E = Pt",
+   "name": "Energy from power",
+   "sym": [
+    [
+     "E",
+     "energy transferred",
+     "J"
+    ],
+    [
+     "P",
+     "power",
+     "W"
+    ],
+    [
+     "t",
+     "time",
+     "s"
+    ]
+   ],
+   "sessions": [
+    12
+   ]
+  },
+  {
+   "eq": "E = QV",
+   "name": "Energy from charge",
+   "sym": [
+    [
+     "E",
+     "energy transferred",
+     "J"
+    ],
+    [
+     "Q",
+     "charge",
+     "C"
+    ],
+    [
+     "V",
+     "potential difference",
+     "V"
+    ]
+   ],
+   "sessions": [
+    12
+   ]
+  },
+  {
+   "eq": "Vp × Ip = Vs × Is",
+   "name": "Transformer power",
+   "sym": [
+    [
+     "Vp",
+     "pd across the primary coil",
+     "V"
+    ],
+    [
+     "Ip",
+     "current in the primary coil",
+     "A"
+    ],
+    [
+     "Vs",
+     "pd across the secondary coil",
+     "V"
+    ],
+    [
+     "Is",
+     "current in the secondary coil",
+     "A"
+    ]
+   ],
+   "sessions": [
+    13
+   ]
+  },
+  {
+   "eq": "ρ = m/V",
+   "name": "Density",
+   "sym": [
+    [
+     "ρ",
+     "density",
+     "kg/m³"
+    ],
+    [
+     "m",
+     "mass",
+     "kg"
+    ],
+    [
+     "V",
+     "volume",
+     "m³"
+    ]
+   ],
+   "sessions": [
+    15
+   ]
+  },
+  {
+   "eq": "E = mL",
+   "name": "Specific latent heat",
+   "sym": [
+    [
+     "E",
+     "energy for a change of state",
+     "J"
+    ],
+    [
+     "m",
+     "mass",
+     "kg"
+    ],
+    [
+     "L",
+     "specific latent heat",
+     "J/kg"
+    ]
+   ],
+   "sessions": [
+    16
+   ]
+  },
+  {
+   "eq": "pV = constant",
+   "name": "Gas pressure and volume",
+   "sym": [
+    [
+     "p",
+     "pressure",
+     "Pa"
+    ],
+    [
+     "V",
+     "volume",
+     "m³"
+    ]
+   ],
+   "note": "Only at constant temperature, for a fixed mass of gas.",
+   "sessions": [
+    17
+   ]
+  },
+  {
+   "eq": "W = mg",
+   "name": "Weight",
+   "sym": [
+    [
+     "W",
+     "weight",
+     "N"
+    ],
+    [
+     "m",
+     "mass",
+     "kg"
+    ],
+    [
+     "g",
+     "gravitational field strength",
+     "N/kg"
+    ]
+   ],
+   "sessions": [
+    23
+   ]
+  },
+  {
+   "eq": "F = ke",
+   "name": "Hooke's law",
+   "sym": [
+    [
+     "F",
+     "force",
+     "N"
+    ],
+    [
+     "k",
+     "spring constant",
+     "N/m"
+    ],
+    [
+     "e",
+     "extension",
+     "m"
+    ]
+   ],
+   "sessions": [
+    24
+   ]
+  },
+  {
+   "eq": "M = Fd",
+   "name": "Moment",
+   "sym": [
+    [
+     "M",
+     "moment",
+     "N m"
+    ],
+    [
+     "F",
+     "force",
+     "N"
+    ],
+    [
+     "d",
+     "perpendicular distance from the pivot",
+     "m"
+    ]
+   ],
+   "sessions": [
+    25
+   ]
+  },
+  {
+   "eq": "p = F/A",
+   "name": "Pressure",
+   "sym": [
+    [
+     "p",
+     "pressure",
+     "Pa"
+    ],
+    [
+     "F",
+     "force",
+     "N"
+    ],
+    [
+     "A",
+     "area",
+     "m²"
+    ]
+   ],
+   "sessions": [
+    25
+   ]
+  },
+  {
+   "eq": "p = hρg",
+   "name": "Pressure in a liquid",
+   "sym": [
+    [
+     "p",
+     "pressure",
+     "Pa"
+    ],
+    [
+     "h",
+     "depth",
+     "m"
+    ],
+    [
+     "ρ",
+     "density",
+     "kg/m³"
+    ],
+    [
+     "g",
+     "gravitational field strength",
+     "N/kg"
+    ]
+   ],
+   "sessions": [
+    25
+   ]
+  },
+  {
+   "eq": "s = vt",
+   "name": "Distance travelled",
+   "sym": [
+    [
+     "s",
+     "distance",
+     "m"
+    ],
+    [
+     "v",
+     "speed",
+     "m/s"
+    ],
+    [
+     "t",
+     "time",
+     "s"
+    ]
+   ],
+   "sessions": [
+    26
+   ]
+  },
+  {
+   "eq": "a = Δv/t",
+   "name": "Acceleration",
+   "sym": [
+    [
+     "a",
+     "acceleration",
+     "m/s²"
+    ],
+    [
+     "Δv",
+     "change in velocity",
+     "m/s"
+    ],
+    [
+     "t",
+     "time",
+     "s"
+    ]
+   ],
+   "sessions": [
+    26
+   ]
+  },
+  {
+   "eq": "v² − u² = 2as",
+   "name": "Uniform acceleration",
+   "sym": [
+    [
+     "v",
+     "final velocity",
+     "m/s"
+    ],
+    [
+     "u",
+     "initial velocity",
+     "m/s"
+    ],
+    [
+     "a",
+     "acceleration",
+     "m/s²"
+    ],
+    [
+     "s",
+     "distance",
+     "m"
+    ]
+   ],
+   "sessions": [
+    27
+   ]
+  },
+  {
+   "eq": "F = ma",
+   "name": "Newton's second law",
+   "sym": [
+    [
+     "F",
+     "resultant force",
+     "N"
+    ],
+    [
+     "m",
+     "mass",
+     "kg"
+    ],
+    [
+     "a",
+     "acceleration",
+     "m/s²"
+    ]
+   ],
+   "sessions": [
+    28
+   ]
+  },
+  {
+   "eq": "p = mv",
+   "name": "Momentum",
+   "sym": [
+    [
+     "p",
+     "momentum",
+     "kg m/s"
+    ],
+    [
+     "m",
+     "mass",
+     "kg"
+    ],
+    [
+     "v",
+     "velocity",
+     "m/s"
+    ]
+   ],
+   "sessions": [
+    29
+   ]
+  },
+  {
+   "eq": "F = mΔv/Δt",
+   "name": "Force and momentum",
+   "sym": [
+    [
+     "F",
+     "force",
+     "N"
+    ],
+    [
+     "m",
+     "mass",
+     "kg"
+    ],
+    [
+     "Δv",
+     "change in velocity",
+     "m/s"
+    ],
+    [
+     "Δt",
+     "time taken",
+     "s"
+    ]
+   ],
+   "sessions": [
+    29
+   ]
+  },
+  {
+   "eq": "v = fλ",
+   "name": "Wave speed",
+   "sym": [
+    [
+     "v",
+     "wave speed",
+     "m/s"
+    ],
+    [
+     "f",
+     "frequency",
+     "Hz"
+    ],
+    [
+     "λ",
+     "wavelength",
+     "m"
+    ]
+   ],
+   "sessions": [
+    30,
+    32
+   ]
+  },
+  {
+   "eq": "T = 1/f",
+   "name": "Period",
+   "sym": [
+    [
+     "T",
+     "period",
+     "s"
+    ],
+    [
+     "f",
+     "frequency",
+     "Hz"
+    ]
+   ],
+   "sessions": [
+    30
+   ]
+  },
+  {
+   "eq": "magnification = image height ÷ object height",
+   "name": "Magnification",
+   "sym": [
+    [
+     "image height",
+     "height of the image",
+     "any length unit"
+    ],
+    [
+     "object height",
+     "height of the object",
+     "same unit"
+    ]
+   ],
+   "note": "Magnification has no unit.",
+   "sessions": [
+    33
+   ]
+  },
+  {
+   "eq": "F = BIl",
+   "name": "Motor effect",
+   "sym": [
+    [
+     "F",
+     "force",
+     "N"
+    ],
+    [
+     "B",
+     "magnetic flux density",
+     "T"
+    ],
+    [
+     "I",
+     "current",
+     "A"
+    ],
+    [
+     "l",
+     "length of wire in the field",
+     "m"
+    ]
+   ],
+   "sessions": [
+    34
+   ]
+  },
+  {
+   "eq": "Vp/Vs = np/ns",
+   "name": "Transformer turns",
+   "sym": [
+    [
+     "Vp",
+     "pd across the primary coil",
+     "V"
+    ],
+    [
+     "Vs",
+     "pd across the secondary coil",
+     "V"
+    ],
+    [
+     "np",
+     "turns on the primary coil",
+     "no unit"
+    ],
+    [
+     "ns",
+     "turns on the secondary coil",
+     "no unit"
+    ]
+   ],
+   "sessions": [
+    35
+   ]
+  }
+ ],
+ "commands": [
+  {
+   "word": "State",
+   "means": "Give a short answer. No explanation needed.",
+   "example": "State the unit of power.",
+   "good": "watt (W)"
+  },
+  {
+   "word": "Describe",
+   "means": "Say what happens, or give the steps in order. You don't need reasons.",
+   "example": "Describe how the temperature changes in the first 5 minutes.",
+   "good": "It rises steadily from 20 °C to 45 °C."
+  },
+  {
+   "word": "Explain",
+   "means": "Give reasons. Link each point with 'because' or 'so', and use the question's context.",
+   "example": "Explain why the gas pressure increases when it is heated.",
+   "good": "The particles move faster, so they hit the walls more often and with more force, so the pressure increases."
+  },
+  {
+   "word": "Compare",
+   "means": "Give a similarity AND a difference, talking about both things.",
+   "example": "Compare transverse and longitudinal waves.",
+   "good": "Both transfer energy. Transverse waves oscillate at right angles to the direction of travel; longitudinal waves oscillate parallel to it."
+  },
+  {
+   "word": "Calculate",
+   "means": "Work out a number. Show your working and give the unit.",
+   "example": "Calculate the kinetic energy of a 2 kg ball at 3 m/s.",
+   "good": "Ek = 0.5 × 2 × 3² = 9 J"
+  },
+  {
+   "word": "Evaluate",
+   "means": "Use the information given to weigh up points for and against, then give a judgement with a reason.",
+   "example": "Evaluate using wind turbines to supply a town.",
+   "good": "Renewable and no CO₂ while running, but unreliable when it isn't windy. Good alongside a reliable supply, because…"
+  },
+  {
+   "word": "Suggest",
+   "means": "Apply what you know to a new situation. More than one answer can be right.",
+   "example": "Suggest why the student's value was too high.",
+   "good": "Energy was lost to the surroundings, so more energy was measured than the block received."
+  }
+ ]
+}

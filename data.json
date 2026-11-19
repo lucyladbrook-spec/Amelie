@@ -1,0 +1,1028 @@
+{
+ "WEEKS": [
+  {
+   "id": "w1",
+   "label": "Week 1",
+   "start": "2026-11-23"
+  },
+  {
+   "id": "w2",
+   "label": "Week 2",
+   "start": "2026-11-30"
+  },
+  {
+   "id": "w3",
+   "label": "Week 3",
+   "start": "2026-12-07"
+  },
+  {
+   "id": "w4",
+   "label": "Week 4",
+   "start": "2026-12-14"
+  },
+  {
+   "id": "w5",
+   "label": "Week 5 · Christmas",
+   "start": "2026-12-21"
+  },
+  {
+   "id": "w6",
+   "label": "Week 6 · Christmas",
+   "start": "2026-12-28"
+  },
+  {
+   "id": "w7",
+   "label": "Week 7",
+   "start": "2027-01-04"
+  },
+  {
+   "id": "w8",
+   "label": "Week 8",
+   "start": "2027-01-11"
+  },
+  {
+   "id": "w9",
+   "label": "Week 9",
+   "start": "2027-01-18"
+  },
+  {
+   "id": "w10",
+   "label": "Week 10",
+   "start": "2027-01-25"
+  },
+  {
+   "id": "w11",
+   "label": "Week 11 · mock week",
+   "start": "2027-02-01"
+  },
+  {
+   "id": "after",
+   "label": "After the mocks",
+   "start": "2027-02-27"
+  }
+ ],
+ "SESSIONS": [
+  {
+   "n": 1,
+   "week": "w1",
+   "paper": "P1",
+   "topic": "Toolkit",
+   "learn": "Units and prefixes (k, M, m, µ); converting cm→m, g→kg, min→s, kJ→J; standard form",
+   "task": "20 unit conversions",
+   "eq": [],
+   "rp": "",
+   "where": "Cognito; Free Science Lessons (maths skills)",
+   "why": "Unit conversion errors are the most common lost marks in every examiner report."
+  },
+  {
+   "n": 2,
+   "week": "w1",
+   "paper": "P1",
+   "topic": "Toolkit",
+   "learn": "Using the equations sheet: find the equation, substitute, then rearrange",
+   "task": "5 calculations using the equations sheet",
+   "eq": [],
+   "rp": "",
+   "where": "Cognito",
+   "why": "Substituting first earns method marks even if the final answer is wrong."
+  },
+  {
+   "n": 3,
+   "week": "w1",
+   "paper": "P1",
+   "topic": "Energy",
+   "learn": "Energy stores and systems; kinetic energy; gravitational potential energy; work done",
+   "task": "8 questions from PMT Energy topic questions",
+   "eq": [
+    "Ek = ½mv²",
+    "Ep = mgh",
+    "W = Fs"
+   ],
+   "rp": "",
+   "where": "Cognito; Seneca",
+   "why": "Every year. Multi-step KE/GPE calculations are the grade 8–9 questions."
+  },
+  {
+   "n": 4,
+   "week": "w1",
+   "paper": "P1",
+   "topic": "Energy",
+   "learn": "Elastic potential energy; power",
+   "task": "6 calculations (square the extension; convert cm→m)",
+   "eq": [
+    "Ee = ½ke²",
+    "P = E/t",
+    "P = W/t"
+   ],
+   "rp": "",
+   "where": "Cognito; Free Science Lessons",
+   "why": "2025: the most common error was not squaring the extension."
+  },
+  {
+   "n": 5,
+   "week": "w2",
+   "paper": "P1",
+   "topic": "Energy",
+   "learn": "Efficiency; wasted energy and how to reduce it; thermal conductivity",
+   "task": "Efficiency calculations (decimal and %) + 2 'explain' questions",
+   "eq": [
+    "efficiency = useful output ÷ total input"
+   ],
+   "rp": "",
+   "where": "Seneca; BBC Bitesize",
+   "why": "Most years. Explanations must link to useful vs wasted energy."
+  },
+  {
+   "n": 6,
+   "week": "w2",
+   "paper": "P1",
+   "topic": "Energy",
+   "learn": "Specific heat capacity",
+   "task": "4 calculations + list the steps of the SHC practical",
+   "eq": [
+    "E = mcΔθ"
+   ],
+   "rp": "RP1 Specific heat capacity",
+   "where": "Free Science Lessons (required practicals)",
+   "why": "Every year. 2025 had a 6-mark SHC method question."
+  },
+  {
+   "n": 7,
+   "week": "w2",
+   "paper": "P1",
+   "topic": "Practical skills",
+   "learn": "Variables; accuracy vs precision vs resolution; random vs systematic error; uncertainty = range ÷ 2",
+   "task": "Make a vocabulary card + 4 practical-skills questions",
+   "eq": [],
+   "rp": "RP2 Thermal insulators",
+   "where": "Free Science Lessons; Cognito",
+   "why": "Practical marks are lost every year. 'Human error' never scores."
+  },
+  {
+   "n": 8,
+   "week": "w2",
+   "paper": "P1",
+   "topic": "Energy",
+   "learn": "Energy resources: renewable vs non-renewable, reliability, environmental impact",
+   "task": "2 'compare' questions, giving a similarity AND a difference",
+   "eq": [],
+   "rp": "",
+   "where": "BBC Bitesize; Seneca",
+   "why": "Every year (Q1 in 2024 and 2025)."
+  },
+  {
+   "n": 9,
+   "week": "w3",
+   "paper": "P1",
+   "topic": "Electricity",
+   "learn": "Circuit symbols; charge and current; potential difference; resistance",
+   "task": "Draw 10 circuit symbols from memory + 5 calculations",
+   "eq": [
+    "Q = It",
+    "V = IR"
+   ],
+   "rp": "",
+   "where": "Cognito; Seneca",
+   "why": "Every year."
+  },
+  {
+   "n": 10,
+   "week": "w3",
+   "paper": "P1",
+   "topic": "Electricity",
+   "learn": "Series and parallel rules for current, pd and resistance; resistance of a wire",
+   "task": "5 circuit questions + explain why resistors in parallel lower total resistance",
+   "eq": [
+    "R total = R1 + R2 (series)"
+   ],
+   "rp": "RP3 Resistance",
+   "where": "Free Science Lessons; Cognito",
+   "why": "2025: over 80% scored zero on a series/parallel explanation."
+  },
+  {
+   "n": 11,
+   "week": "w3",
+   "paper": "P1",
+   "topic": "Electricity",
+   "learn": "I–V graphs: resistor, filament lamp, diode; LDR and thermistor",
+   "task": "Sketch the 3 I–V graphs from memory + 3 questions",
+   "eq": [
+    "V = IR"
+   ],
+   "rp": "RP4 I–V characteristics",
+   "where": "Free Science Lessons; Cognito",
+   "why": "2025 Q3. A diode lets current flow in one direction only."
+  },
+  {
+   "n": 12,
+   "week": "w3",
+   "paper": "P1",
+   "topic": "Electricity",
+   "learn": "Electrical power and energy transferred",
+   "task": "5 multi-step calculations (convert kW→W and minutes→seconds)",
+   "eq": [
+    "P = VI",
+    "P = I²R",
+    "E = Pt",
+    "E = QV"
+   ],
+   "rp": "",
+   "where": "Cognito; PMT topic questions",
+   "why": "Every year. Often worth 4–6 marks."
+  },
+  {
+   "n": 13,
+   "week": "w4",
+   "paper": "P1",
+   "topic": "Electricity",
+   "learn": "Mains: ac/dc, 230 V 50 Hz, plug wires and earth; National Grid and transformers",
+   "task": "Label a plug + 2 'explain' questions",
+   "eq": [
+    "Vp × Ip = Vs × Is"
+   ],
+   "rp": "",
+   "where": "BBC Bitesize; Seneca",
+   "why": "2022, 2024. Touching a live wire: the answer must say 'electric shock'."
+  },
+  {
+   "n": 14,
+   "week": "w4",
+   "paper": "P1",
+   "topic": "Electricity",
+   "learn": "Static electricity and electric fields (physics only)",
+   "task": "Explain charging by friction (electrons move, not protons) + draw field lines",
+   "eq": [],
+   "rp": "",
+   "where": "Cognito; Free Science Lessons",
+   "why": "2018, 2022, 2024 (10 marks in 2024)."
+  },
+  {
+   "n": 15,
+   "week": "w4",
+   "paper": "P1",
+   "topic": "Particle model",
+   "learn": "Density; states of matter",
+   "task": "4 density calculations + describe measuring an irregular object (displacement)",
+   "eq": [
+    "ρ = m/V"
+   ],
+   "rp": "RP5 Density",
+   "where": "Free Science Lessons; Cognito",
+   "why": "2022: 6-mark density practical question."
+  },
+  {
+   "n": 16,
+   "week": "w4",
+   "paper": "P1",
+   "topic": "Particle model",
+   "learn": "Internal energy; specific heat capacity vs specific latent heat; heating curves",
+   "task": "4 calculations + label a heating curve and explain the flat parts",
+   "eq": [
+    "E = mL",
+    "E = mcΔθ"
+   ],
+   "rp": "",
+   "where": "Cognito; Seneca",
+   "why": "2025: only 3% full marks. During a change of state, potential energy changes, not kinetic."
+  },
+  {
+   "n": 17,
+   "week": "w5",
+   "paper": "P1",
+   "topic": "Particle model",
+   "learn": "Gas pressure and temperature; pV = constant; doing work on a gas heats it (physics only)",
+   "task": "Write the gas pressure explanation: more frequent collisions with the walls + greater force",
+   "eq": [
+    "pV = constant"
+   ],
+   "rp": "",
+   "where": "Cognito; Free Science Lessons",
+   "why": "Most years. 'More collisions between particles' does not score."
+  },
+  {
+   "n": 18,
+   "week": "w5",
+   "paper": "P1",
+   "topic": "Atomic structure",
+   "learn": "Models of the atom; isotopes; alpha, beta, gamma, neutron radiation; nuclear equations",
+   "task": "Timeline card + complete 5 nuclear equations",
+   "eq": [],
+   "rp": "",
+   "where": "Free Science Lessons; Cognito",
+   "why": "Every year. About 90% get nuclear equations right, so these are easy marks."
+  },
+  {
+   "n": 19,
+   "week": "w6",
+   "paper": "P1",
+   "topic": "Atomic structure",
+   "learn": "Half-life and activity; contamination vs irradiation",
+   "task": "4 half-life questions (graph and number) + learn both definitions",
+   "eq": [],
+   "rp": "",
+   "where": "Cognito; PMT topic questions",
+   "why": "Every year. 2025: the answer had to say '4 half-lives'."
+  },
+  {
+   "n": 20,
+   "week": "w6",
+   "paper": "P1",
+   "topic": "Atomic structure",
+   "learn": "Background radiation; medical uses; fission and fusion; chain reactions (physics only)",
+   "task": "Describe fission in 4 steps + define fusion using 'two light nuclei join'",
+   "eq": [],
+   "rp": "",
+   "where": "Cognito; Free Science Lessons",
+   "why": "2018, 2025. Vague wording loses marks."
+  },
+  {
+   "n": 21,
+   "week": "w7",
+   "paper": "P1",
+   "topic": "Practice paper",
+   "learn": "June 2024 Paper 1H, first half (about 50 minutes)",
+   "task": "Exam conditions, with the equations sheet",
+   "eq": [],
+   "rp": "",
+   "where": "Past papers tab",
+   "why": "Shows where she is on Paper 1."
+  },
+  {
+   "n": 22,
+   "week": "w7",
+   "paper": "P1",
+   "topic": "Practice paper",
+   "learn": "June 2024 Paper 1H, second half, then mark it",
+   "task": "Mark with the mark scheme; write the top 5 mistakes in Past papers",
+   "eq": [],
+   "rp": "",
+   "where": "AQA 2024 1H mark scheme",
+   "why": "Turns lost marks into a revision list."
+  },
+  {
+   "n": 23,
+   "week": "w7",
+   "paper": "P2",
+   "topic": "Forces",
+   "learn": "Scalars and vectors; contact and non-contact forces; weight; resultant force; free-body diagrams",
+   "task": "Draw 4 free-body diagrams + 4 calculations",
+   "eq": [
+    "W = mg"
+   ],
+   "rp": "",
+   "where": "Cognito; Seneca",
+   "why": "2025: free-body diagram for a skydiver."
+  },
+  {
+   "n": 24,
+   "week": "w7",
+   "paper": "P2",
+   "topic": "Forces",
+   "learn": "Work done; springs, elastic vs inelastic deformation, Hooke's law",
+   "task": "4 calculations + describe the spring practical",
+   "eq": [
+    "F = ke",
+    "W = Fs"
+   ],
+   "rp": "RP6 Force and extension",
+   "where": "Free Science Lessons",
+   "why": "2018, 2025. A straight line through the origin means directly proportional."
+  },
+  {
+   "n": 25,
+   "week": "w8",
+   "paper": "P2",
+   "topic": "Forces",
+   "learn": "Moments, levers and gears; pressure in fluids, upthrust (physics only)",
+   "task": "4 calculations + 1 'explain' question",
+   "eq": [
+    "M = Fd",
+    "p = F/A",
+    "p = hρg"
+   ],
+   "rp": "",
+   "where": "Cognito",
+   "why": "2022, 2023, 2024 (pressure in fluids)."
+  },
+  {
+   "n": 26,
+   "week": "w8",
+   "paper": "P2",
+   "topic": "Motion",
+   "learn": "Distance vs displacement; speed vs velocity; distance–time and velocity–time graphs (gradient and area)",
+   "task": "Read 3 graphs: gradient = speed or acceleration, area = distance",
+   "eq": [
+    "s = vt",
+    "a = Δv/t"
+   ],
+   "rp": "",
+   "where": "Cognito; Free Science Lessons",
+   "why": "2023: 34% scored zero by not using the area under the graph."
+  },
+  {
+   "n": 27,
+   "week": "w8",
+   "paper": "P2",
+   "topic": "Motion",
+   "learn": "Acceleration; v² − u² = 2as; falling objects and terminal velocity",
+   "task": "4 calculations + explain terminal velocity (air resistance increases until the resultant force is zero)",
+   "eq": [
+    "v² − u² = 2as"
+   ],
+   "rp": "",
+   "where": "Cognito; Seneca",
+   "why": "Almost every year (2019, 2020, 2022, 2025)."
+  },
+  {
+   "n": 28,
+   "week": "w8",
+   "paper": "P2",
+   "topic": "Forces",
+   "learn": "Newton's three laws; F = ma; inertia",
+   "task": "4 calculations + apply the 3rd law to a context",
+   "eq": [
+    "F = ma"
+   ],
+   "rp": "RP7 Acceleration",
+   "where": "Free Science Lessons",
+   "why": "2023: many stated the law but didn't apply it."
+  },
+  {
+   "n": 29,
+   "week": "w9",
+   "paper": "P2",
+   "topic": "Forces",
+   "learn": "Stopping distance (thinking + braking); momentum, conservation, airbags and crumple zones",
+   "task": "2 calculations + explain how an airbag reduces force (longer time, smaller rate of change of momentum)",
+   "eq": [
+    "p = mv",
+    "F = mΔv/Δt"
+   ],
+   "rp": "",
+   "where": "Cognito; BBC Bitesize",
+   "why": "Every year. Only 15% got full marks on airbags in 2025."
+  },
+  {
+   "n": 30,
+   "week": "w9",
+   "paper": "P2",
+   "topic": "Waves",
+   "learn": "Transverse vs longitudinal; amplitude, wavelength, frequency, period; wave speed",
+   "task": "4 calculations + compare the two wave types (similarity AND difference)",
+   "eq": [
+    "v = fλ",
+    "T = 1/f"
+   ],
+   "rp": "RP8 Waves",
+   "where": "Free Science Lessons; Cognito",
+   "why": "2025 Q1. Every year."
+  },
+  {
+   "n": 31,
+   "week": "w9",
+   "paper": "P2",
+   "topic": "Waves",
+   "learn": "Reflection and refraction; sound, ultrasound and seismic waves (physics only)",
+   "task": "Draw a refraction diagram with the normal + 2 questions",
+   "eq": [],
+   "rp": "RP9 Reflection and refraction",
+   "where": "Free Science Lessons",
+   "why": "2022, 2023. 'Human error' never scores on this practical."
+  },
+  {
+   "n": 32,
+   "week": "w9",
+   "paper": "P2",
+   "topic": "Waves",
+   "learn": "Electromagnetic spectrum: order, uses, dangers; infrared absorption and emission",
+   "task": "Learn the order (radio → gamma) + 3 questions",
+   "eq": [
+    "v = fλ"
+   ],
+   "rp": "RP10 Infrared radiation",
+   "where": "Cognito; Seneca",
+   "why": "2019, 2023, 2024."
+  },
+  {
+   "n": 33,
+   "week": "w10",
+   "paper": "P2",
+   "topic": "Waves",
+   "learn": "Lenses and ray diagrams (convex/concave, real/virtual); visible light and colour (physics only)",
+   "task": "Draw 2 ray diagrams",
+   "eq": [
+    "magnification = image height ÷ object height"
+   ],
+   "rp": "",
+   "where": "Free Science Lessons",
+   "why": "2019, 2024, 2025. Write 'virtual', not 'not real'."
+  },
+  {
+   "n": 34,
+   "week": "w10",
+   "paper": "P2",
+   "topic": "Magnetism",
+   "learn": "Magnets and fields; electromagnets; motor effect; Fleming's left-hand rule",
+   "task": "Draw 3 field patterns + 3 questions",
+   "eq": [
+    "F = BIl"
+   ],
+   "rp": "",
+   "where": "Cognito; Free Science Lessons",
+   "why": "Every year."
+  },
+  {
+   "n": 35,
+   "week": "w10",
+   "paper": "P2",
+   "topic": "Magnetism",
+   "learn": "Generator effect; dynamos and alternators; microphones and loudspeakers; transformers (physics only)",
+   "task": "Describe how a generator works in 4 steps",
+   "eq": [
+    "Vp/Vs = np/ns"
+   ],
+   "rp": "",
+   "where": "Cognito",
+   "why": "Hardest topic: 2% got full marks in 2023. Learn the basics, don't chase full marks."
+  },
+  {
+   "n": 36,
+   "week": "w10",
+   "paper": "P2",
+   "topic": "Space",
+   "learn": "Solar system; life cycle of stars; orbits; red-shift and the Big Bang (physics only)",
+   "task": "Draw the star life-cycle chart + explain red-shift",
+   "eq": [],
+   "rp": "",
+   "where": "Cognito; BBC Bitesize",
+   "why": "Every year. Red-shift: the observed wavelength gets longer."
+  },
+  {
+   "n": 37,
+   "week": "w11",
+   "paper": "P2",
+   "topic": "Practice paper",
+   "learn": "June 2024 Paper 2H, first half (about 50 minutes)",
+   "task": "Exam conditions, with the equations sheet",
+   "eq": [],
+   "rp": "",
+   "where": "Past papers tab",
+   "why": "Shows where she is on Paper 2."
+  },
+  {
+   "n": 38,
+   "week": "w11",
+   "paper": "P2",
+   "topic": "Practice paper",
+   "learn": "June 2024 Paper 2H, second half, then mark it",
+   "task": "Mark with the mark scheme; write the top 5 mistakes in Past papers",
+   "eq": [],
+   "rp": "",
+   "where": "AQA 2024 2H mark scheme",
+   "why": "Turns lost marks into a revision list."
+  },
+  {
+   "n": 39,
+   "week": "w11",
+   "paper": "Both",
+   "topic": "Review",
+   "learn": "Redo the questions lost on both practice papers",
+   "task": "Only the lost marks, nothing new",
+   "eq": [],
+   "rp": "",
+   "where": "Past papers tab",
+   "why": "Highest return in the final week."
+  },
+  {
+   "n": 40,
+   "week": "w11",
+   "paper": "Both",
+   "topic": "Review",
+   "learn": "Exam tips + equations-sheet speed drill",
+   "task": "Read Exam tips; 10 quick calculations",
+   "eq": [],
+   "rp": "",
+   "where": "Exam tips tab",
+   "why": "A calm, familiar finish before the mocks start on Friday 5 February."
+  },
+  {
+   "n": 41,
+   "week": "after",
+   "paper": "Both",
+   "topic": "Review",
+   "learn": "Go through the mock papers when they come back",
+   "task": "Write every lost mark by topic",
+   "eq": [],
+   "rp": "",
+   "where": "Her marked mock",
+   "why": "Sets the plan for the Easter run-up to the real exams from 10 May."
+  },
+  {
+   "n": 42,
+   "week": "after",
+   "paper": "Both",
+   "topic": "Review",
+   "learn": "Rebuild the plan for the real exams",
+   "task": "Weakest topics first",
+   "eq": [],
+   "rp": "",
+   "where": "This page",
+   "why": "Mock results day is 12 March."
+  }
+ ],
+ "HOW": [
+  [
+   "Same days, same time, same place for every session.",
+   "A predictable routine takes the decision out of starting."
+  ],
+  [
+   "One session at a time. Press Start for 25 minutes, then take the 5-minute movement break.",
+   "A short block with a clear end is easier to start and to finish."
+  ],
+  [
+   "A second 25-minute block is optional, never expected.",
+   "Stopping on time keeps physics from feeling endless."
+  ],
+  [
+   "Press 'Mark done' and pick a confidence colour straight after.",
+   "Visible progress and a quick reward."
+  ],
+  [
+   "Sit with her for the first few minutes, or work alongside her.",
+   "Working next to someone makes it easier to get going."
+  ],
+  [
+   "Watch the video first (Cognito or Free Science Lessons) with subtitles, then do the practice task.",
+   "Short, predictable input before the questions."
+  ],
+  [
+   "Always answer questions, then check them against the mark scheme.",
+   "Recalling answers fixes them in memory, and mark schemes show the exact wording examiners want."
+  ],
+  [
+   "She can swap the order of sessions within a week, but not skip them.",
+   "Some control without losing the plan."
+  ],
+  [
+   "On a bad day, do only the practice task and stop.",
+   "Something done beats nothing done."
+  ],
+  [
+   "Practice papers are split into two halves.",
+   "1 hr 45 in one go is a lot. Build up to it later."
+  ],
+  [
+   "Ask the SENCo about exam access arrangements (extra time, rest breaks, separate room, word processor) before the February mocks.",
+   "They need to be her normal way of working, and the mocks are the place to use them."
+  ]
+ ],
+ "TIPS": [
+  [
+   "Convert units before you substitute: cm→m, g→kg, kJ→J, minutes→seconds, mA→A.",
+   "The most common way to lose a mark in every series."
+  ],
+  [
+   "Write the equation from the sheet, substitute the numbers, then rearrange.",
+   "Substituting first earns a method mark even if the final answer is wrong."
+  ],
+  [
+   "Show every step of working.",
+   "Answers with no working often score nothing, even when the number is close."
+  ],
+  [
+   "Use brackets on the calculator when dividing by more than one number.",
+   "2025: missing brackets around the bottom of a fraction gave wrong answers."
+  ],
+  [
+   "Don't round until the final answer, and give the significant figures asked for.",
+   "Rounding 4.76% to 5% lost the mark in 2025."
+  ],
+  [
+   "Square what is squared: v² in kinetic energy, e² in elastic energy, I² in power.",
+   "2025: not squaring the extension was the most common error."
+  ],
+  [
+   "'Explain' means give the reason AND link it to the question's context.",
+   "Most students know the fact but don't apply it."
+  ],
+  [
+   "'Compare' needs a similarity and a difference, about both things named.",
+   "2025: half of students lost marks by giving only differences."
+  ],
+  [
+   "Never write 'human error'. Name the actual error, such as parallax or reaction time.",
+   "'Human error' has never scored a mark."
+  ],
+  [
+   "Use precise words: 'virtual' not 'not real', 'directly proportional' not 'proportional', 'collisions with the walls' not 'more collisions'.",
+   "Vague words lose marks on explanations."
+  ],
+  [
+   "Cross out work you don't want marked.",
+   "If two answers are left, the examiner can mark the wrong one."
+  ],
+  [
+   "Give one answer when asked for one.",
+   "Listing several answers is penalised."
+  ]
+ ],
+ "PAPERS": [
+  [
+   "core-p1",
+   "Core assessment, Thu 19 Nov: Physics Paper 1 (school)",
+   "Ask school for the marked paper. It shows which Paper 1 topics to do first."
+  ],
+  [
+   "2024-1h",
+   "June 2024 Paper 1H (sessions 21–22)",
+   ""
+  ],
+  [
+   "2024-2h",
+   "June 2024 Paper 2H (sessions 37–38)",
+   ""
+  ],
+  [
+   "2025-1h",
+   "June 2025 Paper 1H",
+   ""
+  ],
+  [
+   "2025-2h",
+   "June 2025 Paper 2H",
+   ""
+  ],
+  [
+   "2023-1h",
+   "June 2023 Paper 1H",
+   ""
+  ],
+  [
+   "2023-2h",
+   "June 2023 Paper 2H",
+   ""
+  ],
+  [
+   "2022-1h",
+   "June 2022 Paper 1H",
+   "Skip Q11: it was discounted."
+  ],
+  [
+   "2022-2h",
+   "June 2022 Paper 2H",
+   ""
+  ],
+  [
+   "2019-1h",
+   "June 2019 Paper 1H",
+   ""
+  ],
+  [
+   "2019-2h",
+   "June 2019 Paper 2H",
+   ""
+  ]
+ ],
+ "RES": [
+  [
+   "AQA Physics Equations Sheet",
+   "Print it and use it in every session. It's given in the exam.",
+   "Free",
+   "",
+   "Search 'AQA 8463 Physics Equations Sheet'"
+  ],
+  [
+   "AQA past papers and mark schemes",
+   "Practice papers and how marks are given",
+   "Free",
+   "https://www.savemyexams.com/gcse/physics/aqa/past-papers",
+   ""
+  ],
+  [
+   "Physics & Maths Tutor",
+   "Exam questions sorted by topic, with mark schemes",
+   "Free",
+   "",
+   "physicsandmathstutor.com → GCSE Physics → AQA"
+  ],
+  [
+   "Cognito",
+   "Short AQA-matched videos and quizzes for every topic",
+   "Free",
+   "https://cognito.org/specifications/gcse/physics",
+   ""
+  ],
+  [
+   "Free Science Lessons (YouTube)",
+   "Clear AQA videos, especially the required practicals",
+   "Free",
+   "",
+   "Search 'Free Science Lessons AQA physics'"
+  ],
+  [
+   "Seneca Learning",
+   "Short learn-and-test courses (AQA GCSE Physics, Higher)",
+   "Free",
+   "",
+   "senecalearning.com"
+  ],
+  [
+   "Oak National Academy",
+   "Full lessons for anything she needs taught from scratch",
+   "Free",
+   "https://www.thenational.academy/pupils/programmes/physics-secondary-year-10/options/examboard/aqa",
+   ""
+  ],
+  [
+   "BBC Bitesize",
+   "Quick summaries, good for energy resources and the National Grid",
+   "Free",
+   "",
+   "Search 'Bitesize AQA GCSE Physics'"
+  ],
+  [
+   "CGP AQA GCSE Physics Revision Guide + Exam Practice Workbook (Higher)",
+   "A book to work through and annotate",
+   "About £6–12 each",
+   "",
+   "Bookshops or online"
+  ],
+  [
+   "AQA specification (8463)",
+   "The full list of what can be examined",
+   "Free",
+   "https://www.aqa.org.uk/subjects/physics/gcse/physics-8463/specification/subject-content",
+   ""
+  ]
+ ],
+ "VID": {
+  "1": "units prefixes standard form",
+  "2": "rearranging equations",
+  "3": "kinetic energy gravitational potential energy",
+  "4": "elastic potential energy power",
+  "5": "efficiency",
+  "6": "specific heat capacity required practical",
+  "7": "thermal insulation required practical",
+  "8": "energy resources",
+  "9": "current potential difference resistance",
+  "10": "series and parallel circuits",
+  "11": "IV characteristics required practical",
+  "12": "electrical power energy transfer",
+  "13": "national grid mains electricity",
+  "14": "static electricity electric fields",
+  "15": "density required practical",
+  "16": "specific latent heat internal energy",
+  "17": "gas pressure particle model",
+  "18": "nuclear equations alpha beta gamma",
+  "19": "half life contamination irradiation",
+  "20": "nuclear fission fusion",
+  "23": "scalars vectors resultant force",
+  "24": "hookes law required practical",
+  "25": "moments pressure in fluids",
+  "26": "distance time velocity time graphs",
+  "27": "terminal velocity",
+  "28": "newtons laws acceleration required practical",
+  "29": "stopping distance momentum",
+  "30": "waves required practical",
+  "31": "refraction ultrasound seismic waves",
+  "32": "electromagnetic spectrum infrared required practical",
+  "33": "lenses ray diagrams",
+  "34": "motor effect",
+  "35": "generator effect transformers",
+  "36": "life cycle of stars red shift"
+ },
+ "SECTIONS": [
+  {
+   "name": "Skills toolkit",
+   "cgp": "the maths skills and practical skills pages",
+   "ns": [
+    1,
+    2,
+    7
+   ]
+  },
+  {
+   "name": "Energy",
+   "cgp": "the Energy section",
+   "ns": [
+    3,
+    4,
+    5,
+    6,
+    8
+   ]
+  },
+  {
+   "name": "Electricity",
+   "cgp": "the Electricity section",
+   "ns": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+   ]
+  },
+  {
+   "name": "Particle model of matter",
+   "cgp": "the Particle Model of Matter section",
+   "ns": [
+    15,
+    16,
+    17
+   ]
+  },
+  {
+   "name": "Atomic structure",
+   "cgp": "the Atomic Structure section",
+   "ns": [
+    18,
+    19,
+    20
+   ]
+  },
+  {
+   "name": "Forces and motion",
+   "cgp": "the Forces section",
+   "ns": [
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+   ]
+  },
+  {
+   "name": "Waves",
+   "cgp": "the Waves section",
+   "ns": [
+    30,
+    31,
+    32,
+    33
+   ]
+  },
+  {
+   "name": "Magnetism and electromagnetism",
+   "cgp": "the Magnetism and Electromagnetism section",
+   "ns": [
+    34,
+    35
+   ]
+  },
+  {
+   "name": "Space physics",
+   "cgp": "the Space Physics section",
+   "ns": [
+    36
+   ]
+  }
+ ],
+ "TITLE": {
+  "1": "Units and prefixes",
+  "2": "Using the equations sheet",
+  "3": "Energy stores, KE and GPE",
+  "4": "Elastic energy and power",
+  "5": "Efficiency and wasted energy",
+  "6": "Specific heat capacity",
+  "7": "Practical skills",
+  "8": "Energy resources",
+  "9": "Current, pd and resistance",
+  "10": "Series and parallel circuits",
+  "11": "I–V graphs and components",
+  "12": "Electrical power and energy",
+  "13": "Mains and the National Grid",
+  "14": "Static electricity",
+  "15": "Density and states of matter",
+  "16": "Internal energy and latent heat",
+  "17": "Gas pressure",
+  "18": "Atoms and nuclear radiation",
+  "19": "Half-life and contamination",
+  "20": "Fission, fusion and uses",
+  "23": "Forces and resultant force",
+  "24": "Work done and springs",
+  "25": "Moments and pressure",
+  "26": "Motion graphs",
+  "27": "Acceleration and terminal velocity",
+  "28": "Newton's laws",
+  "29": "Stopping distance and momentum",
+  "30": "Wave basics",
+  "31": "Reflection, refraction and sound",
+  "32": "Electromagnetic spectrum",
+  "33": "Lenses and colour",
+  "34": "Magnetism and the motor effect",
+  "35": "Generators and transformers",
+  "36": "Space physics",
+  "21": "Practice Paper 1, part 1",
+  "22": "Practice Paper 1, part 2",
+  "37": "Practice Paper 2, part 1",
+  "38": "Practice Paper 2, part 2",
+  "39": "Redo your lost marks",
+  "40": "Exam tips and speed drill",
+  "41": "Go through your mocks",
+  "42": "Plan for the real exams"
+ }
+}

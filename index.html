@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amelie's Physics Club</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Nunito:wght@400;600;700&family=Caveat:wght@500&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* Amelie's Physics Club — a romantic-academia study journal.
+   Ivory pages, blush and ballet pink layers, chocolate ink, sage for "done", honey for exam warnings.
+   Display: Playfair Display (editorial serif). UI + content: Nunito (rounded sans). Accent: Caveat, used sparingly. */
+:root {
+  --ivory: #FFFDF8; --cream: #F5EFE8; --powder: #F8EDEF; --ballet: #F2D8DF; --blush: #E9BFCB; --rose: #C58D9E; --cocoa: #59434A; --sage: #B6C4AD;
+  --bg: var(--ivory);
+  --surface: #FFFFFF;
+  --ink: #59434A;
+  --muted: #7A6168;
+  --line: #EEDFDC;
+  --blue: #8E3B5A;          /* deep berry: links, key learning, focus */
+  --blue-soft: var(--powder);
+  --pink-mid: var(--ballet);
+  --head: var(--ivory);
+  --green: #6E8A64; --green-ink: #4A6343; --green-soft: #E7EEE2;
+  --amber: #B07A3A; --amber-ink: #8A5A22; --amber-soft: #F7ECDD;
+  --help: var(--ballet); --help-ink: #7E2F4C;
+  --btn: var(--blush); --btn-ink: var(--cocoa);
+  --font-display: "Playfair Display", "Georgia", serif;
+  --font-ui: "Nunito", "Segoe UI", system-ui, sans-serif;
+  --font-hand: "Caveat", "Segoe Script", cursive;
+  --r-lg: 22px; --r-md: 14px; --r-sm: 10px;
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 36px; --s7: 56px;
+  --shadow: 0 1px 2px rgba(89, 67, 74, .05), 0 10px 30px rgba(197, 141, 158, .12);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #211a1c; --surface: #2b2225; --ink: #f4e7ea; --muted: #c9b3ba; --line: #3d3034; --cream: #2f2629; --powder: #36292d;
+    --blue: #f0b4c8; --blue-soft: #3a2b30; --pink-mid: #4a3238; --head: #211a1c;
+    --green: #a9c29e; --green-ink: #c4dbb9; --green-soft: #2c3529; --amber: #e2b47a; --amber-ink: #f0cf9f; --amber-soft: #3a2f22;
+    --help: #4a3238; --help-ink: #f6c6d6; --btn: #6b4553; --btn-ink: #fff4f7; --shadow: none; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #211a1c; --surface: #2b2225; --ink: #f4e7ea; --muted: #c9b3ba; --line: #3d3034; --cream: #2f2629; --powder: #36292d;
+  --blue: #f0b4c8; --blue-soft: #3a2b30; --pink-mid: #4a3238; --head: #211a1c;
+  --green: #a9c29e; --green-ink: #c4dbb9; --green-soft: #2c3529; --amber: #e2b47a; --amber-ink: #f0cf9f; --amber-soft: #3a2f22;
+  --help: #4a3238; --help-ink: #f6c6d6; --btn: #6b4553; --btn-ink: #fff4f7; --shadow: none; color-scheme: dark;
+}
+html { font-size: 100%; }
+html.ts-large { font-size: 112.5%; }
+html.ts-xl { font-size: 125%; }
+html.clear-font { --font-ui: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-ui); font-size: 1.0625rem; line-height: 1.65; }
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 500; line-height: 1.2; margin: 0; text-wrap: balance; letter-spacing: -.005em; }
+h2 { font-size: 1.7rem; }
+h3 { font-size: 1.2rem; }
+h4 { font-size: 1.02rem; font-family: var(--font-ui); font-weight: 700; }
+p { margin: 0; }
+button, input, textarea, select { font: inherit; color: inherit; }
+button { cursor: pointer; }
+a { color: var(--blue); text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-radius: 6px; }
+[hidden] { display: none !important; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.ico { width: 1.2em; height: 1.2em; flex: none; display: inline-block; vertical-align: -0.2em; }
+.ico svg { width: 100%; height: 100%; display: block; }
+.hand { font-family: var(--font-hand); font-size: 1.45rem; color: var(--blue); line-height: 1.1; }
+
+/* header + wordmark */
+.top { background: var(--head); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 5; }
+.top-in { max-width: 1080px; margin: 0 auto; padding: var(--s3) var(--s4) var(--s2); display: grid; gap: var(--s2); }
+.brand { display: flex; justify-content: space-between; align-items: center; gap: var(--s3); }
+.wordmark { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+.wordmark .bow { width: 30px; height: 22px; color: var(--rose); }
+.wordmark h1 { font-size: 1.45rem; font-weight: 500; font-style: italic; }
+.wordmark small { display: block; font-family: var(--font-ui); font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-style: normal; }
+nav.tabs { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: thin; }
+nav.tabs a { flex: none; display: inline-flex; align-items: center; gap: 7px; padding: 8px 14px; min-height: 44px; border-radius: 99px; text-decoration: none; color: var(--muted); font-size: .92rem; font-weight: 600; }
+nav.tabs a .ico { color: var(--rose); }
+nav.tabs a:hover { color: var(--ink); background: var(--powder); }
+nav.tabs a[aria-current="page"] { background: var(--ballet); color: var(--ink); }
+main { max-width: 1080px; margin: 0 auto; padding: var(--s6) var(--s4) var(--s7); }
+.view { display: grid; gap: var(--s5); }
+.narrow { max-width: 780px; width: 100%; margin: 0 auto; }
+
+/* dividers + small editorial details */
+.divider { display: flex; align-items: center; gap: var(--s3); color: var(--rose); }
+.divider::before, .divider::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.divider .ico { width: 18px; height: 18px; }
+
+/* components */
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: var(--s5); box-shadow: var(--shadow); display: grid; gap: var(--s4); }
+.card.tight { padding: var(--s4) var(--s5); gap: var(--s3); }
+.card.cream { background: var(--cream); box-shadow: none; }
+.eyebrow { font-size: .74rem; letter-spacing: .16em; text-transform: uppercase; color: var(--blue); display: flex; align-items: center; gap: 8px; font-weight: 700; }
+.muted { color: var(--muted); }
+.small { font-size: .92rem; }
+.row { display: flex; flex-wrap: wrap; gap: var(--s2); align-items: center; }
+.between { justify-content: space-between; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); padding: 10px 20px; min-height: 48px; border-radius: 99px; text-decoration: none; font-size: .95rem; font-weight: 700; }
+.btn:hover { border-color: var(--rose); background: var(--powder); }
+.btn.primary { background: var(--btn); border-color: var(--rose); color: var(--btn-ink); }
+.btn.primary:hover { background: var(--ballet); }
+.btn.big { font-size: 1.08rem; padding: 14px 30px; min-height: 58px; }
+.btn.ghost { border-color: transparent; background: transparent; color: var(--blue); padding-left: 12px; padding-right: 12px; }
+.btn.small { min-height: 40px; padding: 6px 14px; font-size: .88rem; }
+.btn:disabled { opacity: .45; cursor: default; }
+.chip { display: inline-flex; align-items: center; gap: 6px; font-size: .82rem; font-weight: 600; padding: 3px 11px; border-radius: 99px; background: var(--cream); border: 1px solid var(--line); white-space: nowrap; }
+.chip.eq { background: var(--powder); border-color: var(--ballet); font-size: .95rem; font-weight: 600; }
+.chip.got, .chip.done { background: var(--green-soft); color: var(--green-ink); border-color: transparent; }
+.chip.getting { background: var(--cream); color: var(--ink); border-color: var(--line); }
+.chip.help { background: var(--help); color: var(--help-ink); border-color: transparent; }
+.bar { height: 6px; background: var(--powder); border-radius: 99px; overflow: hidden; }
+.bar > span { display: block; height: 100%; background: var(--rose); border-radius: 99px; }
+.list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s2); }
+.ticklist { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s2); }
+.ticklist li { display: grid; grid-template-columns: 28px 1fr; gap: var(--s2); align-items: start; }
+.ticklist li .ico { color: var(--rose); margin-top: 4px; }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--s4); }
+.subnav { display: flex; gap: var(--s2); flex-wrap: wrap; }
+.subnav a { padding: 8px 18px; border-radius: 99px; border: 1px solid var(--line); text-decoration: none; color: var(--muted); min-height: 44px; display: inline-flex; align-items: center; background: var(--surface); font-weight: 600; }
+.subnav a[aria-current="page"] { background: var(--cocoa); color: var(--ivory); border-color: var(--cocoa); }
+:root[data-theme="dark"] .subnav a[aria-current="page"] { background: var(--blue); color: #211a1c; border-color: var(--blue); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .subnav a[aria-current="page"] { background: var(--blue); color: #211a1c; border-color: var(--blue); } }
+
+/* illustrations */
+.motif { color: var(--rose); }
+.motif svg { width: 100%; height: 100%; display: block; }
+.arch { background: var(--ballet); border-radius: 999px 999px var(--r-lg) var(--r-lg); display: grid; place-items: center; padding: 28px 22px 22px; aspect-ratio: 4 / 5; max-width: 240px; width: 100%; justify-self: center; }
+.arch .motif { width: 80%; color: var(--cocoa); opacity: .85; }
+
+/* home */
+.welcome { display: grid; gap: 4px; }
+.welcome h2 { font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 500; font-style: italic; }
+.today { padding: var(--s6); display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--s6); align-items: center; background: var(--surface); }
+.today h2 { font-size: 2.1rem; }
+.today-body { display: grid; gap: var(--s4); }
+.meta { display: flex; flex-wrap: wrap; gap: var(--s2) var(--s4); color: var(--muted); font-size: .95rem; }
+.meta span { display: inline-flex; align-items: center; gap: 6px; }
+.meta .ico { color: var(--rose); }
+.week-row { display: grid; grid-template-columns: 44px 1fr auto; gap: var(--s3); align-items: center; padding: var(--s2) var(--s3); border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface); }
+.week-row.is-next { border: 2px solid var(--blush); background: var(--powder); }
+.week-row.is-done { background: var(--green-soft); border-color: transparent; }
+.tick { width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--rose); background: var(--surface); display: grid; place-items: center; color: var(--surface); padding: 0; }
+.tick[aria-checked="true"] { background: var(--green); border-color: var(--green); }
+.tick .ico { width: 22px; height: 22px; }
+.open-sess { text-align: left; background: none; border: 0; padding: 6px 0; display: grid; gap: 2px; min-height: 44px; }
+.open-sess b { font-family: var(--font-display); font-weight: 500; font-size: 1.05rem; }
+.open-sess span { font-size: .85rem; color: var(--muted); }
+.reorder { display: flex; gap: 4px; align-items: center; }
+.icon-btn { width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; background: var(--surface); padding: 0; color: var(--ink); }
+.icon-btn:disabled { opacity: .35; cursor: default; }
+.stat { display: grid; gap: 2px; }
+.stat b { font-family: var(--font-display); font-size: 2.2rem; font-weight: 500; font-variant-numeric: tabular-nums; }
+.pearls { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; margin: 0; padding: 0; }
+.pearls a { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; border: 2px solid var(--blush); background: var(--surface); color: var(--muted); font-size: .78rem; font-weight: 700; text-decoration: none; }
+.pearls a.got { background: var(--green-soft); border-color: var(--sage); color: var(--green-ink); }
+.pearls a.getting { background: var(--cream); border-color: var(--rose); color: var(--ink); }
+.pearls a.help { background: var(--ballet); border-color: var(--rose); color: var(--help-ink); }
+.pearls a.done { box-shadow: inset 0 0 0 3px var(--surface); }
+.legend { display: flex; flex-wrap: wrap; gap: var(--s3); font-size: .85rem; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 14px; height: 14px; border-radius: 50%; display: inline-block; border: 2px solid var(--blush); }
+
+/* session journal page */
+.studio { display: grid; gap: var(--s4); }
+.studio-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--s3); }
+.stepper { display: grid; grid-template-columns: repeat(var(--n), 1fr); gap: 6px; list-style: none; margin: 0; padding: 0; position: relative; }
+.stepper button { width: 100%; display: grid; gap: 4px; justify-items: center; background: none; border: 0; padding: 6px 2px; color: var(--muted); font-size: .76rem; font-weight: 700; min-height: 56px; }
+.stepper .dot { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: var(--surface); border: 2px solid var(--blush); color: var(--rose); }
+.stepper .dot .ico { width: 18px; height: 18px; }
+.stepper [aria-current="step"] { color: var(--ink); }
+.stepper [aria-current="step"] .dot { border-color: var(--blue); background: var(--blush); color: var(--cocoa); }
+.stepper .seen .dot { border-color: var(--sage); background: var(--green-soft); color: var(--green-ink); }
+@media (max-width: 560px) { .stepper .lbl { display: none; } }
+.stage { padding: var(--s6); gap: var(--s5); background: var(--surface); border-top: 0; position: relative; }
+.stage::before { content: ""; position: absolute; left: 24px; right: 24px; top: 0; height: 4px; border-radius: 0 0 6px 6px; background: var(--ballet); }
+.stage-title { display: flex; align-items: center; gap: var(--s3); }
+.stage-title h2 { font-size: 1.9rem; }
+.stage-title .badge { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: var(--ballet); color: var(--cocoa); flex: none; }
+.stage-title .badge.amber { background: var(--amber-soft); color: var(--amber-ink); }
+.stage-title .badge.green { background: var(--green-soft); color: var(--green-ink); }
+.stage-foot { display: flex; justify-content: space-between; gap: var(--s3); flex-wrap: wrap; border-top: 1px dashed var(--blush); padding-top: var(--s4); }
+.objective { font-size: 1.15rem; }
+.remember { background: var(--powder); border: 1px solid var(--ballet); border-radius: var(--r-md); padding: var(--s4) var(--s5); display: grid; gap: var(--s3); }
+.remember h4 { color: var(--blue); font-family: var(--font-display); font-weight: 500; font-style: italic; font-size: 1.2rem; }
+.idea { display: grid; grid-template-columns: 34px 1fr; gap: var(--s3); align-items: start; padding: var(--s3) 0; border-bottom: 1px dashed var(--line); }
+.idea:last-child { border-bottom: 0; }
+.idea .n { width: 30px; height: 30px; border-radius: 50%; background: var(--ballet); color: var(--cocoa); display: grid; place-items: center; font-size: .85rem; font-weight: 700; }
+.vcards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--s3); }
+.vcard { border: 1px solid var(--ballet); border-radius: var(--r-md); padding: var(--s4); display: grid; gap: var(--s2); background: var(--powder); align-content: start; }
+.vcard .word { font-family: var(--font-display); font-weight: 500; font-size: 1.2rem; }
+.vcard .lab { font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+.vcard .vis { color: var(--rose); width: 56px; height: 56px; }
+.vcard .ex { background: var(--surface); border-radius: var(--r-sm); padding: var(--s2) var(--s3); font-size: .95rem; }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s3); }
+.step { display: grid; grid-template-columns: 42px 1fr; gap: var(--s3); align-items: start; padding: var(--s3) var(--s4); border-radius: var(--r-md); border: 1px solid var(--line); background: var(--cream); }
+.step .n { width: 32px; height: 32px; border-radius: 50%; background: var(--cocoa); color: var(--ivory); display: grid; place-items: center; font-family: var(--font-display); font-size: .95rem; }
+:root[data-theme="dark"] .step .n { background: var(--blue); color: #211a1c; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .step .n { background: var(--blue); color: #211a1c; } }
+.step .lab { font-size: .72rem; text-transform: uppercase; letter-spacing: .14em; color: var(--blue); font-weight: 700; }
+.step .txt { font-size: 1.08rem; }
+.answer-box { background: var(--green-soft); color: var(--ink); border-radius: var(--r-md); padding: var(--s4); display: flex; gap: var(--s3); align-items: center; }
+.answer-box .ico { color: var(--green-ink); }
+.answer-box b { font-family: var(--font-display); font-size: 1.2rem; font-weight: 500; }
+.qcard { border: 1px solid var(--ballet); border-radius: var(--r-lg); padding: var(--s5); display: grid; gap: var(--s4); background: linear-gradient(var(--powder), var(--powder)) top / 100% 6px no-repeat, var(--surface); }
+.qtext { font-size: 1.2rem; font-weight: 600; line-height: 1.5; }
+.hint { background: var(--cream); border-radius: var(--r-md); padding: var(--s3) var(--s4); display: flex; gap: var(--s3); }
+.hint .ico { color: var(--rose); margin-top: 3px; }
+.numrow { display: flex; gap: var(--s2); align-items: center; flex-wrap: wrap; }
+.numrow input { width: 180px; padding: 12px 16px; min-height: 48px; border: 2px solid var(--ballet); border-radius: 99px; background: var(--ivory); font-size: 1.1rem; font-variant-numeric: tabular-nums; }
+.numrow input:focus { border-color: var(--blue); outline: none; }
+.feedback { border-radius: var(--r-md); padding: var(--s3) var(--s4); display: flex; gap: var(--s3); align-items: flex-start; }
+.feedback.ok { background: var(--green-soft); }
+.feedback.ok .ico { color: var(--green-ink); }
+.feedback.no { background: var(--powder); }
+.feedback.no .ico { color: var(--rose); }
+.watch { display: grid; border-radius: var(--r-md); overflow: hidden; border: 1px solid var(--line); }
+.watch > div { padding: var(--s3) var(--s4); display: grid; grid-template-columns: 28px 1fr; gap: var(--s3); }
+.watch .mis { background: var(--amber-soft); }
+.watch .mis .ico, .watch .mis .lab { color: var(--amber-ink); }
+.watch .fix { background: var(--surface); }
+.watch .fix .ico, .watch .fix .lab { color: var(--green-ink); }
+.watch .lab { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; display: block; font-weight: 700; }
+.conf-opts { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: var(--s3); }
+.conf-opts button { display: grid; gap: var(--s2); justify-items: start; text-align: left; padding: var(--s4); border: 2px solid var(--ballet); border-radius: var(--r-md); background: var(--surface); min-height: 96px; }
+.conf-opts button b { font-family: var(--font-display); font-weight: 500; font-size: 1.15rem; }
+.conf-opts button[aria-pressed="true"] { border-color: var(--rose); background: var(--powder); }
+.conf-opts .ico { width: 26px; height: 26px; color: var(--rose); }
+.timer { display: inline-flex; align-items: center; gap: var(--s2); border: 1px solid var(--ballet); border-radius: 99px; padding: 4px 6px 4px 14px; background: var(--surface); }
+.timer .ico { color: var(--rose); }
+.timer .clock { font-family: var(--font-display); font-variant-numeric: tabular-nums; font-size: 1.15rem; min-width: 3.2em; }
+.timer.brk { border-color: var(--sage); }
+.timer-note { background: var(--green-soft); border-radius: var(--r-md); padding: var(--s3) var(--s4); display: flex; flex-wrap: wrap; gap: var(--s3); align-items: center; justify-content: space-between; }
+.done-panel { text-align: center; justify-items: center; padding: var(--s7) var(--s5); background: var(--surface); }
+.done-panel .big-tick { width: 84px; height: 84px; border-radius: 50%; background: var(--green-soft); color: var(--green-ink); display: grid; place-items: center; border: 2px solid var(--sage); }
+.done-panel .big-tick .ico { width: 44px; height: 44px; }
+
+/* diagrams: same science, softer ink */
+.diagram { border: 1px solid var(--line); border-radius: var(--r-md); padding: var(--s4); display: grid; gap: var(--s3); background: var(--ivory); }
+.diagram svg { width: 100%; max-width: 540px; height: auto; justify-self: center; }
+.diagram .parts { display: flex; flex-wrap: wrap; gap: var(--s2); }
+.diagram .parts button[aria-pressed="true"] { background: var(--ballet); border-color: var(--rose); }
+.dg-line { stroke: var(--ink); stroke-width: 2; fill: none; }
+.dg-box { fill: var(--surface); stroke: var(--ink); stroke-width: 2; }
+.dg-block { fill: var(--ballet); stroke: var(--ink); stroke-width: 2; }
+.dg-ins { fill: var(--amber-soft); stroke: var(--amber); stroke-width: 2; stroke-dasharray: 5 4; }
+.dg-txt { fill: var(--ink); font-family: var(--font-ui); font-size: 12px; }
+.dg-lab { fill: var(--blue); font-family: var(--font-ui); font-size: 12px; font-weight: 700; }
+.dg-part.hl .dg-box, .dg-part.hl .dg-block, .dg-part.hl .dg-line, .dg-part.hl .dg-ins { stroke: var(--blue); stroke-width: 4; }
+.diagram .desc { background: var(--powder); border-radius: var(--r-sm); padding: var(--s2) var(--s3); min-height: 2.6em; }
+
+/* learn */
+.sec { background: var(--surface); }
+.sec-top { display: flex; gap: var(--s3); align-items: center; }
+.sec-top .motif { width: 46px; height: 46px; flex: none; }
+.sec ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.sec li a { display: grid; grid-template-columns: 1fr auto; gap: var(--s3); align-items: center; text-decoration: none; color: var(--ink); padding: 10px 14px; border-radius: var(--r-sm); background: var(--powder); min-height: 48px; }
+.sec li a:hover { background: var(--ballet); }
+details.fold { border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface); }
+details.fold > summary { cursor: pointer; padding: var(--s3) var(--s4); font-weight: 700; min-height: 48px; display: flex; align-items: center; gap: var(--s2); }
+details.fold > summary .ico { color: var(--rose); }
+details.fold > div { padding: 0 var(--s4) var(--s4); display: grid; gap: var(--s3); }
+.eqcard { border-top: 4px solid var(--ballet); }
+.eqcard .big { font-family: var(--font-display); font-size: 1.6rem; color: var(--blue); }
+table.sym { border-collapse: collapse; width: 100%; font-size: .95rem; }
+table.sym th, table.sym td { text-align: left; padding: 6px 8px; border-bottom: 1px dashed var(--line); vertical-align: top; }
+table.sym th { font-weight: 700; color: var(--muted); font-size: .72rem; text-transform: uppercase; letter-spacing: .12em; }
+.search { width: 100%; max-width: 420px; padding: 12px 18px; min-height: 48px; border: 2px solid var(--ballet); border-radius: 99px; background: var(--surface); }
+
+/* papers */
+.paper input[type="number"] { width: 100px; padding: 10px 12px; min-height: 44px; border: 1px solid var(--ballet); border-radius: var(--r-sm); background: var(--ivory); }
+.paper textarea { width: 100%; min-height: 72px; padding: 10px 12px; border: 1px solid var(--ballet); border-radius: var(--r-sm); background: var(--ivory); resize: vertical; }
+
+/* settings */
+dialog { border: 1px solid var(--line); border-radius: var(--r-lg); padding: 0; width: min(540px, calc(100% - 32px)); background: var(--surface); color: var(--ink); }
+dialog::backdrop { background: rgba(89, 67, 74, .35); }
+.dlg { padding: var(--s5); display: grid; gap: var(--s4); }
+fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: var(--s2); }
+legend { font-weight: 700; margin-bottom: var(--s2); }
+.opt { display: flex; gap: var(--s3); align-items: center; min-height: 44px; padding: 6px 12px; border: 1px solid var(--line); border-radius: var(--r-sm); }
+.opt input { width: 20px; height: 20px; accent-color: var(--blue); }
+
+/* rewards */
+.charm-reveal { display: grid; justify-items: center; gap: var(--s2); padding: var(--s4) var(--s5); border: 1px dashed var(--rose); border-radius: var(--r-lg); background: var(--powder); }
+.charm-reveal .charm { width: 96px; height: 96px; }
+.charm { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; background: var(--surface); border: 2px solid var(--blush); color: var(--rose); padding: 10px; }
+.charm .motif { width: 100%; height: 100%; color: var(--cocoa); }
+.charm.special { border-color: var(--amber); background: var(--amber-soft); box-shadow: 0 0 0 4px var(--surface), 0 0 0 6px var(--amber); }
+.charm.special .motif { color: var(--amber-ink); }
+.charm.empty { border-style: dashed; border-color: var(--line); background: transparent; }
+.charms { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; margin: 0; padding: 0; }
+.reward-row { display: grid; grid-template-columns: auto 1fr auto; gap: var(--s3); align-items: center; padding: var(--s3) var(--s4); border-radius: var(--r-md); background: var(--cream); }
+.reward-row.unlocked { background: var(--green-soft); }
+.reward-row .num { font-family: var(--font-display); font-size: 1.3rem; min-width: 2.2em; text-align: center; }
+.reward-edit { display: grid; grid-template-columns: 90px 1fr auto; gap: var(--s2); align-items: center; }
+.reward-edit input { padding: 10px 12px; min-height: 44px; border: 1px solid var(--ballet); border-radius: var(--r-sm); background: var(--ivory); width: 100%; }
+.sparkle { color: var(--amber); }
+@media (prefers-reduced-motion: no-preference) {
+  .charm-reveal .charm { animation: charmIn .5s ease-out both; }
+  @keyframes charmIn { from { opacity: 0; transform: scale(.85); } to { opacity: 1; transform: scale(1); } }
+}
+body.no-rewards .rewards-ui { display: none !important; }
+body.calm .optional { display: none !important; }
+body.calm .card { box-shadow: none; }
+body.calm .arch, body.calm .motif.deco { display: none !important; }
+body.calm .today { grid-template-columns: 1fr; }
+
+@media (max-width: 760px) {
+  .today { grid-template-columns: 1fr; padding: var(--s5); gap: var(--s4); }
+  .today .arch { max-width: 160px; order: -1; }
+}
+@media (max-width: 640px) {
+  main { padding: var(--s4) var(--s3) var(--s7); }
+  .card { padding: var(--s4); }
+  .stage { padding: var(--s4); }
+  .stage-title h2 { font-size: 1.5rem; }
+  .today h2 { font-size: 1.7rem; }
+  .week-row { grid-template-columns: 44px 1fr; }
+  .week-row .reorder { grid-column: 2; }
+  .step { grid-template-columns: 38px 1fr; padding: var(--s3); }
+  .wordmark h1 { font-size: 1.2rem; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .btn, .tick, nav.tabs a, .sec li a { transition: background-color .15s, border-color .15s, color .15s; }
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="brand">
+      <a class="wordmark" href="#home" aria-label="Amelie's Physics Club, home">
+        <span class="bow" aria-hidden="true"><svg viewBox="0 0 60 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M30 18 C22 6 6 4 6 14 C6 24 22 24 30 20 Z"/><path d="M30 18 C38 6 54 4 54 14 C54 24 38 24 30 20 Z"/><path d="M28 21 L20 36 M32 21 L40 36"/><circle cx="30" cy="19" r="3.2" fill="currentColor"/></svg></span>
+        <span><h1>Amelie's Physics Club</h1><small>Pretty notes · Big ideas</small></span>
+      </a>
+      <button type="button" class="btn small" id="settingsBtn" aria-haspopup="dialog"><span class="ico" data-i="gear"></span>Settings</button>
+    </div>
+    <nav class="tabs" aria-label="Main">
+      <a href="#plan" data-nav="plan"><span class="ico" data-i="calendar"></span>My Study Plan</a>
+      <a href="#guide" data-nav="guide"><span class="ico" data-i="book"></span>Learn</a>
+      <a href="#practice" data-nav="practice"><span class="ico" data-i="pencil"></span>Practice</a>
+      <a href="#exam-prep" data-nav="exam-prep"><span class="ico" data-i="star"></span>Exam Prep</a>
+      <a href="#progress" data-nav="progress"><span class="ico" data-i="flower"></span>My Progress</a>
+      <a href="#resources" data-nav="resources"><span class="ico" data-i="ribbon"></span>Resources</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <div id="view" class="view"><p class="muted">Loading your revision…</p></div>
+</main>
+
+<dialog id="settings" aria-labelledby="settingsTitle">
+  <form class="dlg" method="dialog" id="settingsForm">
+    <div class="row between"><h2 id="settingsTitle" style="font-size:1.25rem">Settings</h2><button class="btn small" value="close">Close</button></div>
+    <fieldset>
+      <legend>Text size</legend>
+      <label class="opt"><input type="radio" name="ts" value="normal"> Standard</label>
+      <label class="opt"><input type="radio" name="ts" value="large"> Large</label>
+      <label class="opt"><input type="radio" name="ts" value="xl"> Extra large</label>
+    </fieldset>
+    <fieldset>
+      <legend>Reading font</legend>
+      <label class="opt"><input type="radio" name="font" value="club"> Nunito (the Club font)</label>
+      <label class="opt"><input type="radio" name="font" value="clear"> Atkinson Hyperlegible (designed for easy reading)</label>
+    </fieldset>
+    <fieldset>
+      <legend>Rewards</legend>
+      <label class="opt"><input type="checkbox" name="rewards"> Show charms and the reward shelf</label>
+      <a class="btn small" href="#edit-rewards" id="editRewardsLink">Edit the rewards</a>
+    </fieldset>
+    <fieldset>
+      <legend>Focus</legend>
+      <label class="opt"><input type="checkbox" name="calm"> Reduced-distraction mode (hides illustrations, progress, videos and extra panels)</label>
+    </fieldset>
+    <fieldset id="readFs">
+      <legend>Reading</legend>
+      <label class="opt"><input type="checkbox" name="read"> Show "Read aloud" buttons</label>
+    </fieldset>
+    <fieldset>
+      <legend>Timer</legend>
+      <label class="opt"><input type="checkbox" name="sound"> Play soft sounds (timer ending, earning a charm)</label>
+    </fieldset>
+    <p class="small muted">Settings are saved on this device.</p>
+  </form>
+</dialog>
+
+<script>
+/* ============ icons (one consistent set) ============ */
+const ICONS = {
+  book: '<path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5A2.5 2.5 0 0 1 4 20.5z"/>',
+  bulb: '<path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1 2V16h5.2v-.2c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/>',
+  steps: '<path d="M4 6h4"/><path d="M4 12h8"/><path d="M4 18h12"/><circle cx="18" cy="6" r="2"/>',
+  pencil: '<path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 6l3 3"/>',
+  alert: '<path d="M12 3l9.5 17h-19z"/><path d="M12 10v4"/><path d="M12 17.5v.5"/>',
+  check: '<path d="M5 12.5l4.5 4.5L19 7"/>',
+  play: '<path d="M8 5l11 7-11 7z"/>',
+  clock: '<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>',
+  pause: '<path d="M9 5v14"/><path d="M15 5v14"/>',
+  speaker: '<path d="M4 9.5h4L13 5v14l-5-4.5H4z"/><path d="M16.5 9a4.5 4.5 0 0 1 0 6"/>',
+  gear: '<circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/>',
+  up: '<path d="M6 14l6-6 6 6"/>',
+  down: '<path d="M6 10l6 6 6-6"/>',
+  left: '<path d="M15 6l-6 6 6 6"/>',
+  right: '<path d="M9 6l6 6-6 6"/>',
+  help: '<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6"/><path d="M12 17v.5"/>',
+  half: '<circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/>',
+  full: '<circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/>',
+  video: '<rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3z"/>',
+  key: '<circle cx="8" cy="12" r="4"/><path d="M12 12h9M18 12v3M21 12v2"/>',
+  retry: '<path d="M4 12a8 8 0 1 0 2.3-5.7"/><path d="M4 4v4h4"/>',
+  home: '<path d="M4 11l8-7 8 7v9H4z"/><path d="M10 20v-5h4v5"/>',
+  calendar: '<rect x="4" y="5" width="16" height="15" rx="3"/><path d="M4 10h16M9 3v4M15 3v4"/>',
+  star: '<path d="M12 3.5l2.5 5.3 5.8.7-4.3 4 1.1 5.7L12 16.4l-5.1 2.8 1.1-5.7-4.3-4 5.8-.7z"/>',
+  flower: '<circle cx="12" cy="10" r="2.2"/><path d="M12 7.8c-1.6-3.6 3.2-3.6 1.6 0M14.2 10c3.6-1.6 3.6 3.2 0 1.6M12 12.2c1.6 3.6-3.2 3.6-1.6 0M9.8 10c-3.6 1.6-3.6-3.2 0-1.6"/><path d="M12 13v8M12 18c-2-2-4-2-5-1M12 17c2-2 4-2 5-1"/>',
+  ribbon: '<path d="M12 11C9 6 4 5 4 9s5 4 8 2zM12 11c3-5 8-6 8-2s-5 4-8 2z"/><path d="M11 12l-3 8M13 12l3 8"/>',
+  heart: '<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>',
+  coffee: '<path d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M16 11h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M8 3v3M12 3v3"/>'
+};
+function icon(name) {
+  const s = document.createElement("span"); s.className = "ico"; s.setAttribute("aria-hidden", "true");
+  s.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' + (ICONS[name] || "") + "</svg>";
+  return s;
+}
+document.querySelectorAll("[data-i]").forEach(el => el.replaceWith(icon(el.dataset.i)));
+
+const MOTIFS = {"book": "<path d=\"M14 34C34 26 50 28 60 38C70 28 86 26 106 34V92C86 84 70 86 60 96C50 86 34 84 14 92Z\"/><path d=\"M60 38V96\"/><path d=\"M24 46C34 42 44 43 52 48M24 58C34 54 44 55 52 60M24 70C34 66 44 67 52 72M68 48C76 43 86 42 96 46M68 60C76 55 86 54 96 58\"/><path d=\"M84 30V50L89 45L94 50V29\"/>", "cup": "<path d=\"M30 52H82V74C82 90 70 98 56 98C42 98 30 90 30 74Z\"/><path d=\"M82 58C97 58 97 82 82 82\"/><ellipse cx=\"56\" cy=\"104\" rx=\"40\" ry=\"6\"/><path d=\"M46 44C40 36 52 32 46 22M58 44C52 36 64 32 58 22M70 44C64 36 76 32 70 22\"/><path d=\"M56 82s-8-5-8-10a4 4 0 0 1 8-1 4 4 0 0 1 8 1c0 5-8 10-8 10z\"/>", "lamp": "<ellipse cx=\"44\" cy=\"104\" rx=\"26\" ry=\"6\"/><path d=\"M44 98L58 62L44 34\"/><path d=\"M40 30L64 18L84 46L60 58Z\"/><circle cx=\"44\" cy=\"34\" r=\"4\"/><circle cx=\"58\" cy=\"62\" r=\"4\"/><path d=\"M74 62L82 74M84 56L98 62M66 66L68 80\" stroke-dasharray=\"3 5\"/>", "tulip": "<path d=\"M42 72H78V100C78 107 42 107 42 100Z\"/><path d=\"M42 80H78\" opacity=\".5\"/><path d=\"M60 72C58 56 58 46 58 34M62 72C68 56 76 50 82 42M58 72C52 58 44 52 38 46\"/><path d=\"M50 34C49 18 67 18 66 34C63 30 61 33 58 27C55 33 53 30 50 34Z\"/><path d=\"M76 42C78 28 94 30 90 44C88 40 85 42 84 37C80 42 79 39 76 42Z\"/><path d=\"M30 46C28 32 44 30 44 44C41 41 39 43 37 38C34 43 33 40 30 46Z\"/><path d=\"M60 60C66 54 70 54 72 52\"/>", "pearls": "<circle cx=\"95.7\" cy=\"55.7\" r=\"5.2\"/><circle cx=\"91.5\" cy=\"65.7\" r=\"5.2\"/><circle cx=\"85.4\" cy=\"74.2\" r=\"5.2\"/><circle cx=\"77.8\" cy=\"80.6\" r=\"5.2\"/><circle cx=\"69.2\" cy=\"84.6\" r=\"5.2\"/><circle cx=\"60.0\" cy=\"86.0\" r=\"5.2\"/><circle cx=\"50.8\" cy=\"84.6\" r=\"5.2\"/><circle cx=\"42.2\" cy=\"80.6\" r=\"5.2\"/><circle cx=\"34.6\" cy=\"74.2\" r=\"5.2\"/><circle cx=\"28.5\" cy=\"65.7\" r=\"5.2\"/><circle cx=\"24.3\" cy=\"55.7\" r=\"5.2\"/><path d=\"M50 18C44 8 32 8 34 16C36 22 46 21 50 18ZM50 18C56 8 68 8 66 16C64 22 54 21 50 18Z\" transform=\"translate(10 0)\"/><circle cx=\"60\" cy=\"18\" r=\"3\" fill=\"currentColor\"/>", "bow": "<path d=\"M60 52C46 28 14 26 14 46C14 66 46 64 60 56Z\"/><path d=\"M60 52C74 28 106 26 106 46C106 66 74 64 60 56Z\"/><path d=\"M56 57L40 98M64 57L80 98\"/><path d=\"M40 98L46 92L50 99M80 98L74 92L70 99\"/><ellipse cx=\"60\" cy=\"54\" rx=\"6\" ry=\"7\" fill=\"currentColor\"/>", "headphones": "<path d=\"M26 70C26 30 94 30 94 70\"/><rect x=\"18\" y=\"66\" width=\"18\" height=\"30\" rx=\"8\"/><rect x=\"84\" y=\"66\" width=\"18\" height=\"30\" rx=\"8\"/><path d=\"M54 30C50 24 42 24 44 30C46 34 52 33 54 30ZM54 30C58 24 66 24 64 30C62 34 56 33 54 30Z\" transform=\"translate(6 -2)\"/>", "record": "<rect x=\"12\" y=\"34\" width=\"96\" height=\"66\" rx=\"8\"/><circle cx=\"54\" cy=\"66\" r=\"26\"/><circle cx=\"54\" cy=\"66\" r=\"17\" opacity=\".6\"/><circle cx=\"54\" cy=\"66\" r=\"5\"/><path d=\"M96 42V70L78 84\"/><circle cx=\"96\" cy=\"42\" r=\"4\"/><path d=\"M20 92H32\"/>", "moon": "<path d=\"M70 24A34 34 0 1 0 96 82A28 28 0 1 1 70 24Z\"/><path d=\"M28 30l3 6 6 1-4.5 4 1 6-5.5-3-5.5 3 1-6L18 37l6-1z\"/><path d=\"M90 30l2 4 4 .5-3 3 .7 4-3.7-2-3.7 2 .7-4-3-3 4-.5z\"/><circle cx=\"34\" cy=\"80\" r=\"1.6\" fill=\"currentColor\"/><circle cx=\"100\" cy=\"58\" r=\"1.6\" fill=\"currentColor\"/>", "notebook": "<rect x=\"28\" y=\"16\" width=\"58\" height=\"88\" rx=\"6\"/><path d=\"M28 28H22M28 44H22M28 60H22M28 76H22M28 92H22\"/><path d=\"M40 36H74M40 48H74M40 60H64\"/><path d=\"M96 26L104 34L72 92L62 96L64 86Z\"/>"};
+const SECTION_MOTIF = { "Skills toolkit": "book", "Energy": "cup", "Electricity": "lamp", "Particle model of matter": "tulip", "Atomic structure": "pearls", "Forces and motion": "bow", "Waves": "headphones", "Magnetism and electromagnetism": "record", "Space physics": "moon" };
+function motifFor(n) { const s = SECTIONS.find(x => x.ns.includes(n)); return s ? SECTION_MOTIF[s.name] : "notebook"; }
+function motif(name, cls) {
+  const d = document.createElement("div"); d.className = "motif" + (cls ? " " + cls : ""); d.setAttribute("aria-hidden", "true");
+  d.innerHTML = '<svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">' + (MOTIFS[name] || MOTIFS.notebook) + "</svg>";
+  return d;
+}
+function divider(i) { return h("div", { class: "divider", "aria-hidden": "true" }, icon(i || "heart")); }
+/* ============ helpers ============ */
+const $ = (s, el = document) => el.querySelector(s);
+function h(tag, attrs = {}, ...kids) {
+  const el = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs || {})) {
+    if (v == null || v === false) continue;
+    if (k === "class") el.className = v;
+    else if (k === "style") el.setAttribute("style", v);
+    else if (k.startsWith("on")) el.addEventListener(k.slice(2), v);
+    else el.setAttribute(k, v === true ? "" : v);
+  }
+  for (const k of kids.flat(Infinity)) if (k != null && k !== false) el.append(k.nodeType ? k : document.createTextNode(String(k)));
+  return el;
+}
+const plural = (n, w) => n + " " + w + (n === 1 ? "" : "s");
+
+/* ============ data (loaded from files) ============ */
+let D = null, C = null, E = null;
+let SESSIONS = [], WEEKS = [], SECTIONS = [], TITLE = {};
+const CONF3 = {
+  help: { label: "I need more help", short: "Need more help", icon: "help", cls: "help" },
+  getting: { label: "I'm getting there", short: "Getting there", icon: "half", cls: "getting" },
+  got: { label: "I understand this", short: "Understand", icon: "full", cls: "got" }
+};
+
+/* ============ state + persistence ============ */
+const LS = "amelie-physics-v1", LS_SET = "amelie-physics-settings";
+let state = { done: {}, conf: {}, papers: {}, order: {}, pos: {}, charms: {}, rewards: null };
+let settings = { ts: "normal", calm: false, read: false, sound: true, font: "club", rewards: true };
+function normConf(v) { if (typeof v === "number") return v <= 2 ? "help" : v === 3 ? "getting" : "got"; return CONF3[v] ? v : undefined; }
+function normalize(s) {
+  const out = { done: { ...(s.done || {}) }, conf: {}, papers: JSON.parse(JSON.stringify(s.papers || {})), order: JSON.parse(JSON.stringify(s.order || {})), pos: JSON.parse(JSON.stringify(s.pos || {})), charms: JSON.parse(JSON.stringify(s.charms || {})), rewards: Array.isArray(s.rewards) ? JSON.parse(JSON.stringify(s.rewards)) : null };
+  for (const [k, v] of Object.entries(s.conf || {})) { const c = normConf(v); if (c) out.conf[k] = c; }
+  return out;
+}
+try { const raw = localStorage.getItem(LS); if (raw) state = normalize(JSON.parse(raw)); } catch (e) {}
+try { const raw = localStorage.getItem(LS_SET); if (raw) settings = { ...settings, ...JSON.parse(raw) }; } catch (e) {}
+function saveLocal() { try { localStorage.setItem(LS, JSON.stringify(state)); } catch (e) {} }
+let mode = "local", docRef = null, writing = false, queued = false, saveTimer = null;
+function save() {
+  saveLocal();
+  if (mode !== "shared") return;
+  clearTimeout(saveTimer); saveTimer = setTimeout(flush, 700);
+}
+async function flush() {
+  if (!docRef) return;
+  if (writing) { queued = true; return; }
+  writing = true;
+  try { await docRef.set({ ...state, updated: new Date().toISOString() }); }
+  catch (e) { if (e && e.code === "unavailable") { writing = false; setTimeout(flush, 1500 + Math.random() * 1000); return; } }
+  writing = false;
+  if (queued) { queued = false; flush(); }
+}
+
+/* ============ settings ============ */
+const canSpeak = (() => { try { return "speechSynthesis" in window && typeof SpeechSynthesisUtterance === "function"; } catch (e) { return false; } })();
+function applySettings() {
+  document.documentElement.classList.toggle("ts-large", settings.ts === "large");
+  document.documentElement.classList.toggle("ts-xl", settings.ts === "xl");
+  document.body.classList.toggle("calm", !!settings.calm);
+  document.body.classList.toggle("no-rewards", settings.rewards === false);
+  document.documentElement.classList.toggle("clear-font", settings.font === "clear");
+  try { localStorage.setItem(LS_SET, JSON.stringify(settings)); } catch (e) {}
+}
+const dlg = $("#settings"), form = $("#settingsForm");
+if (!canSpeak) $("#readFs").hidden = true;
+$("#settingsBtn").addEventListener("click", () => {
+  form.ts.value = settings.ts; form.font.value = settings.font || "club"; form.rewards.checked = settings.rewards !== false; form.calm.checked = settings.calm; form.read.checked = settings.read; form.sound.checked = settings.sound;
+  if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
+});
+form.addEventListener("change", () => {
+  settings = { ts: form.ts.value, font: form.font.value, rewards: form.rewards.checked, calm: form.calm.checked, read: form.read.checked, sound: form.sound.checked };
+  applySettings(); render();
+});
+$("#editRewardsLink").addEventListener("click", () => { if (dlg.close) dlg.close(); else dlg.removeAttribute("open"); });
+form.addEventListener("submit", e => { e.preventDefault(); if (dlg.close) dlg.close(); else dlg.removeAttribute("open"); });
+applySettings();
+
+/* ============ read aloud ============ */
+function readAloudBtn(getEl) {
+  if (!settings.read || !canSpeak) return null;
+  const b = h("button", { type: "button", class: "btn small" }, icon("speaker"), "Read aloud");
+  b.addEventListener("click", () => {
+    try {
+      if (speechSynthesis.speaking) { speechSynthesis.cancel(); b.lastChild.textContent = "Read aloud"; return; }
+      const el = getEl(); if (!el) return;
+      const clone = el.cloneNode(true); clone.querySelectorAll("button, .no-read, [hidden]").forEach(x => x.remove());
+      const u = new SpeechSynthesisUtterance(clone.innerText || clone.textContent);
+      u.lang = "en-GB"; u.rate = 0.95;
+      u.onend = () => { b.lastChild.textContent = "Read aloud"; };
+      speechSynthesis.speak(u); b.lastChild.textContent = "Stop reading";
+    } catch (e) {}
+  });
+  return b;
+}
+
+/* ============ plan logic ============ */
+function sess(n) { return SESSIONS[n - 1]; }
+function weekOf(n) { return WEEKS.find(w => w.id === sess(n).week); }
+function weekOrder(wid) {
+  const base = SESSIONS.filter(s => s.week === wid).map(s => s.n);
+  const saved = (state.order[wid] || []).filter(n => base.includes(n));
+  return saved.concat(base.filter(n => !saved.includes(n)));
+}
+function planOrder() { return WEEKS.flatMap(w => weekOrder(w.id)); }
+function nextSession() { return planOrder().find(n => !state.done[n]) || null; }
+function currentWeekId() {
+  const t = new Date(); let cur = WEEKS[0].id;
+  for (const w of WEEKS) if (new Date(w.start + "T00:00:00") <= t) cur = w.id;
+  return cur;
+}
+function fmtDate(iso) { return new Date(iso + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short" }); }
+function title(n) { return TITLE[n] || sess(n).topic; }
+function enr(n) { return (E.sessions || {})[String(n)] || {}; }
+function content(n) { return C[String(n)] || { ideas: [] }; }
+function isPaperSession(n) { return !content(n).qs; }
+function firstSentence(t) { const m = t.match(/^(.+?[.!?])(\s|$)/); return m ? m[1] : t; }
+function objectives(n) {
+  const e = enr(n); if (e.objectives) return e.objectives;
+  return content(n).ideas.slice(0, 3).map(firstSentence);
+}
+function essentials(n) { const e = enr(n); return e.essentials || content(n).ideas.slice(0, 3); }
+function secFor(n) { return SECTIONS.find(s => s.ns.includes(n)); }
+const GUIDE_ORDER = () => SECTIONS.flatMap(s => s.ns);
+
+/* ============ timer ============ */
+const T = { left: 25 * 60, phase: "work", run: null, ended: false, ctx: null };
+function tText() { const m = Math.floor(T.left / 60), s = T.left % 60; return m + ":" + String(s).padStart(2, "0"); }
+function beep() { if (!settings.sound || !T.ctx) return; try { const o = T.ctx.createOscillator(), g = T.ctx.createGain(); o.type = "sine"; o.frequency.value = 523; g.gain.value = 0.06; o.connect(g); g.connect(T.ctx.destination); o.start(); o.stop(T.ctx.currentTime + 0.5); } catch (e) {} }
+function tTick() {
+  T.left--;
+  if (T.left <= 0) {
+    clearInterval(T.run); T.run = null; beep();
+    if (T.phase === "work") { T.phase = "break-ready"; T.left = 5 * 60; }
+    else { T.phase = "work"; T.left = 25 * 60; T.ended = "break"; }
+    if (T.phase === "break-ready") T.ended = "work";
+  }
+  paintTimer();
+}
+function tToggle() {
+  try { if (!T.ctx) T.ctx = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) {}
+  if (T.run) { clearInterval(T.run); T.run = null; }
+  else { if (T.phase === "break-ready") T.phase = "break"; T.ended = false; T.run = setInterval(tTick, 1000); }
+  paintTimer();
+}
+function tReset() { clearInterval(T.run); T.run = null; T.phase = "work"; T.left = 25 * 60; T.ended = false; paintTimer(); }
+function timerEl() {
+  const wrap = h("div", { id: "timerWrap", style: "display:grid;gap:8px;justify-items:end" });
+  paintTimer(wrap); return wrap;
+}
+function paintTimer(target) {
+  const wrap = target || $("#timerWrap"); if (!wrap) return;
+  const label = T.run ? "Pause timer" : (T.phase === "work" ? (T.left < 1500 ? "Resume timer" : "Start 25-minute timer") : "Start 5-minute break");
+  wrap.replaceChildren(...[
+    h("div", { class: "timer" + (T.phase !== "work" ? " brk" : ""), role: "group", "aria-label": "Revision timer" },
+      icon(T.phase === "work" ? "clock" : "coffee"),
+      h("span", { class: "clock", "aria-live": "off" }, tText()),
+      h("span", { class: "sr" }, T.phase === "work" ? "focus time remaining" : "break time remaining"),
+      h("button", { type: "button", class: "btn small", onclick: tToggle, "aria-label": label }, icon(T.run ? "pause" : "play"), T.run ? "Pause" : (T.phase === "work" ? "Start" : "Break")),
+      (T.run || T.left !== 25 * 60 || T.phase !== "work") ? h("button", { type: "button", class: "btn small ghost", onclick: tReset }, "Reset") : null),
+    T.ended === "work" ? h("div", { class: "timer-note", role: "status" }, h("span", {}, "25 minutes done. Good time for a 5-minute break: your place is saved."), h("button", { type: "button", class: "btn small", onclick: tToggle }, icon("coffee"), "Start break")) : null,
+    T.ended === "break" ? h("div", { class: "timer-note", role: "status" }, h("span", {}, "Break over. Carry on when you're ready, or stop here.")) : null].filter(Boolean));
+}
+
+/* ============ shared UI bits ============ */
+function confChip(n) { const c = state.conf[n]; if (!c) return null; const k = CONF3[c]; return h("span", { class: "chip " + k.cls }, icon(k.icon), k.short); }
+function eqChips(n) { const s = sess(n); return s.eq.length ? h("div", { class: "row" }, s.eq.map(e => h("span", { class: "chip eq" }, e))) : null; }
+function stageTitle(iconName, text, tone) { return h("div", { class: "stage-title" }, h("span", { class: "badge" + (tone ? " " + tone : "") }, icon(iconName)), h("h2", {}, text)); }
+const yt = q => "https://www.youtube.com/results?search_query=" + encodeURIComponent(q);
+function videoBlock(n) {
+  const q = (D.VID || {})[n]; if (!q) return null;
+  const sec = secFor(n);
+  return h("div", { class: "optional", style: "display:grid;gap:10px" },
+    h("h3", {}, "Prefer to watch first?"),
+    h("div", { class: "row" },
+      h("a", { class: "btn small", href: yt("freesciencelessons AQA GCSE physics " + q), target: "_blank", rel: "noopener" }, icon("video"), "Free Science Lessons"),
+      h("a", { class: "btn small", href: yt("Cognito GCSE physics " + q), target: "_blank", rel: "noopener" }, icon("video"), "Cognito"),
+      h("a", { class: "btn small", href: "https://cognito.org/courses/gcse/physics-triple/aqa/higher/lessons", target: "_blank", rel: "noopener" }, "Cognito lessons + quiz")),
+    sec ? h("p", { class: "small muted" }, "CGP Revision Guide: this is in " + sec.cgp + ". The book's online videos and quizzes open with the code inside its front cover.") : null);
+}
+const VISUALS = {
+  block: '<rect x="10" y="22" width="36" height="26" rx="3" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="28" y="40" text-anchor="middle" font-size="10" fill="currentColor" font-family="Lexend">1 kg</text><path d="M48 18 l0 -10 m-4 4 l4 -4 l4 4" stroke="currentColor" stroke-width="2.5" fill="none"/><text x="38" y="14" font-size="9" fill="currentColor" font-family="Lexend" text-anchor="end">+1 °C</text>',
+  thermo: '<rect x="22" y="6" width="12" height="34" rx="6" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="28" cy="46" r="8" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M28 44 V22" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M42 30 h10 m-4 -4 l4 4 l-4 4" stroke="currentColor" stroke-width="2.5" fill="none"/>'
+};
+function vocabCard(word, def, from) {
+  const x = (E.vocab || {})[word] || {};
+  return h("div", { class: "vcard" },
+    x.visual && VISUALS[x.visual] ? (() => { const d = h("div", { class: "vis", "aria-hidden": "true" }); d.innerHTML = '<svg viewBox="0 0 56 56">' + VISUALS[x.visual] + "</svg>"; return d; })() : null,
+    h("div", { class: "word" }, word),
+    h("div", {}, h("span", { class: "lab" }, "Simply put"), h("div", {}, def)),
+    x.formal ? h("div", {}, h("span", { class: "lab" }, "Formal definition"), h("div", {}, x.formal)) : null,
+    x.example ? h("div", { class: "ex" }, h("span", { class: "lab" }, "Example"), h("div", {}, x.example)) : null,
+    from ? h("a", { href: "#topic-" + from, class: "small" }, "From: " + title(from)) : null);
+}
+
+/* ============ diagrams ============ */
+const DIAGRAMS = {
+  "shc-practical": {
+    title: "Specific heat capacity practical",
+    caption: "Measure the block's mass on a balance first. Then heat it and record the energy supplied and the temperature rise.",
+    parts: [
+      ["supply", "Power supply", "Provides the electrical energy for the heater."],
+      ["joulemeter", "Joulemeter", "Measures the energy supplied in joules. You can use an ammeter, voltmeter and stopwatch instead (E = V × I × t)."],
+      ["heater", "Immersion heater", "Sits in one hole in the block and transfers energy to it."],
+      ["thermometer", "Thermometer", "Sits in the other hole. Read the temperature at the start and the end to find Δθ."],
+      ["block", "Metal block", "The material being tested. Its mass is measured on a balance before heating."],
+      ["insulation", "Insulation", "Reduces energy lost to the surroundings, so the value of c is closer to the true value."]
+    ],
+    svg: `<svg viewBox="0 0 400 240" role="img" aria-labelledby="dgT dgD">
+<title id="dgT">Specific heat capacity apparatus</title><desc id="dgD">A power supply connected through a joulemeter to an immersion heater in a metal block. A thermometer sits in a second hole in the block. The block is wrapped in insulation.</desc>
+<g class="dg-part" data-p="insulation"><rect class="dg-ins" x="196" y="96" width="176" height="122" rx="14"/></g>
+<g class="dg-part" data-p="block"><rect class="dg-block" x="214" y="112" width="140" height="92" rx="4"/><text class="dg-txt" x="284" y="196" text-anchor="middle">block</text></g>
+<g class="dg-part" data-p="supply"><rect class="dg-box" x="16" y="150" width="78" height="54" rx="6"/><text class="dg-txt" x="55" y="176" text-anchor="middle">power</text><text class="dg-txt" x="55" y="191" text-anchor="middle">supply</text></g>
+<g class="dg-part" data-p="joulemeter"><rect class="dg-box" x="114" y="150" width="64" height="54" rx="6"/><rect class="dg-box" x="124" y="160" width="44" height="18" rx="2"/><text class="dg-txt" x="146" y="174" text-anchor="middle">0000 J</text><text class="dg-txt" x="146" y="196" text-anchor="middle">J</text></g>
+<path class="dg-line" d="M94 165 H114"/><path class="dg-line" d="M94 190 H114"/>
+<path class="dg-line" d="M146 150 V44 H238 V62"/><path class="dg-line" d="M160 150 V56 H252 V62"/>
+<g class="dg-part" data-p="heater"><rect class="dg-box" x="236" y="62" width="18" height="104" rx="4"/><path class="dg-line" d="M240 120 l10 6 l-10 6 l10 6 l-10 6"/></g>
+<g class="dg-part" data-p="thermometer"><rect class="dg-box" x="312" y="26" width="12" height="132" rx="6"/><circle class="dg-box" cx="318" cy="162" r="9"/><path d="M318 160 V96" stroke="var(--amber)" stroke-width="4" stroke-linecap="round"/></g>
+<g class="dg-labels">
+<text class="dg-lab" x="262" y="56">heater</text>
+<text class="dg-lab" x="330" y="40">thermometer</text>
+<text class="dg-lab" x="200" y="232">insulation</text>
+<text class="dg-lab" x="114" y="224">joulemeter</text>
+</g>
+</svg>`
+  }
+  ,
+  "falling-ball": {
+    title: "Energy transfer as a ball falls",
+    caption: "Ignoring air resistance, the gravitational potential energy lost equals the kinetic energy gained.",
+    parts: [
+      ["top", "At the top", "The ball is still, so all its energy is in the gravitational potential store (Ep = mgh). Kinetic energy is zero."],
+      ["falling", "Falling", "As it falls, the gravitational potential store empties and the kinetic store fills up."],
+      ["bottom", "Just before landing", "All the Ep has been transferred to the kinetic store: mgh = ½mv²."],
+      ["air", "Air resistance", "In real life some energy is transferred to the thermal store of the air, so the ball lands a little slower."]
+    ],
+    svg: `<svg viewBox="0 0 400 240" role="img" aria-labelledby="fbT fbD"><title id="fbT">Falling ball energy diagram</title><desc id="fbD">A ball at the top of a drop has all its energy as gravitational potential energy. Just before landing the same energy is kinetic energy. Bar charts compare the two stores at the top and at the bottom.</desc>
+<path class="dg-line" d="M20 214 H200"/>
+<g class="dg-part" data-p="top"><circle class="dg-box" cx="90" cy="38" r="14"/><text class="dg-txt" x="112" y="36">top</text></g>
+<g class="dg-part" data-p="falling"><path class="dg-line" d="M90 58 V172" stroke-dasharray="6 5"/><path class="dg-line" d="M83 164 L90 174 L97 164"/><path class="dg-line" d="M40 38 V200"/><text class="dg-txt" x="30" y="122" text-anchor="middle">h</text></g>
+<g class="dg-part" data-p="bottom"><circle class="dg-box" cx="90" cy="198" r="14"/><text class="dg-txt" x="112" y="202">bottom</text></g>
+<g class="dg-part" data-p="air"><path class="dg-line" d="M130 110 h26 M130 124 h20 M130 96 h20" stroke-dasharray="3 4"/><text class="dg-txt" x="160" y="114">air</text></g>
+<g><text class="dg-lab" x="262" y="28" text-anchor="middle">at the top</text><text class="dg-lab" x="352" y="28" text-anchor="middle">at the bottom</text>
+<path class="dg-line" d="M230 200 H380"/>
+<rect x="240" y="60" width="20" height="140" fill="var(--blue)"/><rect x="266" y="198" width="20" height="2" fill="var(--green)"/>
+<rect x="330" y="198" width="20" height="2" fill="var(--blue)"/><rect x="356" y="60" width="20" height="140" fill="var(--green)"/>
+<text class="dg-txt" x="250" y="216" text-anchor="middle">Ep</text><text class="dg-txt" x="276" y="216" text-anchor="middle">Ek</text><text class="dg-txt" x="340" y="216" text-anchor="middle">Ep</text><text class="dg-txt" x="366" y="216" text-anchor="middle">Ek</text></g>
+</svg>`
+  },
+  "sankey": {
+    title: "Sankey diagram: where the energy goes",
+    caption: "The width of each arrow shows the amount of energy. Here a motor is supplied with 100 J.",
+    parts: [
+      ["input", "Total input", "100 J of energy is supplied (for a motor, by an electric current)."],
+      ["useful", "Useful output", "70 J is transferred usefully, e.g. to the kinetic store of the motor. Efficiency = 70 ÷ 100 = 0.7 (70%)."],
+      ["wasted", "Wasted energy", "30 J is dissipated to the surroundings, mostly as thermal energy because of friction."]
+    ],
+    svg: `<svg viewBox="0 0 400 240" role="img" aria-labelledby="skT skD"><title id="skT">Sankey diagram</title><desc id="skD">An arrow 100 joules wide splits into a 70 joule useful arrow going right and a 30 joule wasted arrow curving down.</desc>
+<g class="dg-part" data-p="input"><rect class="dg-box" x="20" y="40" width="120" height="120" style="fill:var(--blue-soft)"/><text class="dg-txt" x="80" y="104" text-anchor="middle">100 J in</text></g>
+<g class="dg-part" data-p="useful"><path class="dg-box" d="M140 40 H320 V24 L372 82 L320 140 V124 H140 Z" style="fill:var(--green-soft)"/><text class="dg-txt" x="250" y="86" text-anchor="middle">70 J useful</text></g>
+<g class="dg-part" data-p="wasted"><path class="dg-box" d="M140 124 H170 Q206 124 206 160 V196 H222 L188 230 L154 196 H170 V164 Q170 160 166 160 H140 Z" style="fill:var(--amber-soft)"/><text class="dg-txt" x="236" y="190">30 J wasted</text><text class="dg-txt" x="236" y="206">(thermal)</text></g>
+</svg>`
+  }
+  ,
+  "meters": {
+    title: "Where the meters go",
+    caption: "A simple circuit with an ammeter in series and a voltmeter in parallel across the resistor.",
+    parts: [
+      ["cell", "Cell", "Provides the potential difference that pushes charge around the circuit. The long line is the positive side."],
+      ["ammeter", "Ammeter", "Measures current in amps. It goes IN SERIES, in the loop, so the same current flows through it."],
+      ["resistor", "Resistor", "The component being tested. Resistance R = V ÷ I."],
+      ["voltmeter", "Voltmeter", "Measures the pd across the resistor in volts. It goes IN PARALLEL, connected across the component."]
+    ],
+    svg: `<svg viewBox="0 0 400 250" role="img" aria-labelledby="mT mD"><title id="mT">Ammeter and voltmeter circuit</title><desc id="mD">A cell at the top, an ammeter on the left side of the loop, a resistor at the bottom, and a voltmeter connected across the resistor.</desc>
+<path class="dg-line" d="M60 50 H190 M210 50 H340 V170 H230 M170 170 H60 V126 M60 94 V50"/>
+<g class="dg-part" data-p="cell"><path class="dg-line" d="M192 32 V68" style="stroke-width:3"/><path class="dg-line" d="M208 40 V60" style="stroke-width:5"/><text class="dg-txt" x="200" y="24" text-anchor="middle">cell</text></g>
+<g class="dg-part" data-p="ammeter"><circle class="dg-box" cx="60" cy="110" r="16"/><text class="dg-txt" x="60" y="115" text-anchor="middle" style="font-size:15px">A</text></g>
+<g class="dg-part" data-p="resistor"><rect class="dg-box" x="170" y="160" width="60" height="20"/></g>
+<g class="dg-part" data-p="voltmeter"><path class="dg-line" d="M150 170 V215 H184 M216 215 H250 V170"/><circle class="dg-box" cx="200" cy="215" r="16"/><text class="dg-txt" x="200" y="220" text-anchor="middle" style="font-size:15px">V</text></g>
+<circle cx="150" cy="170" r="3" fill="var(--ink)"/><circle cx="250" cy="170" r="3" fill="var(--ink)"/>
+</svg>`
+  },
+  "series-parallel": {
+    title: "Series and parallel circuits",
+    caption: "Two resistors connected in series (left) and in parallel (right).",
+    parts: [
+      ["series", "Series", "One loop. The current is the same everywhere. The supply pd is shared between the resistors. R total = R1 + R2."],
+      ["parallel", "Parallel", "Separate branches. Each branch has the full supply pd. The branch currents add up to the total current. The total resistance is less than the smallest resistor."]
+    ],
+    svg: `<svg viewBox="0 0 400 240" role="img" aria-labelledby="spT spD"><title id="spT">Series and parallel circuits</title><desc id="spD">Left: two resistors one after another in a single loop. Right: two resistors on separate branches.</desc>
+<g class="dg-part" data-p="series">
+<path class="dg-line" d="M20 60 H45 M85 60 H115 M155 60 H180 V190 H108 M92 190 H20 V60"/>
+<rect class="dg-box" x="45" y="51" width="40" height="18"/><rect class="dg-box" x="115" y="51" width="40" height="18"/>
+<path class="dg-line" d="M94 176 V204" style="stroke-width:3"/><path class="dg-line" d="M106 182 V198" style="stroke-width:5"/>
+<text class="dg-lab" x="100" y="30" text-anchor="middle">series</text></g>
+<g class="dg-part" data-p="parallel">
+<path class="dg-line" d="M220 60 H280 M320 60 H380 V200 H308 M292 200 H220 V60 M220 130 H280 M320 130 H380"/>
+<rect class="dg-box" x="280" y="51" width="40" height="18"/><rect class="dg-box" x="280" y="121" width="40" height="18"/>
+<path class="dg-line" d="M294 186 V214" style="stroke-width:3"/><path class="dg-line" d="M306 192 V208" style="stroke-width:5"/>
+<circle cx="220" cy="130" r="3" fill="var(--ink)"/><circle cx="380" cy="130" r="3" fill="var(--ink)"/>
+<text class="dg-lab" x="300" y="30" text-anchor="middle">parallel</text></g>
+</svg>`
+  },
+  "iv-graphs": {
+    title: "I–V graphs",
+    caption: "Current (I) against potential difference (V), including negative values when the supply is reversed.",
+    parts: [
+      ["resistor", "Fixed resistor", "A straight line through the origin: current is directly proportional to pd, so the resistance stays the same (at constant temperature)."],
+      ["lamp", "Filament lamp", "The line curves and gets flatter: as the current increases the filament heats up, so its resistance increases."],
+      ["diode", "Diode", "Current flows in one direction only. In reverse, the resistance is very high, so almost no current flows."]
+    ],
+    svg: `<svg viewBox="0 0 400 200" role="img" aria-labelledby="ivT ivD"><title id="ivT">I–V graphs</title><desc id="ivD">Three graphs: a straight line through the origin for a resistor, an S-shaped curve for a filament lamp, and a line that stays at zero then rises steeply for a diode.</desc>
+<g class="dg-part" data-p="resistor" transform="translate(5,20)"><path class="dg-line" d="M10 90 H115 M62 10 V170" style="stroke-width:1.5"/><path class="dg-line" d="M18 150 L106 30" style="stroke:var(--blue);stroke-width:3"/><text class="dg-txt" x="68" y="16">I</text><text class="dg-txt" x="108" y="104">V</text><text class="dg-lab" x="62" y="186" text-anchor="middle">resistor</text></g>
+<g class="dg-part" data-p="lamp" transform="translate(135,20)"><path class="dg-line" d="M10 90 H115 M62 10 V170" style="stroke-width:1.5"/><path class="dg-line" d="M14 134 C34 132 46 112 62 90 C78 68 90 48 110 46" style="stroke:var(--blue);stroke-width:3"/><text class="dg-txt" x="68" y="16">I</text><text class="dg-txt" x="108" y="104">V</text><text class="dg-lab" x="62" y="186" text-anchor="middle">filament lamp</text></g>
+<g class="dg-part" data-p="diode" transform="translate(265,20)"><path class="dg-line" d="M10 90 H115 M62 10 V170" style="stroke-width:1.5"/><path class="dg-line" d="M14 90 H76 C84 90 88 70 94 22" style="stroke:var(--blue);stroke-width:3"/><text class="dg-txt" x="68" y="16">I</text><text class="dg-txt" x="108" y="104">V</text><text class="dg-lab" x="62" y="186" text-anchor="middle">diode</text></g>
+</svg>`
+  }
+  ,
+  "particles": {
+    title: "Particles in solids, liquids and gases",
+    caption: "Same particles, different arrangement and movement. Gases are least dense because the particles are far apart.",
+    parts: [
+      ["solid", "Solid", "Particles are close together in a regular pattern. They vibrate about fixed positions."],
+      ["liquid", "Liquid", "Particles are close together but arranged randomly. They can move past each other."],
+      ["gas", "Gas", "Particles are far apart and arranged randomly. They move quickly in all directions."]
+    ],
+    svg: `<svg viewBox="0 0 400 220" role="img" aria-labelledby="ptT ptD"><title id="ptT">Particle arrangements</title><desc id="ptD">A solid with particles in a neat grid, a liquid with close but jumbled particles, and a gas with a few widely spaced particles.</desc>
+<g class="dg-part" data-p="solid"><rect class="dg-box" x="10" y="40" width="120" height="140" rx="6" style="fill:none"/><circle cx="25" cy="95" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="43" cy="95" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="61" cy="95" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="79" cy="95" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="97" cy="95" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="25" cy="113" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="43" cy="113" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="61" cy="113" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="79" cy="113" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="97" cy="113" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="25" cy="131" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="43" cy="131" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="61" cy="131" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="79" cy="131" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="97" cy="131" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="25" cy="149" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="43" cy="149" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="61" cy="149" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="79" cy="149" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="97" cy="149" r="8" class="dg-box" style="fill:var(--pink-mid)"/><text class="dg-lab" x="70" y="204" text-anchor="middle">solid</text></g>
+<g class="dg-part" data-p="liquid"><rect class="dg-box" x="140" y="40" width="120" height="140" rx="6" style="fill:none"/><circle cx="150" cy="150" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="166" cy="148" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="184" cy="151" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="200" cy="149" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="216" cy="152" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="156" cy="134" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="174" cy="132" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="192" cy="135" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="210" cy="133" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="162" cy="116" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="182" cy="118" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="200" cy="114" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="218" cy="120" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="170" cy="98" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="194" cy="100" r="8" class="dg-box" style="fill:var(--pink-mid)"/><text class="dg-lab" x="200" y="204" text-anchor="middle">liquid</text></g>
+<g class="dg-part" data-p="gas"><rect class="dg-box" x="270" y="40" width="120" height="140" rx="6" style="fill:none"/><circle cx="275" cy="70" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="330" cy="95" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="300" cy="130" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="355" cy="150" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="285" cy="170" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="340" cy="60" r="8" class="dg-box" style="fill:var(--pink-mid)"/><circle cx="310" cy="85" r="8" class="dg-box" style="fill:var(--pink-mid)"/><text class="dg-lab" x="330" y="204" text-anchor="middle">gas</text></g>
+</svg>`
+  },
+  "heating-curve": {
+    title: "Heating curve",
+    caption: "Temperature of a substance as it is heated steadily, from solid to gas.",
+    parts: [
+      ["rising", "Sloping parts", "The temperature rises. Energy increases the kinetic energy of the particles. Use E = mcΔθ."],
+      ["melting", "First flat part", "Melting. The temperature stays the same while energy breaks bonds, increasing the particles' potential energy. Use E = mL (latent heat of fusion)."],
+      ["boiling", "Second flat part", "Boiling. Again the temperature stays the same. Use E = mL (latent heat of vaporisation)."]
+    ],
+    svg: `<svg viewBox="0 0 400 230" role="img" aria-labelledby="hcT hcD"><title id="hcT">Heating curve</title><desc id="hcD">A graph of temperature against time: a rise, a flat section for melting, another rise, a flat section for boiling, then a final rise.</desc>
+<path class="dg-line" d="M40 200 H385 M40 200 V15" style="stroke-width:1.5"/><text class="dg-txt" x="210" y="222" text-anchor="middle">time</text><text class="dg-txt" x="28" y="110" text-anchor="middle" transform="rotate(-90 28 110)">temperature</text>
+<g class="dg-part" data-p="rising"><path class="dg-line" d="M50 190 L110 140 M170 140 L250 70 M330 70 L372 36" style="stroke:var(--blue);stroke-width:3"/><text class="dg-txt" x="60" y="160">solid</text><text class="dg-txt" x="214" y="120">liquid</text><text class="dg-txt" x="346" y="80">gas</text></g>
+<g class="dg-part" data-p="melting"><path class="dg-line" d="M110 140 H170" style="stroke:var(--amber);stroke-width:4"/><text class="dg-lab" x="140" y="132" text-anchor="middle">melting</text></g>
+<g class="dg-part" data-p="boiling"><path class="dg-line" d="M250 70 H330" style="stroke:var(--amber);stroke-width:4"/><text class="dg-lab" x="290" y="62" text-anchor="middle">boiling</text></g>
+</svg>`
+  },
+  "penetration": {
+    title: "How far each type of radiation gets",
+    caption: "Alpha is stopped by paper, beta by a few millimetres of aluminium, and gamma is only reduced by thick lead.",
+    parts: [
+      ["alpha", "Alpha (α)", "2 protons + 2 neutrons. Most ionising, least penetrating: stopped by paper or a few cm of air."],
+      ["beta", "Beta (β)", "A fast electron from the nucleus. Stopped by a few mm of aluminium."],
+      ["gamma", "Gamma (γ)", "An electromagnetic wave. Least ionising, most penetrating: only reduced by thick lead or concrete."]
+    ],
+    svg: `<svg viewBox="0 0 400 220" role="img" aria-labelledby="pnT pnD"><title id="pnT">Penetration of alpha, beta and gamma</title><desc id="pnD">A source on the left. Alpha stops at a sheet of paper, beta stops at aluminium, and gamma passes through and is weakened by lead.</desc>
+<rect class="dg-box" x="10" y="60" width="40" height="120" rx="6"/><text class="dg-txt" x="30" y="125" text-anchor="middle">source</text>
+<rect x="128" y="40" width="4" height="160" fill="var(--muted)"/><rect x="206" y="40" width="10" height="160" fill="#a9b4c0"/><rect x="286" y="40" width="22" height="160" fill="#5d6773"/>
+<text class="dg-txt" x="130" y="214" text-anchor="middle">paper</text><text class="dg-txt" x="211" y="214" text-anchor="middle">aluminium</text><text class="dg-txt" x="297" y="214" text-anchor="middle">lead</text>
+<g class="dg-part" data-p="alpha"><path class="dg-line" d="M52 85 H124 M116 79 L124 85 L116 91"/><text class="dg-lab" x="80" y="76">α</text></g>
+<g class="dg-part" data-p="beta"><path class="dg-line" d="M52 120 H202 M194 114 L202 120 L194 126"/><text class="dg-lab" x="80" y="112">β</text></g>
+<g class="dg-part" data-p="gamma"><path class="dg-line" d="M52 155 H284"/><path class="dg-line" d="M310 155 H384 M376 149 L384 155 L376 161" stroke-dasharray="5 4"/><text class="dg-lab" x="80" y="147">γ</text></g>
+</svg>`
+  },
+  "half-life": {
+    title: "Half-life on a graph",
+    caption: "Activity of a sample over time. It halves every half-life.",
+    parts: [
+      ["curve", "Decay curve", "The activity falls quickly at first, then more slowly. It never quite reaches zero."],
+      ["one", "One half-life", "Start at 160 Bq. Halve it to 80 Bq, read across to the curve and down to the time axis. That time is one half-life."],
+      ["two", "Two half-lives", "After two half-lives a quarter is left: 40 Bq. After three, an eighth: 20 Bq."]
+    ],
+    svg: `<svg viewBox="0 0 400 230" role="img" aria-labelledby="hlT hlD"><title id="hlT">Half-life graph</title><desc id="hlD">A curve falling from 160 becquerels, reaching 80 after one half-life and 40 after two.</desc>
+<path class="dg-line" d="M50 190 H385 M50 190 V15" style="stroke-width:1.5"/><text class="dg-txt" x="215" y="215" text-anchor="middle">time</text><text class="dg-txt" x="20" y="105" text-anchor="middle" transform="rotate(-90 20 105)">activity (Bq)</text>
+<text class="dg-txt" x="44" y="34" text-anchor="end">160</text><text class="dg-txt" x="44" y="114" text-anchor="end">80</text><text class="dg-txt" x="44" y="154" text-anchor="end">40</text>
+<g class="dg-part" data-p="curve"><polyline class="dg-line" points="50,30.0 55,39.0 60,47.5 65,55.5 70,63.0 75,70.1 80,76.9 85,83.2 90,89.2 95,94.9 100,100.2 105,105.2 110,110.0 115,114.5 120,118.7 125,122.7 130,126.5 135,130.1 140,133.4 145,136.6 150,139.6 155,142.4 160,145.1 165,147.6 170,150.0 175,152.2 180,154.4 185,156.4 190,158.3 195,160.0 200,161.7 205,163.3 210,164.8 215,166.2 220,167.6 225,168.8 230,170.0 235,171.1 240,172.2 245,173.2 250,174.1 255,175.0 260,175.9 265,176.7 270,177.4 275,178.1 280,178.8 285,179.4 290,180.0 295,180.6 300,181.1 305,181.6 310,182.1 315,182.5 320,182.9 325,183.3 330,183.7 335,184.1 340,184.4 345,184.7 350,185.0 355,185.3 360,185.5 365,185.8 370,186.0" style="stroke:var(--blue);stroke-width:3"/></g>
+<g class="dg-part" data-p="one"><path class="dg-line" d="M50 110 H110 V190" stroke-dasharray="5 4"/><text class="dg-lab" x="110" y="205" text-anchor="middle">1 half-life</text></g>
+<g class="dg-part" data-p="two"><path class="dg-line" d="M50 150 H170 V190" stroke-dasharray="5 4"/><text class="dg-lab" x="182" y="205" text-anchor="start">2</text></g>
+</svg>`
+  },
+  "fission": {
+    title: "Nuclear fission and the chain reaction",
+    caption: "A uranium-235 nucleus absorbs a neutron and splits.",
+    parts: [
+      ["neutron", "Neutron absorbed", "A slow-moving neutron is absorbed by a uranium-235 nucleus, which becomes unstable."],
+      ["nucleus", "Nucleus splits", "The nucleus splits into two smaller nuclei (the daughter nuclei)."],
+      ["products", "Released", "Two or three neutrons are released, along with gamma rays and a lot of energy."],
+      ["chain", "Chain reaction", "The released neutrons can be absorbed by more nuclei, causing more fissions. Control rods absorb neutrons to control this in a reactor."]
+    ],
+    svg: `<svg viewBox="0 0 400 230" role="img" aria-labelledby="fsT fsD"><title id="fsT">Fission diagram</title><desc id="fsD">A neutron hits a uranium-235 nucleus, which splits into two smaller nuclei and releases three neutrons and energy. The neutrons go on to cause more fissions.</desc>
+<g class="dg-part" data-p="neutron"><circle class="dg-box" cx="24" cy="115" r="7"/><path class="dg-line" d="M33 115 H70 M62 109 L70 115 L62 121"/><text class="dg-txt" x="24" y="98" text-anchor="middle">n</text></g>
+<g class="dg-part" data-p="nucleus"><circle class="dg-box" cx="110" cy="115" r="32" style="fill:var(--pink-mid)"/><text class="dg-txt" x="110" y="119" text-anchor="middle">U-235</text><path class="dg-line" d="M144 100 L196 66 M144 130 L196 164"/></g>
+<g class="dg-part" data-p="products"><circle class="dg-box" cx="216" cy="56" r="20" style="fill:var(--blue-soft)"/><circle class="dg-box" cx="216" cy="174" r="22" style="fill:var(--blue-soft)"/>
+<circle class="dg-box" cx="262" cy="98" r="7"/><circle class="dg-box" cx="270" cy="118" r="7"/><circle class="dg-box" cx="262" cy="138" r="7"/><text class="dg-txt" x="180" y="122">energy</text></g>
+<g class="dg-part" data-p="chain"><path class="dg-line" d="M271 96 L322 70 M279 118 H330 M271 140 L322 166" stroke-dasharray="5 4"/><text class="dg-lab" x="336" y="74">more</text><text class="dg-lab" x="336" y="122">fissions</text><text class="dg-lab" x="336" y="170">…</text></g>
+</svg>`
+  }
+  ,
+  "resultant": {
+    title: "Resultant force",
+    caption: "Forces in opposite directions: subtract to find the resultant.",
+    parts: [
+      ["driving", "Driving force", "2000 N forwards from the engine."],
+      ["resistive", "Resistive forces", "1400 N backwards: friction and air resistance together."],
+      ["result", "Resultant force", "2000 − 1400 = 600 N forwards. The car accelerates forwards. If the forces were equal, the resultant would be zero and the speed would stay the same."]
+    ],
+    svg: `<svg viewBox="0 0 400 220" role="img" aria-labelledby="rsT rsD"><title id="rsT">Resultant force on a car</title><desc id="rsD">A car with a 2000 newton arrow forwards and a 1400 newton arrow backwards. Below, a single 600 newton resultant arrow forwards.</desc>
+<rect class="dg-box" x="150" y="60" width="100" height="44" rx="10" style="fill:var(--blue-soft)"/><circle class="dg-box" cx="172" cy="108" r="10"/><circle class="dg-box" cx="228" cy="108" r="10"/>
+<g class="dg-part" data-p="driving"><path class="dg-line" d="M250 82 H380 M370 74 L382 82 L370 90" style="stroke:var(--blue);stroke-width:3"/><text class="dg-txt" x="315" y="70" text-anchor="middle">2000 N</text></g>
+<g class="dg-part" data-p="resistive"><path class="dg-line" d="M150 82 H59 M69 74 L57 82 L69 90" style="stroke:var(--amber);stroke-width:3"/><text class="dg-txt" x="104" y="70" text-anchor="middle">1400 N</text></g>
+<g class="dg-part" data-p="result"><path class="dg-line" d="M200 170 H239 M229 162 L241 170 L229 178" style="stroke:var(--green);stroke-width:4"/><text class="dg-lab" x="220" y="196" text-anchor="middle">resultant: 600 N forwards</text></g>
+</svg>`
+  },
+  "spring-graph": {
+    title: "Force–extension graph",
+    caption: "Results from the spring practical, with force on the vertical axis.",
+    parts: [
+      ["line", "Straight section", "A straight line through the origin: force and extension are directly proportional. This is Hooke's law, F = ke. The gradient is the spring constant k."],
+      ["limit", "Limit of proportionality", "After this point the line curves. F = ke no longer works, and the spring may be permanently stretched."]
+    ],
+    svg: `<svg viewBox="0 0 400 230" role="img" aria-labelledby="sgT sgD"><title id="sgT">Force against extension</title><desc id="sgD">A straight line from the origin that curves over after the limit of proportionality.</desc>
+<path class="dg-line" d="M50 195 H380 M50 195 V15" style="stroke-width:1.5"/><text class="dg-txt" x="215" y="220" text-anchor="middle">extension (m)</text><text class="dg-txt" x="22" y="105" text-anchor="middle" transform="rotate(-90 22 105)">force (N)</text>
+<g class="dg-part" data-p="line"><path class="dg-line" d="M50 195 L250 75" style="stroke:var(--blue);stroke-width:3"/></g>
+<g class="dg-part" data-p="limit"><path class="dg-line" d="M250 75 C290 52 330 44 370 40" style="stroke:var(--amber);stroke-width:3"/><circle cx="250" cy="75" r="5" fill="var(--amber)"/><text class="dg-lab" x="246" y="62" text-anchor="end">limit of proportionality</text></g>
+</svg>`
+  },
+  "moments": {
+    title: "Balanced moments",
+    caption: "A see-saw balances when the clockwise moment equals the anticlockwise moment.",
+    parts: [
+      ["pivot", "Pivot", "The point the see-saw turns around. Distances are measured from here."],
+      ["left", "Anticlockwise moment", "300 N × 2 m = 600 N m."],
+      ["right", "Clockwise moment", "400 N × 1.5 m = 600 N m. The moments are equal, so the see-saw balances."]
+    ],
+    svg: `<svg viewBox="0 0 400 220" role="img" aria-labelledby="moT moD"><title id="moT">See-saw moments</title><desc id="moD">A plank on a pivot. 300 newtons pushes down 2 metres to the left; 400 newtons pushes down 1.5 metres to the right.</desc>
+<rect class="dg-box" x="30" y="110" width="340" height="12" rx="3" style="fill:var(--pink-mid)"/>
+<g class="dg-part" data-p="pivot"><path class="dg-box" d="M200 122 L180 170 H220 Z"/><text class="dg-txt" x="200" y="190" text-anchor="middle">pivot</text></g>
+<g class="dg-part" data-p="left"><path class="dg-line" d="M60 40 V106 M53 96 L60 108 L67 96" style="stroke:var(--blue);stroke-width:3"/><text class="dg-txt" x="60" y="32" text-anchor="middle">300 N</text><path class="dg-line" d="M60 140 H200" stroke-dasharray="4 4"/><text class="dg-txt" x="130" y="156" text-anchor="middle">2 m</text></g>
+<g class="dg-part" data-p="right"><path class="dg-line" d="M305 40 V106 M298 96 L305 108 L312 96" style="stroke:var(--blue);stroke-width:3"/><text class="dg-txt" x="305" y="32" text-anchor="middle">400 N</text><path class="dg-line" d="M200 140 H305" stroke-dasharray="4 4"/><text class="dg-txt" x="252" y="156" text-anchor="middle">1.5 m</text></g>
+</svg>`
+  },
+  "vt-graph": {
+    title: "Velocity–time graph",
+    caption: "A car speeds up from rest, travels at a steady speed, then slows down.",
+    parts: [
+      ["up", "Sloping up", "Accelerating. Acceleration = gradient = 12 ÷ 6 = 2 m/s²."],
+      ["flat", "Flat", "Constant velocity of 12 m/s. The acceleration is zero."],
+      ["down", "Sloping down", "Decelerating. The gradient is negative."],
+      ["area", "Area under the line", "Distance travelled. The first triangle is ½ × 6 × 12 = 36 m."]
+    ],
+    svg: `<svg viewBox="0 0 400 230" role="img" aria-labelledby="vtT vtD"><title id="vtT">Velocity-time graph</title><desc id="vtD">The line rises from 0 to 12 metres per second in 6 seconds, stays flat until 12 seconds, then falls to 0 at 16 seconds. The triangle under the first part is shaded.</desc>
+<g class="dg-part" data-p="area"><path d="M50 190 L170 70 V190 Z" fill="var(--blue-soft)" stroke="none"/><text class="dg-lab" x="128" y="170" text-anchor="middle">area = distance</text></g>
+<path class="dg-line" d="M50 190 H385 M50 190 V20" style="stroke-width:1.5"/><text class="dg-txt" x="215" y="222" text-anchor="middle">time (s)</text><text class="dg-txt" x="22" y="105" text-anchor="middle" transform="rotate(-90 22 105)">velocity (m/s)</text>
+<text class="dg-txt" x="44" y="74" text-anchor="end">12</text><text class="dg-txt" x="170" y="206" text-anchor="middle">6</text><text class="dg-txt" x="290" y="206" text-anchor="middle">12</text><text class="dg-txt" x="370" y="206" text-anchor="middle">16</text>
+<g class="dg-part" data-p="up"><path class="dg-line" d="M50 190 L170 70" style="stroke:var(--blue);stroke-width:3"/></g>
+<g class="dg-part" data-p="flat"><path class="dg-line" d="M170 70 H290" style="stroke:var(--green);stroke-width:3"/></g>
+<g class="dg-part" data-p="down"><path class="dg-line" d="M290 70 L370 190" style="stroke:var(--amber);stroke-width:3"/></g>
+</svg>`
+  },
+  "skydiver": {
+    title: "Forces on a falling skydiver",
+    caption: "Weight (W) stays the same. Air resistance grows as the skydiver speeds up.",
+    parts: [
+      ["start", "Just after jumping", "Only weight acts, so there is a large resultant force downwards and the skydiver accelerates."],
+      ["speeding", "Speeding up", "Air resistance increases with speed, so the resultant force gets smaller and the acceleration decreases."],
+      ["terminal", "Terminal velocity", "Air resistance = weight. The resultant force is zero, so the speed stays constant."]
+    ],
+    svg: `<svg viewBox="0 0 400 220" role="img" aria-labelledby="skyT skyD"><title id="skyT">Skydiver forces</title><desc id="skyD">Three figures. The first has only a weight arrow. The second has a weight arrow and a shorter air resistance arrow. The third has equal weight and air resistance arrows.</desc>
+<g class="dg-part" data-p="start"><circle class="dg-box" cx="80" cy="70" r="9"/><rect class="dg-box" x="70" y="80" width="20" height="34" rx="6"/><path class="dg-line" d="M80 118 V178 M74 170 L80 180 L86 170" style="stroke:var(--blue)"/><text class="dg-txt" x="90" y="160">W</text><text class="dg-lab" x="80" y="206" text-anchor="middle">just after jumping</text></g><g class="dg-part" data-p="speeding"><circle class="dg-box" cx="200" cy="70" r="9"/><rect class="dg-box" x="190" y="80" width="20" height="34" rx="6"/><path class="dg-line" d="M200 118 V178 M194 170 L200 180 L206 170" style="stroke:var(--blue)"/><text class="dg-txt" x="210" y="160">W</text><path class="dg-line" d="M200 60 V32 M194 40 L200 30 L206 40" style="stroke:var(--amber)"/><text class="dg-txt" x="210" y="50.0">air</text><text class="dg-lab" x="200" y="206" text-anchor="middle">speeding up</text></g><g class="dg-part" data-p="terminal"><circle class="dg-box" cx="320" cy="70" r="9"/><rect class="dg-box" x="310" y="80" width="20" height="34" rx="6"/><path class="dg-line" d="M320 118 V178 M314 170 L320 180 L326 170" style="stroke:var(--blue)"/><text class="dg-txt" x="330" y="160">W</text><path class="dg-line" d="M320 60 V2 M314 10 L320 0 L326 10" style="stroke:var(--amber)"/><text class="dg-txt" x="330" y="35.0">air</text><text class="dg-lab" x="320" y="206" text-anchor="middle">terminal velocity</text></g>
+</svg>`
+  },
+  "stopping": {
+    title: "Stopping distance",
+    caption: "Stopping distance = thinking distance + braking distance.",
+    parts: [
+      ["thinking", "Thinking distance", "Distance travelled during the driver's reaction time. Longer if the car is faster, or the driver is tired, distracted, or has taken alcohol or drugs."],
+      ["braking", "Braking distance", "Distance travelled while the brakes slow the car. Longer if the car is faster or heavier, or the brakes, tyres or road are in poor condition (worn, wet, icy)."]
+    ],
+    svg: `<svg viewBox="0 0 400 160" role="img" aria-labelledby="stT stD"><title id="stT">Stopping distance bar</title><desc id="stD">A bar split into thinking distance followed by a longer braking distance.</desc>
+<rect class="dg-box" x="14" y="40" width="40" height="24" rx="6" style="fill:var(--blue-soft)"/><circle class="dg-box" cx="24" cy="66" r="6"/><circle class="dg-box" cx="44" cy="66" r="6"/>
+<g class="dg-part" data-p="thinking"><rect class="dg-box" x="60" y="90" width="110" height="30" style="fill:var(--blue-soft)"/><text class="dg-txt" x="115" y="110" text-anchor="middle">thinking</text></g>
+<g class="dg-part" data-p="braking"><rect class="dg-box" x="170" y="90" width="210" height="30" style="fill:var(--amber-soft)"/><text class="dg-txt" x="275" y="110" text-anchor="middle">braking</text></g>
+<path class="dg-line" d="M60 138 H380" /><text class="dg-lab" x="220" y="154" text-anchor="middle">stopping distance</text>
+</svg>`
+  }
+  ,
+  "wave": {
+    title: "Transverse and longitudinal waves",
+    caption: "Top: a transverse wave. Bottom: a longitudinal wave with compressions and rarefactions.",
+    parts: [
+      ["amplitude", "Amplitude", "The maximum displacement from the rest position: from the middle line to a peak, not peak to trough."],
+      ["wavelength", "Wavelength (λ)", "The distance from one point on a wave to the same point on the next wave, e.g. peak to peak."],
+      ["longitudinal", "Longitudinal wave", "The oscillations are parallel to the direction of energy transfer. Close-together parts are compressions; spread-out parts are rarefactions. Sound is longitudinal."]
+    ],
+    svg: `<svg viewBox="0 0 400 230" role="img" aria-labelledby="wvT wvD"><title id="wvT">Wave diagram</title><desc id="wvD">A transverse wave with amplitude and wavelength marked, and below it a longitudinal wave shown as lines bunched into compressions and spread into rarefactions.</desc>
+<path class="dg-line" d="M30 70 H370" stroke-dasharray="4 4" style="stroke-width:1"/>
+<path class="dg-line" d="M30,70.0 L34,64.6 L38,59.5 L42,54.6 L46,50.3 L50,46.5 L54,43.6 L58,41.5 L62,40.3 L66,40.0 L70,40.8 L74,42.4 L78,45.0 L82,48.3 L86,52.4 L90,57.0 L94,62.0 L98,67.3 L102,72.7 L106,78.0 L110,83.0 L114,87.6 L118,91.7 L122,95.0 L126,97.6 L130,99.2 L134,100.0 L138,99.7 L142,98.5 L146,96.4 L150,93.5 L154,89.7 L158,85.4 L162,80.5 L166,75.4 L170,70.0 L174,64.6 L178,59.5 L182,54.6 L186,50.3 L190,46.5 L194,43.6 L198,41.5 L202,40.3 L206,40.0 L210,40.8 L214,42.4 L218,45.0 L222,48.3 L226,52.4 L230,57.0 L234,62.0 L238,67.3 L242,72.7 L246,78.0 L250,83.0 L254,87.6 L258,91.7 L262,95.0 L266,97.6 L270,99.2 L274,100.0 L278,99.7 L282,98.5 L286,96.4 L290,93.5 L294,89.7 L298,85.4 L302,80.5 L306,75.4 L310,70.0 L314,64.6 L318,59.5 L322,54.6 L326,50.3 L330,46.5 L334,43.6 L338,41.5 L342,40.3 L346,40.0 L350,40.8 L354,42.4 L358,45.0 L362,48.3 L366,52.4 L370,57.0" style="stroke:var(--blue);stroke-width:3"/>
+<g class="dg-part" data-p="amplitude"><path class="dg-line" d="M65 70 V40 M60 46 L65 38 L70 46"/><text class="dg-lab" x="72" y="30">amplitude</text></g>
+<g class="dg-part" data-p="wavelength"><path class="dg-line" d="M65 112 H205 M73 107 L65 112 L73 117 M197 107 L205 112 L197 117"/><path class="dg-line" d="M65 40 V112 M205 40 V112" stroke-dasharray="3 4" style="stroke-width:1"/><text class="dg-lab" x="135" y="128" text-anchor="middle">wavelength</text></g>
+<g class="dg-part" data-p="longitudinal"><path class="dg-line" d="M30.0 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M42.2 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M53.9 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M64.6 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M73.9 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M81.7 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M88.0 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M93.1 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M97.2 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M100.9 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M104.8 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M109.3 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M115.0 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M122.0 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M130.6 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M140.6 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M151.8 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M163.9 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M176.1 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M188.2 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M199.4 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M209.4 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M218.0 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M225.0 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M230.7 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M235.2 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M239.1 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M242.8 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M246.9 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M252.0 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M258.3 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M266.1 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M275.4 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M286.1 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M297.8 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M310.0 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M322.2 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M333.9 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M344.6 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M353.9 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M361.7 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M368.0 150 V190" style="stroke-width:1.5"/><path class="dg-line" d="M373.1 150 V190" style="stroke-width:1.5"/><text class="dg-lab" x="200" y="214" text-anchor="middle">longitudinal: compressions and rarefactions</text></g>
+</svg>`
+  },
+  "refraction": {
+    title: "Refraction through a glass block",
+    caption: "Light slows down in glass, so it bends towards the normal as it enters and away as it leaves.",
+    parts: [
+      ["normal", "Normal", "A line at 90° to the surface. Measure every angle from the normal."],
+      ["incident", "Incident ray", "The ray going into the block. The angle between it and the normal is the angle of incidence (i)."],
+      ["refracted", "Refracted ray", "Inside the glass the light slows down and bends TOWARDS the normal, so the angle of refraction (r) is smaller."],
+      ["emergent", "Emergent ray", "Leaving the block, the light speeds up and bends away from the normal. It comes out parallel to the incident ray."]
+    ],
+    svg: `<svg viewBox="0 0 400 240" role="img" aria-labelledby="rfT rfD"><title id="rfT">Refraction diagram</title><desc id="rfD">A ray enters a glass block at an angle, bends towards the normal inside the block, then leaves parallel to its original direction.</desc>
+<rect class="dg-box" x="110" y="70" width="190" height="100" style="fill:var(--blue-soft)"/><text class="dg-txt" x="270" y="160" text-anchor="middle">glass</text>
+<g class="dg-part" data-p="normal"><path class="dg-line" d="M180 20 V125 M220 115 V225" stroke-dasharray="5 4" style="stroke-width:1.5"/><text class="dg-txt" x="186" y="28">normal</text></g>
+<g class="dg-part" data-p="incident"><path class="dg-line" d="M100 10 L180 70 M158 49 L171 63 L152 60" style="stroke:var(--amber);stroke-width:3"/><text class="dg-lab" x="160" y="40">i</text></g>
+<g class="dg-part" data-p="refracted"><path class="dg-line" d="M180 70 L220 170" style="stroke:var(--amber);stroke-width:3"/><text class="dg-lab" x="188" y="100">r</text></g>
+<g class="dg-part" data-p="emergent"><path class="dg-line" d="M220 170 L300 230 M278 209 L291 223 L272 220" style="stroke:var(--amber);stroke-width:3"/></g>
+</svg>`
+  },
+  "em-spectrum": {
+    title: "The electromagnetic spectrum",
+    caption: "From left to right: wavelength gets shorter, frequency and energy get higher. All travel at 3 × 10⁸ m/s in a vacuum.",
+    parts: [
+      ["radio", "Radio", "Longest wavelength, lowest frequency. Used for TV and radio broadcasts."],
+      ["micro", "Microwaves", "Used for satellite communication and cooking."],
+      ["ir", "Infrared", "Used in heaters, thermal cameras and remote controls."],
+      ["vis", "Visible", "The only part we can see. Used in fibre optics."],
+      ["uv", "Ultraviolet", "Used in energy-efficient lamps and sun tanning. Can cause skin ageing and skin cancer."],
+      ["xray", "X-rays", "Used for medical imaging. Ionising: can damage cells and cause cancer."],
+      ["gamma", "Gamma", "Shortest wavelength, highest frequency. Used to sterilise equipment and treat cancer. Ionising."]
+    ],
+    svg: `<svg viewBox="0 0 400 170" role="img" aria-labelledby="emT emD"><title id="emT">Electromagnetic spectrum</title><desc id="emD">Seven boxes in order: radio, microwaves, infrared, visible, ultraviolet, X-rays, gamma.</desc>
+<text class="dg-txt" x="10" y="40">long wavelength, low frequency</text><text class="dg-txt" x="390" y="40" text-anchor="end">short wavelength, high frequency</text>
+<path class="dg-line" d="M10 140 H388 M378 134 L390 140 L378 146"/><text class="dg-lab" x="200" y="162" text-anchor="middle">frequency and energy increase</text>
+<g class="dg-part" data-p="radio"><rect class="dg-box" x="10" y="60" width="52" height="60" rx="6" style="fill:var(--blue-soft)"/><text class="dg-txt" x="36" y="94" text-anchor="middle" style="font-size:9px">Radio</text></g><g class="dg-part" data-p="micro"><rect class="dg-box" x="65" y="60" width="52" height="60" rx="6" style="fill:var(--blue-soft)"/><text class="dg-txt" x="91" y="94" text-anchor="middle" style="font-size:9px">Microwaves</text></g><g class="dg-part" data-p="ir"><rect class="dg-box" x="120" y="60" width="52" height="60" rx="6" style="fill:var(--blue-soft)"/><text class="dg-txt" x="146" y="94" text-anchor="middle" style="font-size:9px">Infrared</text></g><g class="dg-part" data-p="vis"><rect class="dg-box" x="175" y="60" width="52" height="60" rx="6" style="fill:var(--pink-mid)"/><text class="dg-txt" x="201" y="94" text-anchor="middle" style="font-size:9px">Visible</text></g><g class="dg-part" data-p="uv"><rect class="dg-box" x="230" y="60" width="52" height="60" rx="6" style="fill:var(--blue-soft)"/><text class="dg-txt" x="256" y="94" text-anchor="middle" style="font-size:9px">Ultraviolet</text></g><g class="dg-part" data-p="xray"><rect class="dg-box" x="285" y="60" width="52" height="60" rx="6" style="fill:var(--blue-soft)"/><text class="dg-txt" x="311" y="94" text-anchor="middle" style="font-size:9px">X-rays</text></g><g class="dg-part" data-p="gamma"><rect class="dg-box" x="340" y="60" width="52" height="60" rx="6" style="fill:var(--blue-soft)"/><text class="dg-txt" x="366" y="94" text-anchor="middle" style="font-size:9px">Gamma</text></g>
+</svg>`
+  },
+  "lens": {
+    title: "Convex (converging) lens",
+    caption: "Rays parallel to the axis are refracted and meet at the principal focus.",
+    parts: [
+      ["lens", "Convex lens", "Thicker in the middle. It converges (brings together) parallel rays."],
+      ["focus", "Principal focus (F)", "The point where rays parallel to the axis meet after passing through the lens."],
+      ["focal", "Focal length", "The distance from the centre of the lens to the principal focus."]
+    ],
+    svg: `<svg viewBox="0 0 400 220" role="img" aria-labelledby="lnT lnD"><title id="lnT">Convex lens</title><desc id="lnD">Three parallel rays pass through a convex lens and meet at the principal focus on the axis.</desc>
+<path class="dg-line" d="M10 110 H390" stroke-dasharray="4 4" style="stroke-width:1"/><text class="dg-txt" x="14" y="104">axis</text>
+<path class="dg-line" d="M20 60 H160 L290 110 M20 110 H290 M20 160 H160 L290 110" style="stroke:var(--amber);stroke-width:2.5"/>
+<g class="dg-part" data-p="lens"><path class="dg-box" d="M160 30 Q190 110 160 190 Q130 110 160 30 Z" style="fill:var(--blue-soft)"/></g>
+<g class="dg-part" data-p="focus"><circle cx="290" cy="110" r="5" fill="var(--blue)"/><text class="dg-lab" x="290" y="96" text-anchor="middle">F</text></g>
+<g class="dg-part" data-p="focal"><path class="dg-line" d="M160 200 H290 M168 195 L160 200 L168 205 M282 195 L290 200 L282 205"/><text class="dg-txt" x="225" y="216" text-anchor="middle">focal length</text></g>
+</svg>`
+  },
+  "magnet-field": {
+    title: "Magnetic field around a bar magnet",
+    caption: "Field lines go from north to south. They are closest together, and the field is strongest, at the poles.",
+    parts: [
+      ["magnet", "Bar magnet", "A permanent magnet: it makes its own magnetic field."],
+      ["lines", "Field lines", "Arrows point from the north pole to the south pole. They never cross."],
+      ["poles", "Poles", "The field is strongest here, where the lines are closest. Like poles repel; unlike poles attract."]
+    ],
+    svg: `<svg viewBox="0 0 400 220" role="img" aria-labelledby="mfT mfD"><title id="mfT">Bar magnet field</title><desc id="mfD">A bar magnet with curved field lines looping from the north pole round to the south pole, with arrows.</desc>
+<g class="dg-part" data-p="lines"><path class="dg-line" d="M150 102 C110 30 290 30 250 102 M150 118 C110 190 290 190 250 118 M150 106 C60 -20 340 -20 250 106 M150 114 C60 240 340 240 250 114" style="stroke:var(--blue);stroke-width:2"/>
+<path class="dg-line" d="M195 47 L203 51 L195 55 M195 165 L203 169 L195 173" style="stroke:var(--blue);stroke-width:2"/>
+<path class="dg-line" d="M150 110 H80 M250 110 H320" style="stroke:var(--blue);stroke-width:2"/><path class="dg-line" d="M92 105 L84 110 L92 115 M308 105 L316 110 L308 115" style="stroke:var(--blue);stroke-width:2"/></g>
+<g class="dg-part" data-p="magnet"><rect class="dg-box" x="150" y="95" width="50" height="30" style="fill:var(--pink-mid)"/><rect class="dg-box" x="200" y="95" width="50" height="30" style="fill:var(--blue-soft)"/></g>
+<g class="dg-part" data-p="poles"><text class="dg-lab" x="175" y="115" text-anchor="middle">N</text><text class="dg-lab" x="225" y="115" text-anchor="middle">S</text></g>
+</svg>`
+  },
+  "transformer": {
+    title: "Transformer",
+    caption: "Two coils wound on an iron core. This one is a step-up transformer: more turns on the secondary coil.",
+    parts: [
+      ["primary", "Primary coil", "An alternating current here makes a changing magnetic field in the iron core."],
+      ["core", "Iron core", "Iron is used because it is easily magnetised. It carries the changing magnetic field to the secondary coil."],
+      ["secondary", "Secondary coil", "The changing magnetic field induces an alternating pd here. More turns than the primary means a higher pd (step-up)."]
+    ],
+    svg: `<svg viewBox="0 0 400 220" role="img" aria-labelledby="trT trD"><title id="trT">Transformer</title><desc id="trD">A square iron core with a primary coil of a few turns on the left and a secondary coil of more turns on the right.</desc>
+<g class="dg-part" data-p="core"><path class="dg-box" d="M120 30 H280 V190 H120 Z M150 60 V160 H250 V60 Z" fill-rule="evenodd" style="fill:#c4cbd3"/></g>
+<g class="dg-part" data-p="primary"><path class="dg-line" d="M110 75 Q135 65 160 75" style="stroke:var(--blue);stroke-width:3"/><path class="dg-line" d="M110 95 Q135 85 160 95" style="stroke:var(--blue);stroke-width:3"/><path class="dg-line" d="M110 115 Q135 105 160 115" style="stroke:var(--blue);stroke-width:3"/><path class="dg-line" d="M110 135 Q135 125 160 135" style="stroke:var(--blue);stroke-width:3"/><path class="dg-line" d="M120 70 H40 M120 150 H40"/><text class="dg-lab" x="60" y="112">primary</text></g>
+<g class="dg-part" data-p="secondary"><path class="dg-line" d="M240 68 Q265 60 290 68" style="stroke:var(--amber);stroke-width:3"/><path class="dg-line" d="M240 80 Q265 72 290 80" style="stroke:var(--amber);stroke-width:3"/><path class="dg-line" d="M240 92 Q265 84 290 92" style="stroke:var(--amber);stroke-width:3"/><path class="dg-line" d="M240 104 Q265 96 290 104" style="stroke:var(--amber);stroke-width:3"/><path class="dg-line" d="M240 116 Q265 108 290 116" style="stroke:var(--amber);stroke-width:3"/><path class="dg-line" d="M240 128 Q265 120 290 128" style="stroke:var(--amber);stroke-width:3"/><path class="dg-line" d="M240 140 Q265 132 290 140" style="stroke:var(--amber);stroke-width:3"/><path class="dg-line" d="M240 152 Q265 144 290 152" style="stroke:var(--amber);stroke-width:3"/><path class="dg-line" d="M280 66 H360 M280 154 H360"/><text class="dg-lab" x="300" y="112">secondary</text></g>
+</svg>`
+  },
+  "star-life": {
+    title: "Life cycle of a star",
+    caption: "What happens after the main sequence depends on the star's mass.",
+    parts: [
+      ["early", "Nebula → protostar", "Gravity pulls a cloud of dust and gas together. It gets hotter until hydrogen nuclei start to fuse."],
+      ["main", "Main sequence", "Stable for billions of years: the outward force from fusion energy balances the inward pull of gravity."],
+      ["small", "A star like the Sun", "Red giant → white dwarf → black dwarf."],
+      ["big", "A much bigger star", "Red supergiant → supernova → neutron star or black hole. Supernovas make elements heavier than iron and spread them through the universe."]
+    ],
+    svg: `<svg viewBox="0 0 400 230" role="img" aria-labelledby="slT slD"><title id="slT">Star life cycle</title><desc id="slD">Nebula, protostar, main sequence. Then for a Sun-sized star: red giant, white dwarf, black dwarf. For a much bigger star: red supergiant, supernova, neutron star or black hole.</desc>
+<g class="dg-part" data-p="early"><rect class="dg-box" x="10" y="20" width="90" height="30" rx="8" style="fill:var(--blue-soft)"/><text class="dg-txt" x="55.0" y="39" text-anchor="middle">nebula</text> <rect class="dg-box" x="120" y="20" width="98" height="30" rx="8" style="fill:var(--blue-soft)"/><text class="dg-txt" x="169.0" y="39" text-anchor="middle">protostar</text><path class="dg-line" d="M100 35 H118 M112 30 L119 35 L112 40"/></g>
+<path class="dg-line" d="M218 35 H236 M230 30 L237 35 L230 40"/>
+<g class="dg-part" data-p="main"><rect class="dg-box" x="238" y="20" width="120" height="30" rx="8" style="fill:var(--blue-soft)"/><text class="dg-txt" x="298.0" y="39" text-anchor="middle">main sequence</text></g>
+<path class="dg-line" d="M298 50 V66 H65 V110 M130 66 V170 H65 V180"/>
+<g class="dg-part" data-p="small"><rect class="dg-box" x="10" y="110" width="110" height="30" rx="8" style="fill:var(--blue-soft)"/><text class="dg-txt" x="65.0" y="129" text-anchor="middle">red giant</text> <rect class="dg-box" x="140" y="110" width="120" height="30" rx="8" style="fill:var(--blue-soft)"/><text class="dg-txt" x="200.0" y="129" text-anchor="middle">white dwarf</text> <rect class="dg-box" x="280" y="110" width="110" height="30" rx="8" style="fill:var(--blue-soft)"/><text class="dg-txt" x="335.0" y="129" text-anchor="middle">black dwarf</text><path class="dg-line" d="M120 125 H138 M260 125 H278"/></g>
+<g class="dg-part" data-p="big"><rect class="dg-box" x="10" y="180" width="110" height="30" rx="8" style="fill:var(--blue-soft)"/><text class="dg-txt" x="65.0" y="199" text-anchor="middle">red supergiant</text> <rect class="dg-box" x="140" y="180" width="120" height="30" rx="8" style="fill:var(--blue-soft)"/><text class="dg-txt" x="200.0" y="199" text-anchor="middle">supernova</text> <rect class="dg-box" x="280" y="180" width="110" height="30" rx="8" style="fill:var(--blue-soft)"/><text class="dg-txt" x="335.0" y="199" text-anchor="middle" style="font-size:9.5px">neutron star / black hole</text><path class="dg-line" d="M120 195 H138 M260 195 H278"/></g>
+<text class="dg-lab" x="140" y="60">like the Sun</text><text class="dg-lab" x="138" y="162">much bigger</text>
+</svg>`
+  }
+};
+function diagramEl(id) {
+  const d = DIAGRAMS[id]; if (!d) return null;
+  const box = h("figure", { class: "diagram", style: "margin:0" });
+  const pic = h("div"); pic.innerHTML = d.svg;
+  const desc = h("p", { class: "desc", role: "status" }, "Choose a part to see what it does.");
+  const btns = d.parts.map(([pid, name, text]) => h("button", { type: "button", class: "btn small", "aria-pressed": "false", onclick: e => {
+    box.querySelectorAll(".parts button").forEach(b => b.setAttribute("aria-pressed", String(b === e.currentTarget)));
+    pic.querySelectorAll(".dg-part").forEach(g => g.classList.toggle("hl", g.dataset.p === pid));
+    desc.replaceChildren(h("b", {}, name + ": "), text);
+  } }, name));
+  box.append(h("figcaption", {}, h("h3", {}, d.title), h("p", { class: "small muted" }, d.caption)), pic, h("div", { class: "parts" }, btns), desc);
+  return box;
+}
+
+/* ============ rewards: charms + reward shelf ============ */
+const CHARM_NAMES = { book: "Little book", cup: "Coffee cup", lamp: "Desk lamp", tulip: "Tulips", pearls: "Pearl necklace", bow: "Satin bow", headphones: "Headphones", record: "Record player", moon: "Moon and stars", notebook: "Notebook" };
+const DEFAULT_REWARDS = [
+  { at: 5, text: "A café drink of your choice", claimed: false },
+  { at: 10, text: "New pink stationery", claimed: false },
+  { at: 20, text: "Film night: you choose the film", claimed: false },
+  { at: 30, text: "A day out of your choice", claimed: false },
+  { at: 40, text: "Something special after the mocks", claimed: false }
+];
+function rewards() { return (state.rewards || DEFAULT_REWARDS).slice().sort((a, b) => a.at - b.at); }
+function doneCount() { return SESSIONS.filter(s => state.done[s.n]).length; }
+function charmCount() { return Object.keys(state.charms).length; }
+function awardCharm(n) {
+  if (state.charms[n]) return null;
+  const names = Object.keys(CHARM_NAMES);
+  const have = {}; Object.values(state.charms).forEach(c => { have[c.name] = (have[c.name] || 0) + 1; });
+  const fewest = Math.min(...names.map(k => have[k] || 0));
+  const pool = names.filter(k => (have[k] || 0) === fewest);
+  const name = pool[Math.floor(Math.random() * pool.length)];
+  const special = (charmCount() + 1) % 5 === 0;
+  state.charms[n] = { name, special, at: new Date().toISOString() };
+  return state.charms[n];
+}
+function markDone(n) {
+  const first = !state.done[n];
+  state.done[n] = true;
+  return first ? awardCharm(n) : null;
+}
+function chime() {
+  if (!settings.sound) return;
+  try { if (!T.ctx) T.ctx = new (window.AudioContext || window.webkitAudioContext)();
+    [523.25, 659.25, 783.99].forEach((f, i) => { const o = T.ctx.createOscillator(), g = T.ctx.createGain(); o.type = "sine"; o.frequency.value = f; g.gain.setValueAtTime(0.0001, T.ctx.currentTime + i * 0.12); g.gain.exponentialRampToValueAtTime(0.05, T.ctx.currentTime + i * 0.12 + 0.02); g.gain.exponentialRampToValueAtTime(0.0001, T.ctx.currentTime + i * 0.12 + 0.6); o.connect(g); g.connect(T.ctx.destination); o.start(T.ctx.currentTime + i * 0.12); o.stop(T.ctx.currentTime + i * 0.12 + 0.7); });
+  } catch (e) {}
+}
+function charmEl(c, label) {
+  const el = h("span", { class: "charm" + (c && c.special ? " special" : "") + (c ? "" : " empty"), role: c ? "img" : null, "aria-label": c ? (c.special ? "Special " : "") + CHARM_NAMES[c.name] + (label ? ", " + label : "") : null, title: c ? (c.special ? "Special " : "") + CHARM_NAMES[c.name] : null });
+  if (c) el.append(motif(c.name)); else el.setAttribute("aria-hidden", "true");
+  return el;
+}
+function nextReward() { const d = doneCount(); return rewards().find(r => r.at > d) || null; }
+function nextRewardLine() {
+  const r = nextReward(); if (!r) return null;
+  const left = r.at - doneCount();
+  return plural(left, "more session") + " until: " + r.text;
+}
+let editingRewards = false;
+function rewardShelf() {
+  const d = doneCount(), list = rewards();
+  const box = h("section", { class: "card rewards-ui", "aria-labelledby": "shelfH" });
+  box.append(h("div", { class: "row between" }, h("h3", { id: "shelfH" }, "Reward shelf"),
+    h("button", { type: "button", class: "btn small" + (editingRewards ? "" : " primary"), id: "editRewardsBtn", onclick: () => { editingRewards = !editingRewards; render(); } }, icon(editingRewards ? "left" : "pencil"), editingRewards ? "Cancel" : "Edit rewards")));
+  if (editingRewards) {
+    const rows = list.map(r => ({ ...r }));
+    const wrap = h("div", { style: "display:grid;gap:8px" });
+    const draw = () => wrap.replaceChildren(
+      h("p", { class: "small muted" }, "Choose these together. Each one unlocks after that many finished sessions (out of 42)."),
+      ...rows.map((r, i) => h("div", { class: "reward-edit" },
+        h("input", { type: "number", min: "1", max: "42", value: r.at, "aria-label": "Sessions needed for reward " + (i + 1), oninput: e => { r.at = Math.max(1, Math.min(42, Number(e.target.value) || 1)); } }),
+        h("input", { type: "text", value: r.text, "aria-label": "Reward " + (i + 1), oninput: e => { r.text = e.target.value; } }),
+        h("button", { type: "button", class: "icon-btn", "aria-label": "Remove reward " + (i + 1), onclick: () => { rows.splice(i, 1); draw(); } }, "×"))),
+      h("div", { class: "row" },
+        h("button", { type: "button", class: "btn small", onclick: () => { rows.push({ at: Math.min(42, (rows[rows.length - 1] || { at: 0 }).at + 5), text: "", claimed: false }); draw(); } }, "Add a reward"),
+        h("button", { type: "button", class: "btn primary small", onclick: () => { state.rewards = rows.filter(r => r.text.trim()).map(r => ({ at: r.at, text: r.text.trim(), claimed: !!r.claimed })); editingRewards = false; save(); render(); } }, "Save rewards")));
+    draw(); box.append(wrap); return box;
+  }
+  const nr = nextReward();
+  if (nr) {
+    const prev = list.filter(r => r.at <= d).reduce((m, r) => Math.max(m, r.at), 0);
+    box.append(h("div", { style: "display:grid;gap:6px" },
+      h("p", {}, h("b", {}, "Next: "), nr.text),
+      h("div", { class: "bar", role: "progressbar", "aria-valuemin": String(prev), "aria-valuemax": String(nr.at), "aria-valuenow": String(d), "aria-label": "Progress to next reward" }, h("span", { style: "width:" + ((d - prev) / (nr.at - prev) * 100) + "%" })),
+      h("p", { class: "small muted" }, plural(nr.at - d, "more session") + " to go.")));
+  }
+  box.append(h("ul", { class: "list" }, list.map((r, i) => {
+    const unlocked = d >= r.at;
+    return h("li", { class: "reward-row" + (unlocked ? " unlocked" : "") },
+      h("span", { class: "num", "aria-label": "after " + r.at + " sessions" }, r.at),
+      h("span", {}, r.text, unlocked ? h("span", { class: "small muted", style: "display:block" }, r.claimed ? "Enjoyed ♡" : "Unlocked!") : h("span", { class: "small muted", style: "display:block" }, "Unlocks after " + plural(r.at, "session"))),
+      unlocked ? h("button", { type: "button", class: "btn small" + (r.claimed ? "" : " primary"), "aria-pressed": String(!!r.claimed), onclick: () => { const all = rewards(); all[i].claimed = !all[i].claimed; state.rewards = all; save(); render(); } }, r.claimed ? "Had it" : "Mark as had") : icon("heart"));
+  })));
+  return box;
+}
+function charmCollection() {
+  const earned = SESSIONS.map(s => state.charms[s.n]).filter(Boolean);
+  return h("section", { class: "card rewards-ui", "aria-labelledby": "charmH" },
+    h("div", { class: "row between" }, h("h3", { id: "charmH" }, "Your charm collection"), h("span", { class: "small muted" }, earned.length + " of 42")),
+    h("p", { class: "small muted" }, "You earn a charm every time you finish a session. Every fifth one is a special gold charm."),
+    h("ol", { class: "charms" }, SESSIONS.map(s => h("li", {}, charmEl(state.charms[s.n], title(s.n))))));
+}
+
+/* ============ HOME (welcome) ============ */
+function homeView() {
+  const v = h("div", { class: "view" });
+  const nx = nextSession();
+  const done = SESSIONS.filter(s => state.done[s.n]).length, total = SESSIONS.length;
+  const hour = new Date().getHours();
+  v.append(h("section", { class: "welcome" },
+    h("h2", {}, "Hello, Amelie."),
+    h("p", { class: "hand" }, hour < 12 ? "Welcome to your little Physics Club. Good morning." : hour < 18 ? "Welcome to your little Physics Club." : "Welcome to your little Physics Club. Cosy evening study?")));
+  if (nx) {
+    const s = sess(nx), w = weekOf(nx), pos = state.pos[nx];
+    const resuming = pos && pos.stage > 0;
+    const frame = h("div", { class: "arch" }, motif(motifFor(nx)));
+    v.append(h("section", { class: "card today", "aria-labelledby": "todayH" },
+      h("div", { class: "today-body" },
+        h("div", { class: "eyebrow" }, resuming ? "Continue where you left off" : "Today's revision"),
+        h("h2", { id: "todayH" }, title(nx)),
+        h("p", { class: "objective" }, enr(nx).objective || s.learn),
+        h("div", { class: "meta" },
+          h("span", {}, icon("clock"), isPaperSession(nx) ? "About 50 minutes" : "About 25 minutes"),
+          h("span", {}, icon("calendar"), "Session " + nx + " of " + total + " · " + w.label)),
+        h("div", {}, h("h4", { style: "margin-bottom:8px" }, isPaperSession(nx) ? "What you'll do" : "By the end you can"),
+          h("ul", { class: "ticklist" }, objectives(nx).slice(0, 3).map(o => h("li", {}, icon("heart"), h("span", {}, o))))),
+        h("div", { class: "row" },
+          h("a", { class: "btn primary big", href: "#session-" + nx }, icon("play"), resuming ? "Continue revising" : "Start revising"),
+          h("a", { class: "btn ghost optional", href: "#plan" }, "Choose a different session"))),
+      frame));
+  } else {
+    v.append(h("section", { class: "card today" }, h("div", { class: "today-body" }, h("div", { class: "eyebrow" }, "All 42 sessions complete"),
+      h("h2", {}, "You've worked through the whole plan."), h("p", {}, "Keep practising with past papers in Exam Prep.")), h("div", { class: "arch" }, motif("bow"))));
+  }
+  v.append(h("section", { class: "card tight optional", "aria-label": "Progress" },
+    h("div", { class: "row between" }, h("span", {}, h("b", {}, done + " of " + total), " sessions complete"), h("a", { href: "#progress", class: "small" }, "See my progress")),
+    h("div", { class: "bar", role: "progressbar", "aria-valuemin": "0", "aria-valuemax": String(total), "aria-valuenow": String(done), "aria-label": "Sessions complete" }, h("span", { style: "width:" + (done / total * 100) + "%" })),
+    h("p", { class: "hand", style: "font-size:1.25rem" }, done === 0 ? "One topic at a time." : "Look how far you've come. One topic at a time."),
+    nextRewardLine() ? h("p", { class: "small rewards-ui" }, icon("heart"), " " + nextRewardLine() + " · ", h("a", { href: "#progress" }, "Reward shelf")) : null));
+  return v;
+}
+
+/* ============ MY STUDY PLAN ============ */
+function planView() {
+  const nx = nextSession();
+  const cw = nx ? sess(nx).week : currentWeekId();
+  return h("div", { class: "view narrow" },
+    h("div", { style: "display:grid;gap:4px" }, h("h2", {}, "My Study Plan"), h("p", { class: "muted" }, "Four short sessions a week, all leading to your mocks on Friday 5 February.")),
+    weekCard(cw, true),
+    divider("flower"),
+    h("details", { class: "fold" }, h("summary", {}, icon("calendar"), "See every week"),
+      h("div", {}, WEEKS.filter(w => w.id !== cw).map(w => weekCard(w.id, false)))));
+}
+function weekCard(wid, main) {
+  const w = WEEKS.find(x => x.id === wid);
+  const order = weekOrder(wid); const nx = nextSession();
+  const doneN = order.filter(n => state.done[n]).length;
+  return h("section", { class: main ? "card" : null, id: main ? "thisWeek" : null, style: main ? null : "display:grid;gap:8px;margin-bottom:18px" },
+    h("div", { class: "row between" }, h(main ? "h3" : "h4", { style: main ? "font-size:1.35rem" : null }, (main ? "This week · " : "") + w.label + (w.id !== "after" ? " · from " + fmtDate(w.start) : "")), h("span", { class: "muted small" }, doneN + " of " + order.length + " done")),
+    main ? h("p", { class: "small muted" }, "Do these in any order you like. The arrows move a session earlier or later.") : null,
+    h("ol", { class: "list" }, order.map((n, i) => h("li", { class: "week-row" + (state.done[n] ? " is-done" : "") + (n === nx ? " is-next" : "") },
+      h("button", { type: "button", class: "tick", role: "checkbox", "aria-checked": String(!!state.done[n]), "aria-label": "Session " + n + " complete", onclick: () => { if (state.done[n]) delete state.done[n]; else { if (markDone(n) && settings.rewards !== false) chime(); } save(); render(); } }, state.done[n] ? icon("check") : null),
+      h("a", { class: "open-sess", href: "#session-" + n, style: "text-decoration:none;color:inherit" }, h("b", {}, title(n)), h("span", {}, "Session " + n + " · " + (sess(n).paper === "Both" ? "Papers 1 and 2" : "Paper " + sess(n).paper.slice(1)))),
+      h("div", { class: "reorder" }, confChip(n),
+        h("button", { type: "button", class: "icon-btn", "aria-label": "Move " + title(n) + " earlier", disabled: i === 0 ? true : null, onclick: () => move(wid, i, -1) }, icon("up")),
+        h("button", { type: "button", class: "icon-btn", "aria-label": "Move " + title(n) + " later", disabled: i === order.length - 1 ? true : null, onclick: () => move(wid, i, 1) }, icon("down")))))));
+}
+function move(wid, i, d) {
+  const o = weekOrder(wid); const j = i + d; if (j < 0 || j >= o.length) return;
+  [o[i], o[j]] = [o[j], o[i]]; state.order[wid] = o; save(); render();
+}
+
+/* ============ MY PROGRESS ============ */
+function progressView() {
+  const topicNs = GUIDE_ORDER();
+  const got = topicNs.filter(n => state.conf[n] === "got"), getting = topicNs.filter(n => state.conf[n] === "getting"), help = topicNs.filter(n => state.conf[n] === "help");
+  const done = SESSIONS.filter(s => state.done[s.n]).length, left = SESSIONS.length - done;
+  const scores = (D.PAPERS || []).filter(([id]) => state.papers[id] && typeof state.papers[id].score === "number");
+  const notes = (D.PAPERS || []).filter(([id]) => state.papers[id] && state.papers[id].notes && state.papers[id].notes.trim());
+  const line = done === 0 ? "Your first session is ready whenever you are." : "You've completed " + plural(done, "session") + ". " + plural(left, "session") + " to go.";
+  const topicList = ns => ns.length ? h("ul", { class: "list" }, ns.map(n => h("li", {}, h("a", { href: "#topic-" + n }, title(n))))) : h("p", { class: "small muted" }, "None yet.");
+  return h("div", { class: "view narrow" },
+    h("div", { style: "display:grid;gap:4px" }, h("h2", {}, "My Progress"), h("p", { class: "hand" }, line)),
+    rewardShelf(),
+    h("section", { class: "card" },
+      h("div", { class: "grid2" },
+        h("div", { class: "stat" }, h("span", { class: "muted small" }, "Sessions complete"), h("b", {}, done)),
+        h("div", { class: "stat" }, h("span", { class: "muted small" }, "Sessions remaining"), h("b", {}, left))),
+      h("div", { class: "bar", role: "progressbar", "aria-valuemin": "0", "aria-valuemax": String(SESSIONS.length), "aria-valuenow": String(done), "aria-label": "Sessions complete" }, h("span", { style: "width:" + (done / SESSIONS.length * 100) + "%" }))),
+    charmCollection(),
+    h("section", { class: "card", "aria-labelledby": "pearlH" },
+      h("h3", { id: "pearlH" }, "Your topic collection"),
+      h("p", { class: "small muted" }, "One pearl for each topic. Each fills in as you rate it at the end of a session."),
+      h("ol", { class: "pearls" }, topicNs.map(n => { const c = state.conf[n]; return h("li", {}, h("a", { href: "#topic-" + n, class: (c || "") + (state.done[n] ? " done" : ""), title: title(n), "aria-label": title(n) + (c ? ", " + CONF3[c].short : ", not rated yet") + (state.done[n] ? ", done" : "") }, state.done[n] ? icon("check") : String(n))); })),
+      h("div", { class: "legend" }, h("span", {}, h("i", { style: "background:var(--green-soft);border-color:var(--sage)" }), "Understand"), h("span", {}, h("i", { style: "background:var(--cream);border-color:var(--rose)" }), "Getting there"), h("span", {}, h("i", { style: "background:var(--ballet);border-color:var(--rose)" }), "Need more help"), h("span", {}, h("i", {}), "Not rated yet"))),
+    h("div", { class: "grid2" },
+      h("section", { class: "card tight" }, h("h3", {}, h("span", { class: "chip got" }, icon("full"), "Feeling confident")), topicList(got)),
+      h("section", { class: "card tight" }, h("h3", {}, h("span", { class: "chip help" }, icon("help"), "Worth revisiting")), topicList(help))),
+    getting.length ? h("p", { class: "small muted" }, plural(getting.length, "topic") + " marked 'getting there'.") : null,
+    h("section", { class: "card tight" }, h("h3", {}, "Past paper scores"),
+      scores.length ? h("ul", { class: "list" }, scores.map(([id, label]) => h("li", {}, h("b", {}, Math.round(state.papers[id].score) + "%"), " · " + label))) : h("p", { class: "small muted" }, "Add scores in Exam Prep → Past papers.")),
+    h("section", { class: "card tight" }, h("h3", {}, "Areas to improve"),
+      notes.length ? h("ul", { class: "list" }, notes.map(([id, label]) => h("li", {}, h("b", {}, label), h("div", { class: "muted", style: "white-space:pre-wrap" }, state.papers[id].notes)))) : h("p", { class: "small muted" }, "The mistakes you note on past papers will appear here.")));
+}
+
+/* ============ PRACTICE ============ */
+function practiceView() {
+  return h("div", { class: "view" },
+    h("div", { style: "display:grid;gap:4px" }, h("h2", {}, "Practice"), h("p", { class: "muted" }, "Jump straight to the questions for any topic: one at a time, with hints and worked solutions.")),
+    h("div", { class: "grid2" }, SECTIONS.map(sec => h("section", { class: "card tight sec" },
+      h("div", { class: "sec-top" }, motif(SECTION_MOTIF[sec.name], "deco"), h("h3", {}, sec.name)),
+      h("ol", {}, sec.ns.map(n => h("li", {}, h("a", { href: "#practice-" + n }, h("span", {}, title(n), h("span", { class: "small muted", style: "display:block" }, plural((content(n).qs || []).length, "question"))), h("span", { class: "row", style: "gap:6px" }, confChip(n), icon("right"))))))))));
+}
+
+/* ============ EXAM PREP ============ */
+function examNav(cur) {
+  return h("nav", { class: "subnav", "aria-label": "Exam Prep" }, [["exam-tips", "Exam tips"], ["question-decoder", "Question decoder"], ["past-papers", "Past papers"]].map(([id, t]) => h("a", { href: "#" + id, "aria-current": cur === id ? "page" : null }, t)));
+}
+
+/* ============ SESSION (six stages) ============ */
+const STAGES = [
+  { id: "learn", name: "What am I learning?", short: "Learn", icon: "book" },
+  { id: "understand", name: "Understand it", short: "Understand", icon: "bulb" },
+  { id: "example", name: "Worked example", short: "Example", icon: "steps" },
+  { id: "turn", name: "Your turn", short: "Your turn", icon: "pencil" },
+  { id: "watch", name: "Exam watch", short: "Exam watch", icon: "alert" },
+  { id: "check", name: "Check your understanding", short: "Check", icon: "check" }
+];
+function stagesFor(n) { return isPaperSession(n) ? [{ ...STAGES[0], name: "What to do" }, STAGES[5]] : STAGES; }
+let ui = { n: null, stage: 0, chunk: 1, exStep: 0, q: 0, qs: {}, complete: false };
+function openSession(n) {
+  if (ui.n !== n) {
+    const p = state.pos[n] || {};
+    ui = { n, stage: Math.min(p.stage || 0, stagesFor(n).length - 1), chunk: 1, exStep: 0, q: p.q || 0, qs: {}, complete: false };
+  }
+}
+function goStage(i) {
+  ui.stage = i; ui.chunk = 1; ui.exStep = 0;
+  state.pos[ui.n] = { stage: i, q: ui.q }; save();
+  render(); window.scrollTo(0, 0);
+  const t = $("#stageCard"); if (t) t.focus({ preventScroll: true });
+}
+function sessionView(n, start) {
+  const fresh = ui.n !== n;
+  openSession(n);
+  if (fresh && start != null && !isPaperSession(n)) { ui.stage = start; }
+  const s = sess(n), st = stagesFor(n);
+  if (ui.complete) return completeView(n);
+  const stage = st[ui.stage];
+  const card = h("section", { class: "card stage", id: "stageCard", tabindex: "-1", "aria-labelledby": "stageH" });
+  const body = h("div", { style: "display:grid;gap:24px" });
+  card.append(
+    h("div", { class: "row between" },
+      h("div", { class: "eyebrow" }, "Step " + (ui.stage + 1) + " of " + st.length),
+      readAloudBtn(() => body)),
+    body);
+  const fill = { learn: stLearn, understand: stUnderstand, example: stExample, turn: stTurn, watch: stWatch, check: stCheck }[stage.id];
+  fill(n, body, stage);
+  const isLast = ui.stage === st.length - 1;
+  card.append(h("div", { class: "stage-foot no-read" },
+    ui.stage > 0 ? h("button", { type: "button", class: "btn", onclick: () => goStage(ui.stage - 1) }, icon("left"), "Back") : h("a", { class: "btn", href: "#home" }, icon("home"), "Home"),
+    isLast ? null : h("button", { type: "button", class: "btn primary", onclick: () => goStage(ui.stage + 1) }, "Next: " + st[ui.stage + 1].short, icon("right"))));
+  return h("div", { class: "view narrow studio" },
+    h("div", { class: "studio-head" },
+      h("div", { style: "display:grid;gap:2px" },
+        h("a", { href: "#home", class: "small" }, "← Pause and go home (your place is saved)"),
+        h("h2", { style: "font-size:1.15rem" }, "Session " + n + " · " + title(n)),
+        h("span", { class: "small muted" }, (isPaperSession(n) ? "About 50 minutes" : "About 25 minutes") + " · " + weekOf(n).label)),
+      timerEl()),
+    h("nav", { "aria-label": "Session steps" }, h("ol", { class: "stepper", style: "--n:" + st.length },
+      st.map((x, i) => h("li", {}, h("button", { type: "button", class: i < ui.stage ? "seen" : "", "aria-current": i === ui.stage ? "step" : null, onclick: () => goStage(i) },
+        h("span", { class: "dot" }, i < ui.stage ? icon("check") : icon(x.icon)), h("span", { class: "lbl" }, x.short)))))),
+    card);
+}
+function stLearn(n, body) {
+  const s = sess(n), c = content(n);
+  if (isPaperSession(n)) {
+    body.append(stageTitle("book", "What to do"),
+      h("p", { class: "objective" }, s.learn),
+      h("ol", { class: "steps" }, c.ideas.map((t, i) => h("li", { class: "step" }, h("span", { class: "n" }, i + 1), h("div", { class: "txt" }, t)))));
+    return;
+  }
+  body.append(h("div", { class: "row between" }, stageTitle("book", "What am I learning?"), h("div", { style: "width:64px;height:64px" }, motif(motifFor(n), "deco"))),
+    h("p", { class: "objective" }, enr(n).objective || s.learn),
+    eqChips(n),
+    s.rp ? h("p", {}, h("span", { class: "chip" }, "Required practical"), " " + s.rp.replace(/^RP\d+\s*/, "")) : null,
+    h("div", { class: "remember" }, h("h4", {}, "Things to remember"),
+      h("ul", { class: "ticklist" }, essentials(n).map(t => h("li", {}, icon("key"), h("span", {}, t))))),
+    h("p", { class: "small muted" }, "Next you'll go through it in small parts. Take your time."));
+}
+function stUnderstand(n, body) {
+  const c = content(n), e = enr(n);
+  body.append(stageTitle("bulb", "Understand it"));
+  if (e.diagram) body.append(diagramEl(e.diagram));
+  const CH = 3, chunks = Math.ceil(c.ideas.length / CH);
+  const shown = c.ideas.slice(0, ui.chunk * CH);
+  body.append(h("div", {}, h("h3", { style: "margin-bottom:4px" }, "Key ideas"), h("p", { class: "small muted" }, "Part " + Math.min(ui.chunk, chunks) + " of " + chunks)),
+    h("ol", { class: "list", style: "gap:0" }, shown.map((t, i) => h("li", { class: "idea" }, h("span", { class: "n" }, i + 1), h("span", {}, t)))));
+  if (ui.chunk < chunks) body.append(h("div", { class: "row no-read" },
+    h("button", { type: "button", class: "btn", onclick: () => { ui.chunk++; render(); } }, "Show the next part (" + (ui.chunk + 1) + " of " + chunks + ")"),
+    h("button", { type: "button", class: "btn ghost", onclick: () => { ui.chunk = chunks; render(); } }, "Show all")));
+  else {
+    if (c.words && c.words.length) body.append(h("div", { style: "display:grid;gap:12px" }, h("h3", {}, "Key words"),
+      h("div", { class: "vcards" }, c.words.map(([w, d]) => vocabCard(w, d)))));
+    body.append(videoBlock(n));
+  }
+}
+function exampleSteps(n) {
+  const e = enr(n), c = content(n);
+  if (e.example) return { q: c.example.q, steps: e.example, answer: c.example.a };
+  if (!c.example) return null;
+  return { q: c.example.q, steps: c.example.steps.map((t, i) => ({ label: "Step " + (i + 1), text: t })), answer: c.example.a };
+}
+function stExample(n, body) {
+  const ex = exampleSteps(n);
+  body.append(stageTitle("steps", "Worked example"));
+  if (!ex) { body.append(h("p", {}, "There's no worked example for this session.")); return; }
+  const total = ex.steps.length, shown = Math.max(1, ui.exStep);
+  body.append(h("div", { class: "qcard" }, h("div", { class: "eyebrow" }, "The question"), h("p", { class: "qtext" }, ex.q)),
+    h("ol", { class: "steps", "aria-live": "polite" }, ex.steps.slice(0, shown).map((st, i) => h("li", { class: "step" }, h("span", { class: "n" }, i + 1), h("div", {}, h("div", { class: "lab" }, st.label), h("div", { class: "txt" }, st.text))))));
+  if (shown < total) body.append(h("div", { class: "row no-read" },
+    h("button", { type: "button", class: "btn", onclick: () => { ui.exStep = shown + 1; render(); } }, "Show step " + (shown + 1) + " of " + total),
+    h("button", { type: "button", class: "btn ghost", onclick: () => { ui.exStep = total; render(); } }, "Show every step")));
+  else body.append(h("div", { class: "answer-box" }, icon("check"), h("div", {}, h("span", { class: "small muted" }, "Answer"), h("div", {}, h("b", {}, ex.answer)))));
+}
+function parseNum(str) {
+  let s = String(str).trim().replace(/[\s,]/g, "").replace(/(×|x|\*)10\^?/i, "e").replace(/[^0-9eE.+\-]/g, "");
+  if (!s) return NaN; return Number(s);
+}
+function autoHint(n) {
+  const s = sess(n);
+  return s.eq.length ? "Useful equation" + (s.eq.length > 1 ? "s" : "") + " for this topic: " + s.eq.join(" · ") + ". Look back at step 2 if you need the key ideas." : "Look back at the key ideas in step 2 for the words you need.";
+}
+function stTurn(n, body) {
+  const c = content(n), qs = c.qs || [], eq = (enr(n).questions || []);
+  if (ui.q >= qs.length) ui.q = 0;
+  const i = ui.q, [q, a] = qs[i], x = eq[i] || {};
+  const qs_ = ui.qs[i] || (ui.qs[i] = { hint: false, sol: false, val: "", fb: null });
+  body.append(stageTitle("pencil", "Your turn"),
+    h("p", { class: "small muted" }, "One question at a time. Have a go on paper first. Hints and answers are there when you want them."));
+  const card = h("div", { class: "qcard" },
+    h("div", { class: "row between" }, h("div", { class: "eyebrow" }, "Question " + (i + 1) + " of " + qs.length), null),
+    h("p", { class: "qtext" }, q));
+  if (x.numeric) {
+    const check = () => {
+      const v = parseNum(qs_.val); const t = x.numeric.value;
+      if (isNaN(v)) qs_.fb = "empty";
+      else qs_.fb = [t].concat(x.numeric.alt || []).some(tt => Math.abs(v - tt) <= Math.max(Math.abs(tt) * 0.01, 1e-12)) ? "ok" : "no";
+      render(); const el = $("#ans" + i); if (el && qs_.fb !== "ok") el.focus();
+    };
+    const inp = h("input", { id: "ans" + i, type: "text", inputmode: "decimal", autocomplete: "off", value: qs_.val, "aria-describedby": "unit" + i, oninput: e => { qs_.val = e.target.value; } });
+    inp.addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); check(); } });
+    card.append(h("div", { style: "display:grid;gap:6px" }, h("label", { for: "ans" + i, class: "small" }, "Your answer (number only)"),
+      h("div", { class: "numrow no-read" }, inp, h("span", { id: "unit" + i }, x.numeric.unit), h("button", { type: "button", class: "btn primary", onclick: check }, "Check"))));
+    if (qs_.fb === "ok") card.append(h("div", { class: "feedback ok", role: "status" }, icon("star"), h("span", {}, h("b", {}, "Lovely. "), "That matches the answer. Compare your working with the worked solution if you like.")));
+    if (qs_.fb === "no") card.append(h("div", { class: "feedback no", role: "status" }, icon("retry"), h("span", {}, "Not quite yet. Check your units and each step, then try again. A hint or the worked solution can help.")));
+    if (qs_.fb === "empty") card.append(h("div", { class: "feedback no", role: "status" }, icon("help"), h("span", {}, "Type a number first, for example 9000 or 4.2e6.")));
+  } else {
+    card.append(h("p", { class: "small muted" }, "Write your answer on paper, then compare it with the answer."));
+  }
+  if (qs_.hint) card.append(h("div", { class: "hint" }, icon("bulb"), h("div", {}, h("b", {}, "Hint: "), x.hint || autoHint(n))));
+  if (qs_.sol) {
+    if (x.solution) card.append(h("div", { style: "display:grid;gap:8px" }, h("h4", {}, "Worked solution"),
+      h("ol", { class: "steps" }, x.solution.map((st, k) => h("li", { class: "step" }, h("span", { class: "n" }, k + 1), h("div", {}, h("div", { class: "lab" }, st.label), h("div", { class: "txt" }, st.text)))))));
+    else card.append(h("div", { class: "answer-box" }, icon("check"), h("div", {}, h("span", { class: "small muted" }, "Answer"), h("div", {}, a))));
+  }
+  card.append(h("div", { class: "row no-read" },
+    !qs_.hint ? h("button", { type: "button", class: "btn", onclick: () => { qs_.hint = true; render(); } }, icon("bulb"), "Show a hint") : null,
+    !qs_.sol ? h("button", { type: "button", class: "btn", onclick: () => { qs_.sol = true; render(); } }, icon("check"), x.solution ? "Show worked solution" : "Show answer") : null,
+    (qs_.hint || qs_.sol || qs_.fb) ? h("button", { type: "button", class: "btn ghost", onclick: () => { ui.qs[i] = { hint: false, sol: false, val: "", fb: null }; render(); } }, icon("retry"), "Try again") : null));
+  body.append(card,
+    h("div", { class: "row between no-read" },
+      h("button", { type: "button", class: "btn", disabled: i === 0 ? true : null, onclick: () => { ui.q = i - 1; state.pos[n] = { stage: ui.stage, q: ui.q }; save(); render(); } }, icon("left"), "Previous question"),
+      h("button", { type: "button", class: "btn", disabled: i === qs.length - 1 ? true : null, onclick: () => { ui.q = i + 1; state.pos[n] = { stage: ui.stage, q: ui.q }; save(); render(); } }, "Next question", icon("right"))));
+}
+function stWatch(n, body) {
+  const e = enr(n), c = content(n);
+  body.append(stageTitle("alert", "Exam watch", "amber"), h("p", { class: "small muted" }, "These are the mistakes examiners see most often on this topic."));
+  if (e.watch) body.append(h("div", { style: "display:grid;gap:12px" }, e.watch.map(w => h("div", { class: "watch" },
+    h("div", { class: "mis" }, icon("alert"), h("div", {}, h("span", { class: "lab" }, "Common mistake"), w.mistake)),
+    h("div", { class: "fix" }, icon("check"), h("div", {}, h("span", { class: "lab" }, "How to avoid it"), w.avoid))))));
+  else body.append(h("div", { style: "display:grid;gap:12px" }, (c.watch || []).map(t => h("div", { class: "watch" },
+    h("div", { class: "mis" }, icon("alert"), h("div", {}, h("span", { class: "lab" }, "Exam watch"), t))))));
+}
+function stCheck(n, body) {
+  const cur = state.conf[n];
+  body.append(stageTitle("check", isPaperSession(n) ? "Finish this session" : "Check your understanding", "green"));
+  if (!isPaperSession(n)) body.append(h("p", {}, "How does this topic feel now? This just helps decide what to come back to."),
+    h("div", { class: "conf-opts", role: "group", "aria-label": "How confident do you feel?" }, Object.entries(CONF3).map(([k, v]) =>
+      h("button", { type: "button", "aria-pressed": String(cur === k), onclick: () => { state.conf[n] = k; save(); render(); } }, icon(v.icon), h("b", {}, v.label)))));
+  body.append(h("div", { class: "row" }, h("button", { type: "button", class: "btn primary big", onclick: () => {
+    ui.newCharm = markDone(n); if (ui.newCharm && settings.rewards !== false) chime(); delete state.pos[n]; save(); ui.complete = true; render(); window.scrollTo(0, 0);
+  } }, icon("check"), state.done[n] ? "Finish again" : "Finish session")));
+}
+function completeView(n) {
+  const nx = nextSession(); const done = SESSIONS.filter(s => state.done[s.n]).length;
+  return h("div", { class: "view narrow" }, h("section", { class: "card done-panel", "aria-live": "polite" },
+    h("div", { class: "big-tick" }, icon("check")),
+    h("h2", {}, "You've completed this session."),
+    h("p", { class: "hand" }, "Little by little, it all adds up."),
+    ui.newCharm ? h("div", { class: "charm-reveal rewards-ui", role: "status" },
+      charmEl(ui.newCharm),
+      h("b", {}, (ui.newCharm.special ? "A special gold charm: " : "You earned a charm: ") + CHARM_NAMES[ui.newCharm.name]),
+      h("a", { href: "#progress", class: "small" }, "See your collection (" + charmCount() + " of 42)")) : null,
+    (() => { const u = rewards().find(r => r.at === doneCount()); return u ? h("div", { class: "answer-box rewards-ui", role: "status" }, icon("heart"), h("div", {}, h("b", {}, "Reward unlocked!"), h("div", {}, u.text))) : (nextRewardLine() ? h("p", { class: "small muted rewards-ui" }, nextRewardLine()) : null); })(),
+    h("p", { class: "objective" }, title(n) + " is done. That's " + done + " of " + SESSIONS.length + "."),
+    nx ? h("p", { class: "muted" }, "Ready for the next one? It's " + title(nx) + ". Or take a break: it'll be here when you come back.") : h("p", {}, "That was the last session in the plan."),
+    h("div", { class: "row", style: "justify-content:center" },
+      nx ? h("a", { class: "btn primary", href: "#session-" + nx, onclick: () => { ui.n = null; } }, icon("play"), "Start the next session") : null,
+      h("a", { class: "btn", href: "#home" }, icon("home"), "Back to home"))));
+}
+
+/* ============ REVISION GUIDE ============ */
+function guideNav(cur) {
+  return h("nav", { class: "subnav", "aria-label": "Learn" },
+    [["guide", "Topics"], ["vocabulary", "Vocabulary"], ["equations", "Equations"]].map(([id, t]) => h("a", { href: "#" + id, "aria-current": cur === id ? "page" : null }, t)));
+}
+function guideView() {
+  const all = GUIDE_ORDER(); const done = all.filter(n => state.done[n]).length;
+  const row = n => h("li", {}, h("a", { href: "#topic-" + n }, h("span", {}, title(n)),
+    h("span", { class: "row", style: "gap:6px" }, confChip(n), state.done[n] ? h("span", { class: "chip done" }, icon("check"), "Done") : null)));
+  const secCard = (sec, i) => h("section", { class: "card tight sec" },
+    h("div", { class: "row between" }, h("div", { class: "sec-top" }, motif(SECTION_MOTIF[sec.name], "deco"), h("div", {}, h("div", { class: "eyebrow" }, "Section " + (i + 1)), h("h3", {}, sec.name))), h("span", { class: "small muted" }, sec.ns.filter(n => state.done[n]).length + "/" + sec.ns.length)),
+    h("ol", {}, sec.ns.map(row)));
+  return h("div", { class: "view" }, guideNav("guide"),
+    h("div", { style: "display:grid;gap:6px" }, h("h2", {}, "Learn"), h("p", { class: "muted" }, "Your revision notes: every topic, one page each, in specification order. " + done + " of " + all.length + " topics done.")),
+    h("div", { class: "grid2" }, SECTIONS.map(secCard)));
+}
+function topicView(n) {
+  const s = sess(n), c = content(n), all = GUIDE_ORDER(), i = all.indexOf(n), sec = secFor(n);
+  const prev = all[i - 1], next = all[i + 1];
+  const ex = exampleSteps(n);
+  const nav = h("div", { class: "row between" }, h("a", { class: "btn small", href: "#guide" }, icon("left"), "Contents"),
+    h("div", { class: "row" }, prev ? h("a", { class: "btn small", href: "#topic-" + prev }, "Previous") : null, next ? h("a", { class: "btn small", href: "#topic-" + next }, "Next") : null));
+  const eqs = (E.equations || []).filter(q => s.eq.includes(q.eq));
+  return h("div", { class: "view narrow" }, nav,
+    h("section", { class: "card" },
+      h("div", { class: "eyebrow" }, sec ? sec.name + " · Page " + (i + 1) + " of " + all.length : "Topic"),
+      h("h2", {}, title(n)), h("p", { class: "objective" }, enr(n).objective || s.learn),
+      h("div", { class: "row" }, h("a", { class: "btn primary", href: "#session-" + n }, icon("play"), state.done[n] ? "Go through it again as a session" : "Start this as a session"), confChip(n))),
+    enr(n).diagram ? diagramEl(enr(n).diagram) : null,
+    h("details", { class: "fold", open: true }, h("summary", {}, icon("key"), "Things to remember"), h("div", {}, h("ul", { class: "ticklist" }, essentials(n).map(t => h("li", {}, icon("key"), h("span", {}, t)))))),
+    h("details", { class: "fold" }, h("summary", {}, icon("bulb"), "Key ideas"), h("div", {}, h("ol", { class: "list", style: "gap:0" }, c.ideas.map((t, k) => h("li", { class: "idea" }, h("span", { class: "n" }, k + 1), h("span", {}, t)))))),
+    c.words ? h("details", { class: "fold" }, h("summary", {}, icon("book"), "Key words"), h("div", {}, h("div", { class: "vcards" }, c.words.map(([w, d]) => vocabCard(w, d))))) : null,
+    eqs.length ? h("details", { class: "fold" }, h("summary", {}, "Equation cards"), h("div", {}, eqs.map(eqCard))) : null,
+    ex ? h("details", { class: "fold" }, h("summary", {}, icon("steps"), "Worked example"), h("div", {}, h("p", { class: "qtext" }, ex.q),
+      h("ol", { class: "steps" }, ex.steps.map((st, k) => h("li", { class: "step" }, h("span", { class: "n" }, k + 1), h("div", {}, h("div", { class: "lab" }, st.label), h("div", { class: "txt" }, st.text))))),
+      h("div", { class: "answer-box" }, icon("check"), h("b", {}, ex.answer)))) : null,
+    c.qs ? h("details", { class: "fold" }, h("summary", {}, icon("pencil"), "Practice questions"), h("div", {}, c.qs.map(([q, a], k) => h("div", { class: "qcard" }, h("p", {}, h("b", {}, "Q" + (k + 1) + " "), q), h("details", {}, h("summary", { style: "cursor:pointer;color:var(--blue);min-height:40px" }, "Show answer"), h("div", { class: "answer-box" }, a)))))) : null,
+    (c.watch || enr(n).watch) ? h("details", { class: "fold" }, h("summary", {}, icon("alert"), "Exam watch"), h("div", {}, enr(n).watch ? enr(n).watch.map(w => h("div", { class: "watch" }, h("div", { class: "mis" }, icon("alert"), h("div", {}, h("span", { class: "lab" }, "Common mistake"), w.mistake)), h("div", { class: "fix" }, icon("check"), h("div", {}, h("span", { class: "lab" }, "How to avoid it"), w.avoid)))) : c.watch.map(t => h("div", { class: "watch" }, h("div", { class: "mis" }, icon("alert"), h("div", {}, t)))))) : null,
+    videoBlock(n), nav);
+}
+function eqCard(q) {
+  return h("article", { class: "card tight eqcard" },
+    h("div", { class: "row between" }, h("span", { class: "big" }, q.eq), h("span", { class: "small muted" }, q.name)),
+    h("table", { class: "sym" }, h("thead", {}, h("tr", {}, h("th", { scope: "col" }, "Symbol"), h("th", { scope: "col" }, "Means"), h("th", { scope: "col" }, "Unit"))),
+      h("tbody", {}, q.sym.map(([a, b, u]) => h("tr", {}, h("td", {}, h("b", {}, a)), h("td", {}, b), h("td", {}, u))))),
+    q.note ? h("p", { class: "small" }, q.note) : null,
+    q.example ? h("div", { class: "hint" }, icon("steps"), h("div", {}, h("b", {}, "Example: "), q.example)) : null,
+    q.mistake ? h("div", { class: "watch" }, h("div", { class: "mis" }, icon("alert"), h("div", {}, h("span", { class: "lab" }, "Common mistake"), q.mistake))) : null,
+    h("p", { class: "small" }, "Used in: ", q.sessions.map((n, i) => [i ? " · " : "", h("a", { href: "#topic-" + n }, title(n))])));
+}
+let vocabFilter = "";
+function vocabView() {
+  const v = h("div", { class: "view" }, guideNav("vocabulary"), h("h2", {}, "Vocabulary"),
+    h("p", { class: "muted" }, "Every key word from the sessions. 'Simply put' is a plain explanation; a 'Formal definition' is the wording to use in the exam."));
+  const list = h("div", { style: "display:grid;gap:20px" });
+  const search = h("input", { class: "search", type: "search", placeholder: "Search for a word", "aria-label": "Search vocabulary", value: vocabFilter, oninput: e => { vocabFilter = e.target.value; fill(); } });
+  function fill() {
+    const f = vocabFilter.trim().toLowerCase();
+    list.replaceChildren(...SECTIONS.map(sec => {
+      const cards = sec.ns.flatMap(n => (content(n).words || []).filter(([w, d]) => !f || (w + " " + d).toLowerCase().includes(f)).map(([w, d]) => vocabCard(w, d, n)));
+      return cards.length ? h("section", { style: "display:grid;gap:10px" }, h("h3", {}, sec.name), h("div", { class: "vcards" }, cards)) : null;
+    }).filter(Boolean));
+    if (!list.childNodes.length) list.append(h("p", { class: "muted" }, "No words match that search."));
+  }
+  fill(); v.append(search, list); return v;
+}
+function equationsView() {
+  return h("div", { class: "view" }, guideNav("equations"), h("h2", {}, "Equation cards"),
+    h("p", { class: "muted" }, "These are the equations on the Physics Equations Sheet you'll have in the exam. Each card shows what the symbols mean and their units."),
+    SECTIONS.map(sec => { const eqs = (E.equations || []).filter(q => sec.ns.includes(q.sessions[0])); return eqs.length ? h("section", { style: "display:grid;gap:12px" }, h("h3", {}, sec.name), h("div", { class: "grid2" }, eqs.map(eqCard))) : null; }));
+}
+
+/* ============ OTHER PAGES ============ */
+function listPage(heading, intro, rows) {
+  return h("div", { class: "view narrow" }, h("h2", {}, heading), intro ? h("p", { class: "muted" }, intro) : null,
+    h("ul", { class: "list" }, rows.map(([a, b]) => h("li", { class: "card tight" }, h("b", {}, a), h("span", { class: "muted" }, b)))));
+}
+function tipsView() {
+  return h("div", { class: "view narrow" }, examNav("exam-tips"), h("h2", {}, "Exam tips"), h("p", { class: "muted" }, "From the AQA examiners' reports."),
+    h("ul", { class: "list" }, D.TIPS.map(([a, b]) => h("li", { class: "card tight" }, h("b", {}, a), h("span", { class: "muted" }, b)))));
+}
+function decoderView() {
+  return h("div", { class: "view narrow" }, examNav("question-decoder"), h("h2", {}, "Question decoder"),
+    h("p", { class: "muted" }, "The first word of a question tells you what the examiner wants."),
+    h("div", { style: "display:grid;gap:12px" }, (E.commands || []).map(c => h("article", { class: "card tight" },
+      h("h3", {}, c.word), h("p", {}, c.means),
+      h("div", { class: "hint" }, icon("pencil"), h("div", {}, h("b", {}, "Example: "), c.example)),
+      h("div", { class: "answer-box" }, icon("check"), h("div", {}, h("span", { class: "small muted" }, "A good answer"), h("div", {}, c.good)))))));
+}
+function papersView() {
+  return h("div", { class: "view narrow" }, examNav("past-papers"), h("h2", {}, "Past papers"), h("p", { class: "muted" }, "Each paper is out of 100. Note your biggest mistakes: they'll appear in My Progress as areas to improve."),
+    h("div", { style: "display:grid;gap:12px" }, D.PAPERS.map(([id, label, note]) => {
+      const p = state.papers[id] || {};
+      const pct = h("span", { class: "chip" }, typeof p.score === "number" ? Math.round(p.score) + "%" : "No score yet");
+      return h("article", { class: "card tight paper" }, h("h3", {}, label), note ? h("p", { class: "small muted" }, note) : null,
+        h("div", { class: "row" }, h("label", { for: "sc-" + id }, "Score out of 100"),
+          h("input", { id: "sc-" + id, type: "number", min: "0", max: "100", inputmode: "numeric", value: p.score ?? "", oninput: e => {
+            const val = e.target.value === "" ? undefined : Math.max(0, Math.min(100, Number(e.target.value)));
+            state.papers[id] = { ...(state.papers[id] || {}), score: val }; save(); pct.textContent = val == null ? "No score yet" : Math.round(val) + "%"; } }), pct),
+        h("label", { for: "nt-" + id, class: "small" }, "Biggest mistakes"),
+        h("textarea", { id: "nt-" + id, oninput: e => { state.papers[id] = { ...(state.papers[id] || {}), notes: e.target.value }; save(); } }, p.notes || ""));
+    })));
+}
+function resNav(cur) { return h("nav", { class: "subnav", "aria-label": "Resources" }, [["resources", "Links and books"], ["how-to-study", "How to study"]].map(([id, t]) => h("a", { href: "#" + id, "aria-current": cur === id ? "page" : null }, t))); }
+function howView() {
+  return h("div", { class: "view narrow" }, resNav("how-to-study"), h("h2", {}, "How to study"), h("p", { class: "hand" }, "Small habits that make starting easier."),
+    h("ul", { class: "list" }, D.HOW.map(([a, b]) => h("li", { class: "card tight" }, h("b", {}, a), h("span", { class: "muted" }, b)))));
+}
+function resourcesView() {
+  return h("div", { class: "view narrow" }, resNav("resources"), h("h2", {}, "Resources"), h("ul", { class: "list" }, D.RES.map(r => h("li", { class: "card tight" },
+    r[3] ? h("a", { href: r[3], target: "_blank", rel: "noopener" }, h("b", {}, r[0])) : h("b", {}, r[0]),
+    h("span", { class: "muted" }, r[1] + " · " + r[2]), r[4] ? h("span", { class: "small muted" }, r[4]) : null))));
+}
+
+/* ============ routing + render ============ */
+function currentRoute() {
+  const hs = location.hash.slice(1);
+  let m;
+  if ((m = hs.match(/^session-(\d+)$/)) && Number(m[1]) >= 1 && Number(m[1]) <= SESSIONS.length) return { view: "session", n: Number(m[1]), nav: "plan" };
+  if ((m = hs.match(/^practice-(\d+)$/)) && GUIDE_ORDER().includes(Number(m[1]))) return { view: "session", n: Number(m[1]), nav: "practice", start: 3 };
+  if ((m = hs.match(/^topic-(\d+)$/)) && GUIDE_ORDER().includes(Number(m[1]))) return { view: "topic", n: Number(m[1]), nav: "guide" };
+  const map = { home: null, plan: "plan", guide: "guide", vocabulary: "guide", equations: "guide", practice: "practice", "exam-prep": "exam-prep", "exam-tips": "exam-prep", "question-decoder": "exam-prep", "past-papers": "exam-prep", progress: "progress", resources: "resources", "how-to-study": "resources" };
+  if (hs === "exam-prep") return { view: "exam-tips", nav: "exam-prep" };
+  if (hs === "edit-rewards") { editingRewards = true; settings.rewards = true; applySettings(); return { view: "progress", nav: "progress" }; }
+  return (hs in map) ? { view: hs, nav: map[hs] } : { view: "home", nav: null };
+}
+let lastKey = "";
+function render() {
+  if (!D) return;
+  const r = currentRoute();
+  const key = r.view + (r.n || "") + (r.start || "");
+  if (r.view !== "session") { ui.n = null; ui.newCharm = null; }
+  let el;
+  switch (r.view) {
+    case "session": el = sessionView(r.n, r.start); break;
+    case "plan": el = planView(); break;
+    case "practice": el = practiceView(); break;
+    case "progress": el = progressView(); break;
+    case "question-decoder": el = decoderView(); break;
+    case "topic": el = topicView(r.n); break;
+    case "guide": el = guideView(); break;
+    case "vocabulary": el = vocabView(); break;
+    case "equations": el = equationsView(); break;
+    case "how-to-study": el = howView(); break;
+    case "exam-tips": el = tipsView(); break;
+    case "past-papers": el = papersView(); break;
+    case "resources": el = resourcesView(); break;
+    default: el = homeView();
+  }
+  const active = document.activeElement && document.activeElement.id;
+  $("#view").replaceWith(Object.assign(el, { id: "view" }));
+  document.querySelectorAll("nav.tabs a").forEach(a => { if (a.dataset.nav === r.nav) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
+  if (active) { const again = document.getElementById(active); if (again && again.tagName === "INPUT") { again.focus(); try { const L = again.value.length; again.setSelectionRange(L, L); } catch (e) {} } }
+  if (key !== lastKey) { lastKey = key; window.scrollTo(0, 0); }
+}
+window.addEventListener("hashchange", () => { if (canSpeak) try { speechSynthesis.cancel(); } catch (e) {} render(); });
+
+/* ============ boot ============ */
+Promise.all(["data.json", "content.json", "enrich.json"].map(f => fetch(f).then(r => { if (!r.ok) throw new Error(f); return r.json(); })))
+  .then(([d, c, e]) => {
+    D = d; C = c; E = e;
+    SESSIONS = d.SESSIONS; WEEKS = d.WEEKS; SECTIONS = d.SECTIONS; TITLE = d.TITLE;
+    render();
+    connectShared();
+  })
+  .catch(() => { $("#view").replaceChildren(h("div", { class: "card" }, h("h2", {}, "The revision content didn't load."), h("p", {}, "Check your internet connection, then reload the page. Your progress is saved."))); });
+
+/* ============ shared progress (optional, alongside localStorage) ============ */
+async function connectShared() {
+  let db = null;
+  try { db = window.claude && window.claude.use ? await window.claude.use("db") : null; } catch (e) { db = null; }
+  if (!db) return;
+  try { docRef = db.doc("progress/amelie"); } catch (e) { return; }
+  let real = false;
+  docRef.onSnapshot(snap => {
+    if (!snap.metadata.fromCache) real = true;
+    mode = "shared";
+    if (snap.exists) {
+      if (snap.metadata.hasPendingWrites) return;
+      state = normalize(snap.data() || {}); saveLocal();
+      const r = currentRoute();
+      if (r.view !== "session" && !(document.activeElement && /INPUT|TEXTAREA/.test(document.activeElement.tagName))) render();
+    } else if (real) {
+      if (Object.keys(state.done).length || Object.keys(state.conf).length || Object.keys(state.papers).length) flush();
+    }
+  }, () => { mode = "local"; });
+}
+</script>
+</body>
+</html>
